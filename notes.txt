@@ -1,6 +1,0 @@
-A resposta foi:
-{
-  "dos_attack_probability": 80,
-  "justification": "The packets are all from the same source IP address (192.168.56.19) and have identical protocol, flags, sequence, and acknowledgement numbers. The only variable is the TCP source port, which increments by a fixed amount with each packet. This suggests a possible reconnaissance or scanning activity, potentially indicative of a DoS attack."
-}
-

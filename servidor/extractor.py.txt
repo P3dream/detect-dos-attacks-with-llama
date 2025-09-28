@@ -1,0 +1,79 @@
+#!/usr/bin/env python3
+import subprocess
+import json
+import requests
+import time
+from datetime import datetime
+
+# Configurações
+DETECTOR_URL = "http://192.168.56.1:3000/ia"
+INTERFACE = "enp0s3"
+PACKET_COUNT = 10
+SLEEP_BETWEEN = 1.0
+REQUEST_TIMEOUT = 10
+LOG_FILE = "resultados_deteccao.jsonl"  # arquivo de log
+
+def capture_packets(interface=INTERFACE, packet_count=PACKET_COUNT):
+    tshark_command = [
+        "tshark", "-i", interface, "-c", str(packet_count),
+        "-T", "json", "-Y", "ip",
+        "-e", "frame.time", "-e", "ip.src", "-e", "ip.proto",
+        "-e", "ip.len", "-e", "frame.len", "-e", "tcp.srcport",
+        "-e", "tcp.flags", "-e", "tcp.seq", "-e", "tcp.ack",
+        "-e", "udp.srcport", "-e", "udp.dstport",
+        "-e", "icmp.type", "-e", "icmp.code",
+    ]
+    try:
+        result = subprocess.run(tshark_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=False)
+    except Exception as e:
+        print(f"[{datetime.now().isoformat()}] Erro ao chamar tshark: {e}")
+        return []
+
+    if result.returncode != 0:
+        print(f"[{datetime.now().isoformat()}] Erro na captura: {result.stderr.decode(errors='ignore')}")
+        return []
+
+    try:
+        packets = json.loads(result.stdout.decode(errors='ignore'))
+    except json.JSONDecodeError as e:
+        print(f"[{datetime.now().isoformat()}] Erro JSON do tshark: {e}")
+        return []
+
+    return packets
+
+def send_data_to_url(data, url=DETECTOR_URL):
+    try:
+        response = requests.post(url, json=data, timeout=REQUEST_TIMEOUT)
+        if response.status_code == 200:
+            try:
+                response_json = response.json()
+                print(f"[{datetime.now().isoformat()}] Dados enviados com sucesso.")
+                # Salva no log .jsonl
+                with open(LOG_FILE, "a") as f:
+                    log_entry = {
+                        "timestamp": datetime.now().isoformat(),
+                        "response": response_json
+                    }
+                    f.write(json.dumps(log_entry) + "\n")
+            except Exception:
+                print(f"[{datetime.now().isoformat()}] Resposta não-JSON: {response.text[:200]}")
+        else:
+            print(f"[{datetime.now().isoformat()}] Falha ao enviar. Status: {response.status_code}")
+    except requests.exceptions.RequestException as e:
+        print(f"[{datetime.now().isoformat()}] Erro ao enviar dados: {e}")
+
+def main_loop():
+    print("=== Iniciando captura contínua. Pressione Ctrl-C para parar. ===")
+    try:
+        while True:
+            packets = capture_packets()
+            if packets:
+                send_data_to_url(packets)
+            else:
+                print(f"[{datetime.now().isoformat()}] Nenhum pacote capturado.")
+            time.sleep(SLEEP_BETWEEN)
+    except KeyboardInterrupt:
+        print("\n=== Execução interrompida pelo usuário (Ctrl-C). Encerrando. ===")
+
+if __name__ == "__main__":
+    main_loop()

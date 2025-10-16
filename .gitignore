@@ -1,2 +1,4 @@
 node_modules/
 *.log
+__pycache__/
+last_prompt_sent.txt

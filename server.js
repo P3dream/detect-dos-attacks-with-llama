@@ -205,18 +205,23 @@ app.post("/ia", async (req, res) => {
 
   try {
     // prompt com exemplo JSON
-    const promptMessage = `
-Analyze the following network packets and determine the probability that this is a DoS attack.
-Respond strictly with a single JSON object (no extra text). The JSON must follow exactly this structure:
+const promptMessage = `
+Analyze the network packets and determine the probability (0-100) of a DoS attack.
 
-Example output:
+Return STRICTLY a single JSON object:
+
 {
-  "dos_attack_probability": 75,
-  "justification": "Example justification here...",
-  "ip_origin": "192.168.56.2"
+  "dos_attack_probability": 0,    // integer
+  "justification": "string",      // 1-3 sentences explaining key packet features
+  "ip_origin": "x.x.x.x"          // or "unknown"
 }
 
-Network packets to be analyzed:
+Rules:
+- If data is insufficient, set "dos_attack_probability": 0 and explain in "justification".
+- Use only packet features provided (packet rate, SYN/ACK ratio, repeated payloads, ICMP/UDP flood, multiple source ports, TTL anomalies, fragmentation, etc.)
+- If multiple candidate IPs exist, pick the one with strongest evidence; else "unknown".
+
+Packets to analyze:
 
 ${JSON.stringify(req.body, null, 2)}
 `;
@@ -298,6 +303,10 @@ ${JSON.stringify(req.body, null, 2)}
     appendRequestsLog({ id: uuidv4(), datetime: new Date().toISOString(), error: errObj });
     return res.status(500).json({ error: "Erro interno ao processar a solicitação." });
   }
+});
+
+app.get("/test", (req, res) => {
+  res.send("API is running. Use POST /ia to analyze data.");
 });
 
 app.get("/ultima_analise", (req, res) => {

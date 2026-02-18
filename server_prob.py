@@ -17,7 +17,7 @@ app = FastAPI(title="DoS Detection API")
 class DosAnalysis(BaseModel):
     dos_attack_probability: int
     justification: str
-    ip_origin: List[str]
+#    ip_origin: List[str]
 
 # ----------------- Config -----------------
 REQUESTS_LOG_PATH = "requests.log"
@@ -55,18 +55,17 @@ async def analyze_packets(request: Request):
     try:
         # Construir prompt
         prompt = f"""
-Analyze the following network packets and determine the probability (0-100) of a DoS attack.
+Analyze the following network flow and determine the probability (0-100) of a SYN TCP Flooding DoS attack.
 Return STRICTLY a single JSON object matching the schema:
 
 {{
     "dos_attack_probability": 0,
-    "justification": "string",
-    "ip_origin": ["x.x.x.x"]
+    "justification": "string"
 }}
 
-<packets>
+<flow>
 {data}
-</packets>
+</flow>
 """
 
         # Medir tokens (simples contagem de palavras)
@@ -79,11 +78,11 @@ Return STRICTLY a single JSON object matching the schema:
             messages=[
                 {
                     "role": "system",
-                    "content": "You are a network security analyst specialized in detecting DoS attacks. Always respond only with valid JSON matching the schema."
+                    "content": "You are a network security analyst specialized in detecting SYN TCP flooding DDoS attacks. Always respond only with valid JSON matching the schema."
                 },
                 {"role": "user", "content": prompt}
             ],
-            model="llama3.1",
+            model="llama3.2:1b",
             format=DosAnalysis.model_json_schema(),
             stream=False
         )
@@ -146,4 +145,4 @@ async def test():
 # ----------------- Inicialização -----------------
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("server:app", host="0.0.0.0", port=3000, reload=True)
+    uvicorn.run("server_prob:app", host="0.0.0.0", port=3000, reload=True)

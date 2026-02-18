@@ -1,0 +1,1302 @@
+[
+    {
+        "flow_id": 0,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "probability": 80,
+        "raw_response": {
+            "exec_id": "4edf5ea3-3369-41a8-9a5b-fce9b9bd8c58",
+            "result": {
+                "dos_attack_probability": 80,
+                "justification": "Based on the flow packet count and duration, it appears that this is a SYN TCP flood with potential packet rate exceeding 1 Gbps. However, without explicit information about SYN/ACK and FIN packets, we cannot confirm the exact nature of the attack."
+            }
+        }
+    },
+    {
+        "flow_id": 1,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "probability": 20,
+        "raw_response": {
+            "exec_id": "b610e72a-737b-48cf-a176-f7deaf4ae2c0",
+            "result": {
+                "dos_attack_probability": 20,
+                "justification": "A SYN flood attack is a type of Distributed Denial-of-Service (DDoS) attack where an attacker sends excessive amounts of SYN packets to a target's network interface card, overwhelming the system with connections and making it unavailable to legitimate users."
+            }
+        }
+    },
+    {
+        "flow_id": 2,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "probability": 0,
+        "raw_response": {
+            "exec_id": "3fd5363a-a5ee-42b5-8c9e-04ba00c48364",
+            "result": {
+                "dos_attack_probability": 0,
+                "justification": "This analysis does not provide enough information to determine the probability of a SYN TCP Flooding DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 3,
+        "true_label": "BENIGN",
+        "predicted": "SYN",
+        "probability": 100,
+        "raw_response": {
+            "exec_id": "e65fe6a0-c159-485e-98b1-034692072706",
+            "result": {
+                "dos_attack_probability": 100,
+                "justification": "High probability of SYN TCP Flooding DoS attack due to large number of packets sent in a short duration."
+            }
+        }
+    },
+    {
+        "flow_id": 4,
+        "true_label": "BENIGN",
+        "predicted": "SYN",
+        "probability": 100,
+        "raw_response": {
+            "exec_id": "b5fcb186-3d89-433d-940f-53d885732786",
+            "result": {
+                "dos_attack_probability": 100,
+                "justification": "The provided network flow does not contain any evidence that would support a SYN TCP Flooding DoS attack. The packet rates are relatively low and the flow duration is short, suggesting that it may be a normal packet traffic or a legitimate test case."
+            }
+        }
+    },
+    {
+        "flow_id": 5,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "probability": 0,
+        "raw_response": {
+            "exec_id": "0f557c1c-e4a9-49f6-9a23-f3edd7281686",
+            "result": {
+                "dos_attack_probability": 0,
+                "justification": "Highly suspicious network flow indicative of a potential SYN TCP Flooding DoS attack due to the high number of packets sent and large packet size."
+            }
+        }
+    },
+    {
+        "flow_id": 6,
+        "true_label": "BENIGN",
+        "predicted": "SYN",
+        "probability": 100,
+        "raw_response": {
+            "exec_id": "76b4b6fb-e089-4bee-969b-3b2f740d8acf",
+            "result": {
+                "dos_attack_probability": 100,
+                "justification": "The given flow packet rate exceeds the rate of one SYN packet per second, which is a characteristic of SYN flood attacks."
+            }
+        }
+    },
+    {
+        "flow_id": 7,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "probability": 10,
+        "raw_response": {
+            "exec_id": "c1e7a81e-7bd3-496c-8e29-179369095e81",
+            "result": {
+                "dos_attack_probability": 10,
+                "justification": "This flow exhibits characteristics of a SYN TCP flooding DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 8,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "probability": 0,
+        "raw_response": {
+            "exec_id": "b3b51d70-dc17-43d4-9aaa-f4bbf9b442ee",
+            "result": {
+                "dos_attack_probability": 0,
+                "justification": "Based on the given flow and characteristics, it is extremely unlikely to detect a SYN TCP Flooding DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 9,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "probability": 0,
+        "raw_response": {
+            "exec_id": "d447cfe8-821b-4ecc-bd12-6fcd60da7325",
+            "result": {
+                "dos_attack_probability": 0,
+                "justification": "No clear indication of SYN TCP Flooding in this flow, and no packet loss or error is mentioned."
+            }
+        }
+    },
+    {
+        "flow_id": 10,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "probability": 50,
+        "raw_response": {
+            "exec_id": "8d37b981-6309-4fac-aec9-b47d39aa68ca",
+            "result": {
+                "dos_attack_probability": 50,
+                "justification": "Based on the analysis, it is estimated that there is a moderate probability (50%) of detecting SYN TCP Flooding DoS attacks based on this network flow. The high number of packets per second and average packet size indicate a potential attack vector."
+            }
+        }
+    },
+    {
+        "flow_id": 11,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "probability": 0,
+        "raw_response": {
+            "exec_id": "e9547d80-1908-4a0e-a3b3-15886bebb844",
+            "result": {
+                "dos_attack_probability": 0,
+                "justification": "No indication of SYN TCP Flooding DoS attack in the provided network flow."
+            }
+        }
+    },
+    {
+        "flow_id": 12,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "probability": 20,
+        "raw_response": {
+            "exec_id": "37e73753-1e4f-416b-8adb-7734652dd546",
+            "result": {
+                "dos_attack_probability": 20,
+                "justification": "Based on the flow analysis, it's highly likely to be a SYN TCP Flooding DoS attack due to the excessive packet forwarding and high initial window size."
+            }
+        }
+    },
+    {
+        "flow_id": 13,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "probability": 0,
+        "raw_response": {
+            "exec_id": "616cf67f-af3a-47f9-8a14-3184f7659d8b",
+            "result": {
+                "dos_attack_probability": 0,
+                "justification": "This flow does not indicate a SYN TCP flooding attack as it has no multiple packets in a window for the same IP address and TCP sequence number, which is a characteristic of this type of attack."
+            }
+        }
+    },
+    {
+        "flow_id": 14,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "probability": 0,
+        "raw_response": {
+            "exec_id": "9e828139-9a4e-49ed-afca-5523f60526aa",
+            "result": {
+                "dos_attack_probability": 0,
+                "justification": "No indication of SYN TCP Flooding in the given network flow"
+            }
+        }
+    },
+    {
+        "flow_id": 15,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "probability": 10,
+        "raw_response": {
+            "exec_id": "89515d38-b2d8-425c-9cc9-3e26c1837f58",
+            "result": {
+                "dos_attack_probability": 10,
+                "justification": "The flow packets per second is high which may indicate a large number of SYN TCP packets sent by an attacker to overwhelm the system's firewall and router."
+            }
+        }
+    },
+    {
+        "flow_id": 16,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "probability": 0,
+        "raw_response": {
+            "exec_id": "83b4f0cd-81da-4e7c-8a63-fbd9052ddddd",
+            "result": {
+                "dos_attack_probability": 0,
+                "justification": "The specified flow does not exhibit any patterns indicative of SYN TCP flooding DDoS attacks, such as an unusually high number of packets sent in a short period or excessive traffic volume. Syn flooding is typically used by attackers to overwhelm networks with a flood of synthetic requests."
+            }
+        }
+    },
+    {
+        "flow_id": 17,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "probability": 0,
+        "raw_response": {
+            "exec_id": "18f8baab-849a-4b7c-b0ff-cabf985173be",
+            "result": {
+                "dos_attack_probability": 0,
+                "justification": "Based on the provided flow, there is no indication of a SYN TCP Flooding DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 18,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "probability": 50,
+        "raw_response": {
+            "exec_id": "75072759-5d90-4c16-9334-5184f452fe10",
+            "result": {
+                "dos_attack_probability": 50,
+                "justification": "Based on the packet count and average packet size, this SYN flood could cause significant network congestion."
+            }
+        }
+    },
+    {
+        "flow_id": 19,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "probability": 0,
+        "raw_response": {
+            "exec_id": "31c416b2-2ddf-4866-ba81-d768898035ed",
+            "result": {
+                "dos_attack_probability": 0,
+                "justification": "Based on the flow provided, it does not indicate a high probability of SYN TCP Flooding DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 20,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "probability": 0,
+        "raw_response": {
+            "exec_id": "6b210f75-0c33-49ce-96d3-90c0bd5c7c6c",
+            "result": {
+                "dos_attack_probability": 0,
+                "justification": "Based on the provided flow, there are no indications of a SYN TCP Flooding DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 21,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "probability": 70,
+        "raw_response": {
+            "exec_id": "130ca0d7-84ad-4303-9b27-b7b66d6a6a25",
+            "result": {
+                "dos_attack_probability": 70,
+                "justification": "This flow indicates a high volume of packets being sent in a short period, which could be indicative of a SYN TCP flooding DDoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 22,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "probability": 0,
+        "raw_response": {
+            "exec_id": "7eefdf97-d6f6-4b27-8a7d-bd0c9df79083",
+            "result": {
+                "dos_attack_probability": 0,
+                "justification": "The provided network flow does not exhibit any characteristics that would increase the likelihood of a SYN TCP Flooding DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 23,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "probability": 40,
+        "raw_response": {
+            "exec_id": "5db5e92b-f7c7-49ad-8dcf-f7f0d580549f",
+            "result": {
+                "dos_attack_probability": 40,
+                "justification": "Based on the flow duration and packet rates, it is possible to detect a SYN TCP flooding DDoS attack due to the high number of packets per second (103448.27586206896) and average packet size (8.0), indicating significant data traffic. However, without specific indicators such as TCP sequence numbers or a larger packet size ratio, the probability remains uncertain."
+            }
+        }
+    },
+    {
+        "flow_id": 24,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "probability": 0,
+        "raw_response": {
+            "exec_id": "857543d1-e557-4da3-a669-95a37e25cc2b",
+            "result": {
+                "dos_attack_probability": 0,
+                "justification": "The given flow does not contain any SYN packets or TCP segments, which are the building blocks of a SYN flooding attack."
+            }
+        }
+    },
+    {
+        "flow_id": 25,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "probability": 50,
+        "raw_response": {
+            "exec_id": "007c4a76-16bd-415a-ac82-e05a146e8ac1",
+            "result": {
+                "dos_attack_probability": 50,
+                "justification": "SYN flood attacks are a common type of Distributed Denial of Service (DDoS) attack where an attacker sends a large number of SYN packets to a target network interface, overwhelming the router's processing capacity and causing it to crash or become unresponsive."
+            }
+        }
+    },
+    {
+        "flow_id": 26,
+        "true_label": "BENIGN",
+        "predicted": "SYN",
+        "probability": 100,
+        "raw_response": {
+            "exec_id": "efa40f81-41b4-48c2-b861-d52f79bbdcb6",
+            "result": {
+                "dos_attack_probability": 100,
+                "justification": "Based on the provided network flow analysis, it is highly likely that a SYN TCP Flooding DoS attack exists. The high number of packets per second (193.23671497584544) and average packet size (55.25 bytes) suggests excessive traffic, which is indicative of flooding."
+            }
+        }
+    },
+    {
+        "flow_id": 27,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "probability": 0,
+        "raw_response": {
+            "exec_id": "91093796-de1b-411a-a42c-3f3d9175decf",
+            "result": {
+                "dos_attack_probability": 0,
+                "justification": "Based on the flow analysis, there is no indication of a SYN TCP Flooding DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 28,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "probability": 0,
+        "raw_response": {
+            "exec_id": "cbd82bb1-f1a5-4ac7-b78b-e72e85b4e303",
+            "result": {
+                "dos_attack_probability": 0,
+                "justification": "Based on the analysis of the network flow, it is clear that this SYN TCP flood is not a realistic or imminent attack scenario due to several factors such as the low number of packets per second (1000000.0) and the relatively large average packet size (31.0 bytes), which may indicate a legitimate network traffic pattern."
+            }
+        }
+    },
+    {
+        "flow_id": 29,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "probability": 85,
+        "raw_response": {
+            "exec_id": "25c6d069-496b-4937-9fb9-2c83fb8b57d3",
+            "result": {
+                "dos_attack_probability": 85,
+                "justification": "Based on the provided flow data, it can be observed that there is a significant amount of SYN packets sent and forwarded. However, the packet rate (1 million packets per second) is not extremely high compared to other known attacks such as RANSOM or SQL Injection, which are more likely to cause network congestion and flooding. Nevertheless, this alone does not guarantee the existence of an attack. "
+            }
+        }
+    },
+    {
+        "flow_id": 30,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "probability": 0,
+        "raw_response": {
+            "exec_id": "995dae37-f1e2-4584-8581-ff5688f9c5d5",
+            "result": {
+                "dos_attack_probability": 0,
+                "justification": "The flow packets per second are below the threshold of 2,000 (163.09887869520895 / 8) which means it is unlikely to be a SYN TCP Flooding DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 31,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "probability": 0,
+        "raw_response": {
+            "exec_id": "d6cbad4b-861b-4273-8eba-470b27645a95",
+            "result": {
+                "dos_attack_probability": 0,
+                "justification": "No indication of SYN TCP flooding in the provided network flow."
+            }
+        }
+    },
+    {
+        "flow_id": 32,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "probability": 100,
+        "raw_response": {
+            "exec_id": "bca1a710-a9d8-4942-b804-3926693c2f15",
+            "result": {
+                "dos_attack_probability": 100,
+                "justification": "This network flow does not contain any SYN TCP traffic, which is indicative of a SYN Flood TCP attack."
+            }
+        }
+    },
+    {
+        "flow_id": 33,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "probability": 50,
+        "raw_response": {
+            "exec_id": "0d8df20a-4324-46bc-9415-07264c127038",
+            "result": {
+                "dos_attack_probability": 50,
+                "justification": "No indication of SYN TCP flooding in this flow. However, it's worth noting that the high number of packets per second could be suspicious and warrant further investigation."
+            }
+        }
+    },
+    {
+        "flow_id": 34,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "probability": 30,
+        "raw_response": {
+            "exec_id": "30595218-045e-4c27-b4c8-af55f02b573a",
+            "result": {
+                "dos_attack_probability": 30,
+                "justification": "The given network flow represents a high-priority SYN TCP flood with a large number of packets and high packet size. This level of traffic can indicate a significant attack, suggesting a low probability (0) of the described condition occurring."
+            }
+        }
+    },
+    {
+        "flow_id": 35,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "probability": 0,
+        "raw_response": {
+            "exec_id": "c081942f-4926-4704-a255-b704e328e318",
+            "result": {
+                "dos_attack_probability": 0,
+                "justification": "This analysis does not detect any indication of a SYN TCP Flooding DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 36,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "probability": 0,
+        "raw_response": {
+            "exec_id": "67a2aec9-6665-4a10-9f2d-997f94014cf7",
+            "result": {
+                "dos_attack_probability": 0,
+                "justification": "The flow duration is greater than the recommended value of 300 seconds (5 minutes), and the number of packets per second (58823.52941176471) exceeds the maximum allowed (65535)."
+            }
+        }
+    },
+    {
+        "flow_id": 37,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "probability": 0,
+        "raw_response": {
+            "exec_id": "067efeec-1fb2-4054-96c4-b7022af6b462",
+            "result": {
+                "dos_attack_probability": 0,
+                "justification": "The given network flow does not show any indication of SYN TCP flooding DDoS attack"
+            }
+        }
+    },
+    {
+        "flow_id": 38,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "probability": 0,
+        "raw_response": {
+            "exec_id": "69045f67-a7ae-448e-9481-cd3b5f1de531",
+            "result": {
+                "dos_attack_probability": 0,
+                "justification": "No indication of SYN TCP flooding in the network flow data provided."
+            }
+        }
+    },
+    {
+        "flow_id": 39,
+        "true_label": "BENIGN",
+        "predicted": "SYN",
+        "probability": 75,
+        "raw_response": {
+            "exec_id": "02d26a7a-ba37-4939-801c-e0cb023708fc",
+            "result": {
+                "dos_attack_probability": 75,
+                "justification": "The flow rate of packets per second (1.3630721137390989) is relatively high indicating potential SYN TCP flooding. However, the average packet size and window size are both zero, which significantly reduces the attack's payload."
+            }
+        }
+    },
+    {
+        "flow_id": 40,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "probability": 10,
+        "raw_response": {
+            "exec_id": "87e36221-b434-48df-8e77-e151dcb429d5",
+            "result": {
+                "dos_attack_probability": 10,
+                "justification": "This network flow does not contain any indication of SYN TCP flooding or DDoS attacks"
+            }
+        }
+    },
+    {
+        "flow_id": 41,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "probability": 0,
+        "raw_response": {
+            "exec_id": "46c6135e-e9a1-4277-99e3-28bf173917f4",
+            "result": {
+                "dos_attack_probability": 0,
+                "justification": "Based on the given flow, it is highly unlikely to detect a SYN TCP Flooding DoS attack due to the average packet size being larger than the window size of most TCP connections, which reduces the number of packets that can be forwarded per second. Additionally, the average forwarding segment size is smaller than the average packet size."
+            }
+        }
+    },
+    {
+        "flow_id": 42,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "probability": 0,
+        "raw_response": {
+            "exec_id": "6fefa50c-7ed2-4c68-8469-3f10fa89a022",
+            "result": {
+                "dos_attack_probability": 0,
+                "justification": "Based on the provided flow data, it is highly unlikely to detect a SYN TCP Flooding DoS attack due to the following reasons:\n"
+            }
+        }
+    },
+    {
+        "flow_id": 43,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "probability": 80,
+        "raw_response": {
+            "exec_id": "139ecf23-df57-4e0c-b962-d6e349860074",
+            "result": {
+                "dos_attack_probability": 80,
+                "justification": "Based on the given network flow characteristics, we can calculate the probability of a SYN TCP Flooding DoS attack as follows: The average number of packets per second (pps) is high (2000000.0), indicating potential congestion. However, the forward window size (5840 bytes) is relatively small compared to packet sizes (9 bytes). This suggests limited data being transmitted simultaneously, which can help prevent SYN TCP floods. Nevertheless, it's essential to consider other factors such as response times and packet loss rates for a definitive determination."
+            }
+        }
+    },
+    {
+        "flow_id": 44,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "probability": 0,
+        "raw_response": {
+            "exec_id": "baad9c2d-a63c-4666-88df-47ffa561d02e",
+            "result": {
+                "dos_attack_probability": 0,
+                "justification": "Based on the provided flow data, there is no indication of a SYN TCP flooding DoS attack. The packet rate per second (112 packets/s) is relatively low and does not suggest excessive packet flooding. Additionally, the average size of the forwarded segment is very small (0 bytes)."
+            }
+        }
+    },
+    {
+        "flow_id": 45,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "probability": 0,
+        "raw_response": {
+            "exec_id": "38aa1274-ab70-4392-9815-ef54fa56102b",
+            "result": {
+                "dos_attack_probability": 0,
+                "justification": "Based on the provided flow analysis, there is no indication of a SYN TCP Flooding DoS attack. The average packet size and forwarding window size are below typical threshold values for such attacks."
+            }
+        }
+    },
+    {
+        "flow_id": 46,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "probability": 0,
+        "raw_response": {
+            "exec_id": "f769e1c4-bdd6-4b69-9dd0-b7aef4bf0144",
+            "result": {
+                "dos_attack_probability": 0,
+                "justification": "Highly suspicious flow characteristics indicating potential SYN TCP Flooding DoS attack"
+            }
+        }
+    },
+    {
+        "flow_id": 47,
+        "true_label": "BENIGN",
+        "predicted": "SYN",
+        "probability": 80,
+        "raw_response": {
+            "exec_id": "49074f63-c144-4c2f-a49a-9be7190ed3e9",
+            "result": {
+                "dos_attack_probability": 80,
+                "justification": "Based on the analysis of the network flow, there are a total of 116248304 packets in the duration period, out of which 0.6107615987240553 packets per second is forwarded for each packet. The average size of each packet and segment is 99.2112676056338 bytes and 71.84615384615384 bytes respectively. This suggests that there are significant SYN packets being sent without a corresponding response, indicating potential SYN TCP Flooding DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 48,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "probability": 10,
+        "raw_response": {
+            "exec_id": "eea93b27-39e0-465e-985f-0591fba617fe",
+            "result": {
+                "dos_attack_probability": 10,
+                "justification": "Based on the flow rate of 2000000 packets per second and average packet size of 9 bytes, a SYN TCP flooding DDoS attack is highly probable."
+            }
+        }
+    },
+    {
+        "flow_id": 49,
+        "true_label": "BENIGN",
+        "predicted": "SYN",
+        "probability": 100,
+        "raw_response": {
+            "exec_id": "efeb3099-c469-48ce-8d56-29929d245ebb",
+            "result": {
+                "dos_attack_probability": 100,
+                "justification": "The flow has a high number of SYN packets and a low packet loss rate, indicating potential TCP flood attacks."
+            }
+        }
+    },
+    {
+        "flow_id": 50,
+        "true_label": "BENIGN",
+        "predicted": "SYN",
+        "probability": 70,
+        "raw_response": {
+            "exec_id": "bde4a673-69d4-4465-86c8-7d480abf4011",
+            "result": {
+                "dos_attack_probability": 70,
+                "justification": "Based on the provided network flow analysis, a SYN TCP Flooding DoS attack is highly likely due to the high number of packet forwarding and the large average packet size."
+            }
+        }
+    },
+    {
+        "flow_id": 51,
+        "true_label": "BENIGN",
+        "predicted": "SYN",
+        "probability": 70,
+        "raw_response": {
+            "exec_id": "471dc5b8-476d-43e0-b012-9264dce351a3",
+            "result": {
+                "dos_attack_probability": 70,
+                "justification": "The flow packets per second is less than the recommended value of 1, which suggests that there may be a SYN TCP flood attack attempting to saturate the network."
+            }
+        }
+    },
+    {
+        "flow_id": 52,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "probability": 0,
+        "raw_response": {
+            "exec_id": "a6bc2261-0d27-4b4d-a62e-a619509d4452",
+            "result": {
+                "dos_attack_probability": 0,
+                "justification": "This network flow does not exhibit the characteristics of a SYN TCP Flooding DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 53,
+        "true_label": "BENIGN",
+        "predicted": "SYN",
+        "probability": 100,
+        "raw_response": {
+            "exec_id": "c96f9033-ae37-429f-887f-b65b1a45af32",
+            "result": {
+                "dos_attack_probability": 100,
+                "justification": "The flow duration is significantly high (> 2 seconds), indicating a potential SYN TCP flooding DDoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 54,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "probability": 10,
+        "raw_response": {
+            "exec_id": "ce4d5a0e-4126-4675-b0e4-50a425e444ec",
+            "result": {
+                "dos_attack_probability": 10,
+                "justification": "The given flow shows a large number of packets being sent and received in a short period, which is indicative of SYN TCP Flooding DoS attacks. The high packet arrival rate (2000000) along with the forward segment size and packet size indicating a relatively low overhead suggests a significant amount of traffic being sent and potentially overwhelming network resources."
+            }
+        }
+    },
+    {
+        "flow_id": 55,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "probability": 60,
+        "raw_response": {
+            "exec_id": "3d5ac3c9-6eda-4d03-8e2f-71aba5df366d",
+            "result": {
+                "dos_attack_probability": 60,
+                "justification": "Based on the provided flow, it is unlikely to detect a SYN TCP Flooding DoS attack due to the relatively low packet rate (1 second) and the presence of a 'avg_packet_size' value close to the expected segment size."
+            }
+        }
+    },
+    {
+        "flow_id": 56,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "probability": 50,
+        "raw_response": {
+            "exec_id": "6f4ef973-37b7-4786-a72e-86c715b30e50",
+            "result": {
+                "dos_attack_probability": 50,
+                "justification": "A SYN TCP flood can have a high attack probability if the number of packets sent is large and the packet size is relatively small compared to the bandwidth. A common rule of thumb is that for every kilobyte (KB) of bandwidth, you should not send more than 200-300 packets per second. In this case, if the average forward segment size is approximately 35 KB, which is larger than typical TCP header sizes and likely a result of a SYN packet, then the attack probability could be higher."
+            }
+        }
+    },
+    {
+        "flow_id": 57,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "probability": 0,
+        "raw_response": {
+            "exec_id": "81d0c022-e1f8-4106-8067-43a11360704a",
+            "result": {
+                "dos_attack_probability": 0,
+                "justification": "This analysis does not contain any evidence of SYN TCP Flooding DoS attacks."
+            }
+        }
+    },
+    {
+        "flow_id": 58,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "probability": 0,
+        "raw_response": {
+            "exec_id": "59dd7250-83f2-4da1-a683-8a0590d8a57d",
+            "result": {
+                "dos_attack_probability": 0,
+                "justification": "The given network flow does not contain any valid SYN packets and the flow rate is within normal limits."
+            }
+        }
+    },
+    {
+        "flow_id": 59,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "probability": 40,
+        "raw_response": {
+            "exec_id": "0c37cf5a-a8f9-4385-a39b-46159c524ca1",
+            "result": {
+                "dos_attack_probability": 40,
+                "justification": "Low probability due to significant packet loss and retransmission rates."
+            }
+        }
+    },
+    {
+        "flow_id": 60,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "probability": 0,
+        "raw_response": {
+            "exec_id": "6c179e6a-360e-4f5e-a4ed-0805925d732f",
+            "result": {
+                "dos_attack_probability": 0,
+                "justification": "The flow packets per second are less than 50000, which is the threshold of packet flooding attacks."
+            }
+        }
+    },
+    {
+        "flow_id": 61,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "probability": 80,
+        "raw_response": {
+            "exec_id": "98994614-0693-4147-a9f7-567f6f824d91",
+            "result": {
+                "dos_attack_probability": 80,
+                "justification": "High likelihood of a SYN TCP Flooding DoS attack due to high average packet and segment sizes and the significant number of packets per second."
+            }
+        }
+    },
+    {
+        "flow_id": 62,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "probability": 100,
+        "raw_response": {
+            "exec_id": "6ce2274e-7d58-4127-825f-b2d80acca38d",
+            "result": {
+                "dos_attack_probability": 100,
+                "justification": "This network flow exhibits characteristics of SYN TCP Flooding DoS attacks due to the large number of packets sent per second and the relatively small packet size. The high duration also suggests a prolonged attack, increasing the likelihood of flooding."
+            }
+        }
+    },
+    {
+        "flow_id": 63,
+        "true_label": "BENIGN",
+        "predicted": "SYN",
+        "probability": 80,
+        "raw_response": {
+            "exec_id": "4ecdff29-fc5d-4949-b491-5b035524c9e7",
+            "result": {
+                "dos_attack_probability": 80,
+                "justification": "Based on the analysis of the given network flow, a SYN TCP Flooding DoS attack is highly probable due to the large number of packets sent and received in a short duration."
+            }
+        }
+    },
+    {
+        "flow_id": 64,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "probability": 20,
+        "raw_response": {
+            "exec_id": "edbb25f8-f2ee-449e-a6f3-ee7902fa5084",
+            "result": {
+                "dos_attack_probability": 20,
+                "justification": "Based on the provided network flow, it is observed that there are no indications of SYN TCP Flooding DoS attacks."
+            }
+        }
+    },
+    {
+        "flow_id": 65,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "probability": 80,
+        "raw_response": {
+            "exec_id": "775a6805-35ee-40c6-b8d7-3233aa800b9e",
+            "result": {
+                "dos_attack_probability": 80,
+                "justification": "Based on the flow rate of 2,000,000 packets per second and an average packet size of 9 bytes, this corresponds to a TCP flood with a high probability of being a SYN TCP Flooding DDoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 66,
+        "true_label": "BENIGN",
+        "predicted": "SYN",
+        "probability": 80,
+        "raw_response": {
+            "exec_id": "ac7532b0-3a5e-470c-b793-213657b8227b",
+            "result": {
+                "dos_attack_probability": 80,
+                "justification": "Based on the network flow analysis, there is a high probability of SYN TCP Flooding DDoS attack due to excessive packet forwarding and average packet size."
+            }
+        }
+    },
+    {
+        "flow_id": 67,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "probability": 20,
+        "raw_response": {
+            "exec_id": "d56df337-2476-44a4-baee-fa3f139d871c",
+            "result": {
+                "dos_attack_probability": 20,
+                "justification": "Based on the given network flow, it is highly likely to detect a SYN TCP Flooding DoS attack as the large amount of packets per second (2000000.0) and high packet size (9.0 bytes) suggest a malicious activity that consumes network resources."
+            }
+        }
+    },
+    {
+        "flow_id": 68,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "probability": 100,
+        "raw_response": {
+            "exec_id": "ef659b22-9e28-4f2c-bdd1-6c3d8b55baa8",
+            "result": {
+                "dos_attack_probability": 100,
+                "justification": "The given network flow does not contain any indication of SYN TCP flooding DDoS attacks."
+            }
+        }
+    },
+    {
+        "flow_id": 69,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "probability": 0,
+        "raw_response": {
+            "exec_id": "bf119d3d-cd48-4f1d-9614-ed5350af5a38",
+            "result": {
+                "dos_attack_probability": 0,
+                "justification": "There is insufficient information to calculate the probability of a SYN TCP Flooding DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 70,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "probability": 0,
+        "raw_response": {
+            "exec_id": "7b5e072b-feeb-4e92-af41-d8cd7489934e",
+            "result": {
+                "dos_attack_probability": 0,
+                "justification": "No indication of SYN TCP flooding DDoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 71,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "probability": 50,
+        "raw_response": {
+            "exec_id": "bab81036-effc-482d-84b3-739a27f9cf11",
+            "result": {
+                "dos_attack_probability": 50,
+                "justification": "Based on the provided flow data, we can infer that this is an indication of potential SYN TCP Flooding DDoS attacks but without specific details to calculate a precise probability. However, given the characteristics of the traffic pattern (duration and packet rate), it would be challenging to accurately estimate the attack likelihood based solely on this information."
+            }
+        }
+    },
+    {
+        "flow_id": 72,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "probability": 10,
+        "raw_response": {
+            "exec_id": "20ec7a68-924d-494e-9839-51d4cdba62dd",
+            "result": {
+                "dos_attack_probability": 10,
+                "justification": "This network flow indicates a high number of packets sent in a short period, suggesting potential SYN TCP flooding activity."
+            }
+        }
+    },
+    {
+        "flow_id": 73,
+        "true_label": "BENIGN",
+        "predicted": "SYN",
+        "probability": 100,
+        "raw_response": {
+            "exec_id": "fa38c479-d9f8-435f-9b86-a92f1c2fa70a",
+            "result": {
+                "dos_attack_probability": 100,
+                "justification": "The given network flow exhibits characteristics typical of SYN TCP flooding attacks, such as a high packet rate and a significant number of packets per second. The large average packet size also supports this suspicion. Given these indicators alone, it is likely that the traffic in this flow represents an attack attempt."
+            }
+        }
+    },
+    {
+        "flow_id": 74,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "probability": 0,
+        "raw_response": {
+            "exec_id": "fb3b98df-6391-4bd5-8de0-7a9f48b3b7a9",
+            "result": {
+                "dos_attack_probability": 0,
+                "justification": "This network flow does not indicate any indication of a SYN TCP Flooding DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 75,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "probability": 20,
+        "raw_response": {
+            "exec_id": "67b18666-6131-4a69-a567-f1bd1a25d8a9",
+            "result": {
+                "dos_attack_probability": 20,
+                "justification": "Based on the provided flow analysis, the probability of a SYN TCP Flooding DoS attack is estimated to be 20%."
+            }
+        }
+    },
+    {
+        "flow_id": 76,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "probability": 100,
+        "raw_response": {
+            "exec_id": "2dabae00-f06f-40db-ab43-3e267010a80c",
+            "result": {
+                "dos_attack_probability": 100,
+                "justification": "Based on the network flow analysis, the probability of a SYN TCP Flooding DoS attack is HIGH (>= 80)."
+            }
+        }
+    },
+    {
+        "flow_id": 77,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "probability": 0,
+        "raw_response": {
+            "exec_id": "9c36bbba-57ce-40d6-ae00-180656c34383",
+            "result": {
+                "dos_attack_probability": 0,
+                "justification": "No indication of SYN TCP Flooding DDoS attack"
+            }
+        }
+    },
+    {
+        "flow_id": 78,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "probability": 50,
+        "raw_response": {
+            "exec_id": "77ebbca9-82e8-4a8a-b292-239c8f32f936",
+            "result": {
+                "dos_attack_probability": 50,
+                "justification": "Based on the flow duration and packet rate, a high likelihood of SYN TCP flooding DDoS attack due to the long duration and low packet rate."
+            }
+        }
+    },
+    {
+        "flow_id": 79,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "probability": 0,
+        "raw_response": {
+            "exec_id": "4728c8a4-0292-4e5a-8f17-d14aacaaa4ab",
+            "result": {
+                "dos_attack_probability": 0,
+                "justification": "No indication of SYN TCP Flooding in this flow."
+            }
+        }
+    },
+    {
+        "flow_id": 80,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "probability": 100,
+        "raw_response": {
+            "exec_id": "a53b84c8-8de6-4bb8-a03b-96665510eb11",
+            "result": {
+                "dos_attack_probability": 100,
+                "justification": "This network flow exhibits high SYN packet arrival rates (> 10 packets per second) and a large number of forward segments (> 200), indicating a strong potential for SYN flooding attacks."
+            }
+        }
+    },
+    {
+        "flow_id": 81,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "probability": 0,
+        "raw_response": {
+            "exec_id": "17f9807b-89d9-4e7a-b31c-101f800bca5e",
+            "result": {
+                "dos_attack_probability": 0,
+                "justification": "Based on the flow analysis, there are no indications of a SYN TCP flooding DDoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 82,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "probability": 0,
+        "raw_response": {
+            "exec_id": "9d6bb890-4524-4435-888c-da49e5b15b28",
+            "result": {
+                "dos_attack_probability": 0,
+                "justification": "Based on the provided flow analysis, there is no indication of a SYN TCP Flooding DoS attack in this network flow. The packet rates and average sizes do not suggest such an attack."
+            }
+        }
+    },
+    {
+        "flow_id": 83,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "probability": 0,
+        "raw_response": {
+            "exec_id": "d74f2720-217f-414f-84c9-b4ee52597dda",
+            "result": {
+                "dos_attack_probability": 0,
+                "justification": "Based on the provided flow, there is no indication of a SYN TCP Flooding DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 84,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "probability": 0,
+        "raw_response": {
+            "exec_id": "72150d5d-7c38-4219-82e0-50c88e346780",
+            "result": {
+                "dos_attack_probability": 0,
+                "justification": "Based on the provided flow analysis, it is impossible to determine a probability of SYN TCP Flooding DoS attack as there are no indications of excessive SYN packets or flooding."
+            }
+        }
+    },
+    {
+        "flow_id": 85,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "probability": 0,
+        "raw_response": {
+            "exec_id": "cd03c593-ac80-410a-8221-209642596812",
+            "result": {
+                "dos_attack_probability": 0,
+                "justification": "No indication of SYN TCP Flooding DoS attack"
+            }
+        }
+    },
+    {
+        "flow_id": 86,
+        "true_label": "BENIGN",
+        "predicted": "SYN",
+        "probability": 90,
+        "raw_response": {
+            "exec_id": "6e0c1d2d-c4e4-4795-bfe8-3d678d45405b",
+            "result": {
+                "dos_attack_probability": 90,
+                "justification": "Based on the flow analysis, the number of packets sent per second is relatively low (0.4704453977927088), indicating a potential SYN TCP flooding DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 87,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "probability": 0,
+        "raw_response": {
+            "exec_id": "f1607ee3-3325-4711-9e4e-83ad6d716923",
+            "result": {
+                "dos_attack_probability": 0,
+                "justification": "Insufficient information to calculate the probability of a SYN TCP Flooding DoS attack"
+            }
+        }
+    },
+    {
+        "flow_id": 88,
+        "true_label": "BENIGN",
+        "predicted": "SYN",
+        "probability": 75,
+        "raw_response": {
+            "exec_id": "7df0fdcb-701f-486f-88e8-347292bfd0df",
+            "result": {
+                "dos_attack_probability": 75,
+                "justification": "Based on the given network flow, it is observed that there are 6 seconds of SYN TCP traffic sent with a rate of 500000 packets per second. The average packet size and forward segment size suggest some level of header compression, which could be indicative of a SYN flood. However, the init_win_bytes_forward value is negative (-1), indicating that the window size for the initial connection might be set to zero or very small, potentially reducing the attack's effectiveness."
+            }
+        }
+    },
+    {
+        "flow_id": 89,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "probability": 50,
+        "raw_response": {
+            "exec_id": "8e94d93c-0051-461b-82ad-28eae569ee26",
+            "result": {
+                "dos_attack_probability": 50,
+                "justification": "Based on the flow rate of 1000000 packets per second and an average packet size of 9 bytes, the duration is estimated to be around 1.8 seconds. Assuming an attack duration of at least 2 seconds, we can consider this a high-probability zone."
+            }
+        }
+    },
+    {
+        "flow_id": 90,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "probability": 100,
+        "raw_response": {
+            "exec_id": "715601ee-5b6c-4840-9c93-419cd3162a55",
+            "result": {
+                "dos_attack_probability": 100,
+                "justification": "Based on the provided flow characteristics, it is highly likely that a SYN TCP Flooding DoS attack is occurring."
+            }
+        }
+    },
+    {
+        "flow_id": 91,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "probability": 0,
+        "raw_response": {
+            "exec_id": "47de5518-34be-44cd-8583-3aeab39e6c90",
+            "result": {
+                "dos_attack_probability": 0,
+                "justification": "Based on the provided flow data, we can determine that this network flow is not indicative of a SYN TCP Flooding DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 92,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "probability": 100,
+        "raw_response": {
+            "exec_id": "f1c3adf4-582a-422c-bc13-683c67b62c5a",
+            "result": {
+                "dos_attack_probability": 100,
+                "justification": "Based on the provided network flow analysis, there are no indications of a SYN TCP Flooding DoS attack. The packet rates and sizes appear to be within normal operating ranges for forwarding traffic. Therefore, the probability of this being a SYN TCP Flooding DoS attack is close to 0."
+            }
+        }
+    },
+    {
+        "flow_id": 93,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "probability": 0,
+        "raw_response": {
+            "exec_id": "75ac40d0-32b9-4f1f-92d6-6b38f438b1a9",
+            "result": {
+                "dos_attack_probability": 0,
+                "justification": "No indication of SYN TCP flooding in the network flow"
+            }
+        }
+    },
+    {
+        "flow_id": 94,
+        "true_label": "BENIGN",
+        "predicted": "SYN",
+        "probability": 100,
+        "raw_response": {
+            "exec_id": "2da92a13-15aa-4679-86fb-9e05a6f244ff",
+            "result": {
+                "dos_attack_probability": 100,
+                "justification": "This flow indicates a high packet count and forward rate, suggesting a potential SYN TCP flooding attack."
+            }
+        }
+    },
+    {
+        "flow_id": 95,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "probability": 0,
+        "raw_response": {
+            "exec_id": "18256d2b-7b49-45f3-ab4a-1df19a815323",
+            "result": {
+                "dos_attack_probability": 0,
+                "justification": "No indication of SYN TCP flooding in the given network flow."
+            }
+        }
+    },
+    {
+        "flow_id": 96,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "probability": 50,
+        "raw_response": {
+            "exec_id": "840af8ba-c68a-4334-a3da-875efcb94988",
+            "result": {
+                "dos_attack_probability": 50,
+                "justification": "SYN TCP flooding attacks have a high likelihood due to the high number of packets sent in a short period, causing excessive load on the target system."
+            }
+        }
+    },
+    {
+        "flow_id": 97,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "probability": 0,
+        "raw_response": {
+            "exec_id": "79a83d35-57c3-4168-bd54-82afae23ac09",
+            "result": {
+                "dos_attack_probability": 0,
+                "justification": "This flow is a normal traffic pattern with no unusual behavior, it's not indicative of a SYN TCP Flooding DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 98,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "probability": 100,
+        "raw_response": {
+            "exec_id": "5856f60e-0616-4739-824f-5ad10320908f",
+            "result": {
+                "dos_attack_probability": 100,
+                "justification": "Based on the provided network flow data, it appears that there are multiple SYN packets being sent and forwarded without proper response, which is a clear indication of a SYN TCP Flooding DoS attack. The high number of packets per second (2000000) suggests an overwhelming amount of traffic, making it highly likely to be a DDoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 99,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "probability": 85,
+        "raw_response": {
+            "exec_id": "ede249dc-aaf3-4783-9033-76824257b7bf",
+            "result": {
+                "dos_attack_probability": 85,
+                "justification": "This SYN TCP flow is indicative of a potential SYN flooding DoS attack due to the low packet rate (0 packets/s) and high avg_packet_size (6.2727272727272725 bytes), suggesting a large number of incoming SYN packets, likely from a single source."
+            }
+        }
+    }
+]

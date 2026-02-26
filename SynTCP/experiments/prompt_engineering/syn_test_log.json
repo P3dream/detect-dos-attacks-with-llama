@@ -1,0 +1,1402 @@
+[
+    {
+        "flow_id": 0,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "The average packet size of 7.5 bytes is significantly larger than the typical range of 3-5 bytes, suggesting a possible SYN TCP Flooding DoS attack.",
+        "raw_response": {
+            "exec_id": "67483883-2c98-4eb0-b84b-16cbc36248c7",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "The average packet size of 7.5 bytes is significantly larger than the typical range of 3-5 bytes, suggesting a possible SYN TCP Flooding DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 1,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "Initial forward window bytes are consistently larger than the average packet size, indicating a possible SYN flood attempt.",
+        "raw_response": {
+            "exec_id": "3f74de6c-0406-4c6e-b337-87c54a0173fc",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "Initial forward window bytes are consistently larger than the average packet size, indicating a possible SYN flood attempt."
+            }
+        }
+    },
+    {
+        "flow_id": 2,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "Initial packet size exceeded average forward segment size by 95 pixels, indicating a potential for malicious activity.",
+        "raw_response": {
+            "exec_id": "0a91dd88-d925-4ddc-8d6f-ff38a796cb80",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "Initial packet size exceeded average forward segment size by 95 pixels, indicating a potential for malicious activity."
+            }
+        }
+    },
+    {
+        "flow_id": 3,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "Initial forward window bytes are extremely high, indicating a strong indication of a SYN flood.",
+        "raw_response": {
+            "exec_id": "a630e980-0f7e-474d-b69c-e7e6610d9816",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "Initial forward window bytes are extremely high, indicating a strong indication of a SYN flood."
+            }
+        }
+    },
+    {
+        "flow_id": 4,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "Flow duration exceeds the average by 5%. Some packets have larger-than-average forward segment sizes, but the initial forward window is a known issue. Low packet size variability.",
+        "raw_response": {
+            "exec_id": "1e369ebc-1e11-4f6a-8b45-aa59af103c02",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "Flow duration exceeds the average by 5%. Some packets have larger-than-average forward segment sizes, but the initial forward window is a known issue. Low packet size variability."
+            }
+        }
+    },
+    {
+        "flow_id": 5,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "Flow duration is consistently longer than average, suggesting a prolonged initial packet size, increasing the likelihood of a SYN TCP Flooding DoS attack.",
+        "raw_response": {
+            "exec_id": "38d0c4bc-f0e8-4168-8123-e35a254343b8",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "Flow duration is consistently longer than average, suggesting a prolonged initial packet size, increasing the likelihood of a SYN TCP Flooding DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 6,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "The flow duration is unusually high, suggesting a potential SYN-based DoS attack",
+        "raw_response": {
+            "exec_id": "7da76739-bf6f-42b7-97cd-4804d6f739f4",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "The flow duration is unusually high, suggesting a potential SYN-based DoS attack"
+            }
+        }
+    },
+    {
+        "flow_id": 7,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "Anomalously high packet arrival rate, combined with unusually large forward segment sizes and early window announcement, suggests a potential SYN TCP Flooding DoS attack.",
+        "raw_response": {
+            "exec_id": "df4a6f0b-cb6d-4329-92a1-41e6ebfd2f44",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "Anomalously high packet arrival rate, combined with unusually large forward segment sizes and early window announcement, suggests a potential SYN TCP Flooding DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 8,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "Initial packet size and flow duration suggest a possible packet manipulation issue.",
+        "raw_response": {
+            "exec_id": "74a5c991-7b4b-44f5-aa02-73236946d3f8",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "Initial packet size and flow duration suggest a possible packet manipulation issue."
+            }
+        }
+    },
+    {
+        "flow_id": 9,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "Initial Forward Window Bytes are unusually high and indicate a potential attack.",
+        "raw_response": {
+            "exec_id": "a78167e7-ad56-4555-8eae-4ddbc8ce2d04",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "Initial Forward Window Bytes are unusually high and indicate a potential attack."
+            }
+        }
+    },
+    {
+        "flow_id": 10,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "Above average initial forward window byte size is a clear indication of potential SYN TCP Flooding DDoS activity.",
+        "raw_response": {
+            "exec_id": "4e1cd644-7043-4685-9672-d28f0e290090",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "Above average initial forward window byte size is a clear indication of potential SYN TCP Flooding DDoS activity."
+            }
+        }
+    },
+    {
+        "flow_id": 11,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "Anomalies in the flow duration and initial forward window bytes are indicative of potential SYN flooding.",
+        "raw_response": {
+            "exec_id": "e0539eb9-e2af-45fa-8d9d-3dad5da2b76d",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "Anomalies in the flow duration and initial forward window bytes are indicative of potential SYN flooding."
+            }
+        }
+    },
+    {
+        "flow_id": 12,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "Highly likely due to the large flow duration and initial forward window bytes.",
+        "raw_response": {
+            "exec_id": "5b494531-196e-483b-bbf0-6d00db3fe534",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "Highly likely due to the large flow duration and initial forward window bytes."
+            }
+        }
+    },
+    {
+        "flow_id": 13,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "Flow duration is consistently above the average for a SYN-based DoS attack.",
+        "raw_response": {
+            "exec_id": "b374d491-5ea1-42e0-a897-586e8cf595b4",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "Flow duration is consistently above the average for a SYN-based DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 14,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "5.4% of flow duration exceeds recommended threshold (99ms) and packets per second exceed capacity for large-scale network activity.",
+        "raw_response": {
+            "exec_id": "410a8df5-52d2-494a-97f5-38cd9f119f94",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "5.4% of flow duration exceeds recommended threshold (99ms) and packets per second exceed capacity for large-scale network activity."
+            }
+        }
+    },
+    {
+        "flow_id": 15,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "Anomalously low average packet size (45.5 bytes) combined with a noticeable initial forward window byte (-1) could indicate a SYN TCP Flooding DoS attack.",
+        "raw_response": {
+            "exec_id": "5c7e100c-b029-4f9a-8395-75e601b1d2b6",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "Anomalously low average packet size (45.5 bytes) combined with a noticeable initial forward window byte (-1) could indicate a SYN TCP Flooding DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 16,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "Initial Forward Window Bytes are announcing a high window size, indicating potential packet fragmentation and spoofing attacks.",
+        "raw_response": {
+            "exec_id": "9d6a99f8-35a7-4a3e-b760-02e2b92590d8",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "Initial Forward Window Bytes are announcing a high window size, indicating potential packet fragmentation and spoofing attacks."
+            }
+        }
+    },
+    {
+        "flow_id": 17,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "Packet duplication and high variance in packet sizes are indicative of potential SYN TCP flooding attacks.",
+        "raw_response": {
+            "exec_id": "58e1053c-ce41-4da8-a0c6-46cf4168509c",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "Packet duplication and high variance in packet sizes are indicative of potential SYN TCP flooding attacks."
+            }
+        }
+    },
+    {
+        "flow_id": 18,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "Packet size is slightly larger than expected for initial window bytes.",
+        "raw_response": {
+            "exec_id": "e11a62e7-171e-4005-81a7-b969a6726cd9",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "Packet size is slightly larger than expected for initial window bytes."
+            }
+        }
+    },
+    {
+        "flow_id": 19,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "The flow data does not show any unusual patterns that could suggest a SYN TCP Flooding DoS attack. However, the Initial Forward Window Bytes value of -1 is suspicious and warrants further investigation.",
+        "raw_response": {
+            "exec_id": "c7fa9d0d-9faa-45a3-8ed5-8c9522e01932",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "The flow data does not show any unusual patterns that could suggest a SYN TCP Flooding DoS attack. However, the Initial Forward Window Bytes value of -1 is suspicious and warrants further investigation."
+            }
+        }
+    },
+    {
+        "flow_id": 20,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "Network flow data shows a consistent average forward segment size of 7.5 bytes and initial forward window bytes announcement, indicating an indication of increased network activity.",
+        "raw_response": {
+            "exec_id": "83d83a89-3651-4b7b-bf82-14c28ebf5e65",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "Network flow data shows a consistent average forward segment size of 7.5 bytes and initial forward window bytes announcement, indicating an indication of increased network activity."
+            }
+        }
+    },
+    {
+        "flow_id": 21,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "Average packet size is consistently larger than the average forward segment size and initial forward window bytes are also higher than expected.",
+        "raw_response": {
+            "exec_id": "1e5c4a45-7acd-4c3a-8d3c-675407048aa1",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "Average packet size is consistently larger than the average forward segment size and initial forward window bytes are also higher than expected."
+            }
+        }
+    },
+    {
+        "flow_id": 22,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "The flow duration is significantly higher than expected (418498 vs. 5ms), which increases the likelihood of a SYN-based DoS attack.",
+        "raw_response": {
+            "exec_id": "886d8a37-fccd-4eb5-a248-c396ed4ddad2",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "The flow duration is significantly higher than expected (418498 vs. 5ms), which increases the likelihood of a SYN-based DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 23,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "Initial Forward Window Bytes are consistently above the threshold of 5 bytes, suggesting a high risk of SYN TCP Flooding attacks.",
+        "raw_response": {
+            "exec_id": "0c3b3c1f-26d5-4cf2-81fe-6bd22c978bbd",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "Initial Forward Window Bytes are consistently above the threshold of 5 bytes, suggesting a high risk of SYN TCP Flooding attacks."
+            }
+        }
+    },
+    {
+        "flow_id": 24,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "Average packet size is significantly larger than the average forward segment size, indicating a potential windowing attack",
+        "raw_response": {
+            "exec_id": "ec081418-b707-4326-b06e-2fa0bbc63b73",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "Average packet size is significantly larger than the average forward segment size, indicating a potential windowing attack"
+            }
+        }
+    },
+    {
+        "flow_id": 25,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "Flow duration is higher than average, indicating a potential for congestion.",
+        "raw_response": {
+            "exec_id": "c44ca859-9fc4-4fae-841d-5c42a1d6c094",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "Flow duration is higher than average, indicating a potential for congestion."
+            }
+        }
+    },
+    {
+        "flow_id": 26,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "Flow duration is too high, exceeding 95th percentile for packet sizes and windows.",
+        "raw_response": {
+            "exec_id": "7e236bd5-caf6-40b2-b6fd-119095763921",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "Flow duration is too high, exceeding 95th percentile for packet sizes and windows."
+            }
+        }
+    },
+    {
+        "flow_id": 27,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "Initial packet size variation is a strong indication of SYN TCP flooding, as it suggests that the attacker is intentionally manipulating the protocol to inject malicious data.",
+        "raw_response": {
+            "exec_id": "26df35ae-c4b2-470c-bc22-32a30b519a35",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "Initial packet size variation is a strong indication of SYN TCP flooding, as it suggests that the attacker is intentionally manipulating the protocol to inject malicious data."
+            }
+        }
+    },
+    {
+        "flow_id": 28,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "Initial packet size is slightly larger than expected for a normal SYN TCP flow.",
+        "raw_response": {
+            "exec_id": "4ee7ad52-b74f-48bd-b68b-82242a8be533",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "Initial packet size is slightly larger than expected for a normal SYN TCP flow."
+            }
+        }
+    },
+    {
+        "flow_id": 29,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "Anomalously high packet arrival rates and significant size variances in forward segments along with persistent initial window bytes anomalies could be indicative of a SYN-based DoS attack.",
+        "raw_response": {
+            "exec_id": "6f87706c-49cd-4d0c-910e-8d238cf69cb9",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "Anomalously high packet arrival rates and significant size variances in forward segments along with persistent initial window bytes anomalies could be indicative of a SYN-based DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 30,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "Flow Duration and Initial Forward Window Bytes are suspicious indicators of potential SYN TCP flooding.",
+        "raw_response": {
+            "exec_id": "3438223d-a54c-4a1a-912d-cf20b8401580",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "Flow Duration and Initial Forward Window Bytes are suspicious indicators of potential SYN TCP flooding."
+            }
+        }
+    },
+    {
+        "flow_id": 31,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "Initial TCP window size announcement by the forward direction is suspicious.",
+        "raw_response": {
+            "exec_id": "3dd12964-6a55-4417-8568-e46fc5a566f8",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "Initial TCP window size announcement by the forward direction is suspicious."
+            }
+        }
+    },
+    {
+        "flow_id": 32,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "The flow duration is extremely high, indicating significant network congestion.",
+        "raw_response": {
+            "exec_id": "fa1f1bcc-8388-43eb-84a7-88dc6868adef",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "The flow duration is extremely high, indicating significant network congestion."
+            }
+        }
+    },
+    {
+        "flow_id": 33,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "Highly suspicious flow duration and packet size variations suggest a high likelihood of SYN TCP Flooding.",
+        "raw_response": {
+            "exec_id": "f2a41a2c-ec7b-4a52-949a-a6a16c46df02",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "Highly suspicious flow duration and packet size variations suggest a high likelihood of SYN TCP Flooding."
+            }
+        }
+    },
+    {
+        "flow_id": 34,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "Flow duration is significantly above the average for a legitimate network activity. Additionally, the high packet rate and large average segment size suggest potential congestion or abnormal behavior.",
+        "raw_response": {
+            "exec_id": "03a8e761-6bb8-4a53-8727-7cb9c9bb85f8",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "Flow duration is significantly above the average for a legitimate network activity. Additionally, the high packet rate and large average segment size suggest potential congestion or abnormal behavior."
+            }
+        }
+    },
+    {
+        "flow_id": 35,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "Flow Duration and Average Packet Size are suspiciously high compared to other flows in the same network segment.",
+        "raw_response": {
+            "exec_id": "c232b718-f9e5-49a0-92cf-e5d83512c051",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "Flow Duration and Average Packet Size are suspiciously high compared to other flows in the same network segment."
+            }
+        }
+    },
+    {
+        "flow_id": 36,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "Increased Flow Packets per Second and Average Packet Size are characteristic of a SYN TCP Flooding attack.",
+        "raw_response": {
+            "exec_id": "99b43b99-743b-4c0c-9d16-8bb65579899b",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "Increased Flow Packets per Second and Average Packet Size are characteristic of a SYN TCP Flooding attack."
+            }
+        }
+    },
+    {
+        "flow_id": 37,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "Flow duration is consistently above the threshold of 5 seconds, suggesting prolonged network activity that could be indicative of a SYN-based DoS attack.",
+        "raw_response": {
+            "exec_id": "af7f537a-8ec1-40e7-b47a-4b20f2cd012d",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "Flow duration is consistently above the threshold of 5 seconds, suggesting prolonged network activity that could be indicative of a SYN-based DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 38,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "The flow duration of 20882 microseconds is unusually long and could be indicative of a malicious activity.",
+        "raw_response": {
+            "exec_id": "fa3752a7-a032-4735-a3e8-40b693ce6ab7",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "The flow duration of 20882 microseconds is unusually long and could be indicative of a malicious activity."
+            }
+        }
+    },
+    {
+        "flow_id": 39,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "The initial forward window bytes are significant, indicating potential TCP spoofing activity.",
+        "raw_response": {
+            "exec_id": "1fdd5ec8-4d8a-429f-ad4a-75f9c31757a3",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "The initial forward window bytes are significant, indicating potential TCP spoofing activity."
+            }
+        }
+    },
+    {
+        "flow_id": 40,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "Initial packet size and flow duration suggest a potential imbalance in the network flow.",
+        "raw_response": {
+            "exec_id": "ecd078e5-033c-447c-89b5-988a617e7a19",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "Initial packet size and flow duration suggest a potential imbalance in the network flow."
+            }
+        }
+    },
+    {
+        "flow_id": 41,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "The average forward segment size is slightly above the threshold of 5 bytes.",
+        "raw_response": {
+            "exec_id": "2ff29909-c53f-4013-a5dc-868183a88934",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "The average forward segment size is slightly above the threshold of 5 bytes."
+            }
+        }
+    },
+    {
+        "flow_id": 42,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "The flow duration is significantly higher than the average, indicating a potential issue with SYN-based attacks.",
+        "raw_response": {
+            "exec_id": "a3887637-9c6b-4b07-8fef-91d88b1797d0",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "The flow duration is significantly higher than the average, indicating a potential issue with SYN-based attacks."
+            }
+        }
+    },
+    {
+        "flow_id": 43,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "Initial Forward Window Bytes are a common indicator of potential SYN flooding.",
+        "raw_response": {
+            "exec_id": "d2300661-f66e-4e9d-8870-5f81e04a483b",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "Initial Forward Window Bytes are a common indicator of potential SYN flooding."
+            }
+        }
+    },
+    {
+        "flow_id": 44,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "Flow duration is relatively low and packet rate is extremely low. These features don't suggest any significant issue.",
+        "raw_response": {
+            "exec_id": "93b727b0-b380-4af4-aa60-cc73d05a9134",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "Flow duration is relatively low and packet rate is extremely low. These features don't suggest any significant issue."
+            }
+        }
+    },
+    {
+        "flow_id": 45,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "Flow duration is relatively long (95th percentile of 5-150), indicating a potentially active DDoS attack.",
+        "raw_response": {
+            "exec_id": "7f15c7ee-4882-42f2-9560-3221a354ff9d",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "Flow duration is relatively long (95th percentile of 5-150), indicating a potentially active DDoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 46,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "The flow duration of 100 microseconds is extremely low and suggests a brief, non-critical traffic event. However, the high number of packets per second (40000) combined with an average forward segment size that's just above the minimum threshold for SYN TCP flooding (6.5 bytes) raises significant concerns.",
+        "raw_response": {
+            "exec_id": "c59d04ad-252f-47c5-bce9-f1e7f59f36ca",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "The flow duration of 100 microseconds is extremely low and suggests a brief, non-critical traffic event. However, the high number of packets per second (40000) combined with an average forward segment size that's just above the minimum threshold for SYN TCP flooding (6.5 bytes) raises significant concerns."
+            }
+        }
+    },
+    {
+        "flow_id": 47,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "Flow duration is too high, suggesting a persistent attack",
+        "raw_response": {
+            "exec_id": "4725d5b7-9f54-42a0-99ae-1cce6a260b7d",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "Flow duration is too high, suggesting a persistent attack"
+            }
+        }
+    },
+    {
+        "flow_id": 48,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "The average packet size is consistently higher than the initial forward window bytes, suggesting a malicious attempt to manipulate the network flow.",
+        "raw_response": {
+            "exec_id": "a20f5fae-5848-4ef7-88d5-2142450f0403",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "The average packet size is consistently higher than the initial forward window bytes, suggesting a malicious attempt to manipulate the network flow."
+            }
+        }
+    },
+    {
+        "flow_id": 49,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "The flow duration is relatively high (3 microseconds), suggesting a potential issue with the network connection. Additionally, the average packet size is close to zero, which could indicate a lack of legitimate traffic or a suspicious pattern.",
+        "raw_response": {
+            "exec_id": "1b7f69f8-097d-4f46-b797-44b0be5714b5",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "The flow duration is relatively high (3 microseconds), suggesting a potential issue with the network connection. Additionally, the average packet size is close to zero, which could indicate a lack of legitimate traffic or a suspicious pattern."
+            }
+        }
+    },
+    {
+        "flow_id": 50,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "Flow Duration of > 5 seconds is a strong indicator of potential SYN flooding.",
+        "raw_response": {
+            "exec_id": "d7c50f14-d396-496c-9c0a-15b39c95c23c",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "Flow Duration of > 5 seconds is a strong indicator of potential SYN flooding."
+            }
+        }
+    },
+    {
+        "flow_id": 51,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "The flow duration is significantly longer than expected, and the initial forward window bytes are suspiciously large.",
+        "raw_response": {
+            "exec_id": "26d90dc8-0545-4bd2-8069-e3d060d88d4c",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "The flow duration is significantly longer than expected, and the initial forward window bytes are suspiciously large."
+            }
+        }
+    },
+    {
+        "flow_id": 52,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "Anomalies in the initial Forward Window Bytes packet size were detected.",
+        "raw_response": {
+            "exec_id": "16b84b17-c8de-4746-9f29-519c0780c7ad",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "Anomalies in the initial Forward Window Bytes packet size were detected."
+            }
+        }
+    },
+    {
+        "flow_id": 53,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "Low rate of initial window bytes",
+        "raw_response": {
+            "exec_id": "c3ee2aff-4f81-4d31-a219-aa443bd39a47",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "Low rate of initial window bytes"
+            }
+        }
+    },
+    {
+        "flow_id": 54,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "Initial window size announcement indicates a potential SYN-based attack.",
+        "raw_response": {
+            "exec_id": "5984e355-964b-45bf-975e-04e1c80d6adb",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "Initial window size announcement indicates a potential SYN-based attack."
+            }
+        }
+    },
+    {
+        "flow_id": 55,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "Significant initial forward window bytes and high packet fragmentation rate suggest a potential SYN TCP Flooding attack.",
+        "raw_response": {
+            "exec_id": "81469cf1-85c7-43b4-9d28-54ef3626dc47",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "Significant initial forward window bytes and high packet fragmentation rate suggest a potential SYN TCP Flooding attack."
+            }
+        }
+    },
+    {
+        "flow_id": 56,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "Flow duration exceeds the typical 5-second window for a SYN TCP Flooding DoS attack.",
+        "raw_response": {
+            "exec_id": "6a167238-1437-4ed6-bd3c-1620e1599a8b",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "Flow duration exceeds the typical 5-second window for a SYN TCP Flooding DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 57,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "Initial forward window bytes are consistently announced by the forward direction, indicating a potential TCP SYN flood.",
+        "raw_response": {
+            "exec_id": "c02e8612-7276-4d8b-9a86-13c8580953cf",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "Initial forward window bytes are consistently announced by the forward direction, indicating a potential TCP SYN flood."
+            }
+        }
+    },
+    {
+        "flow_id": 58,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "Low-level packet anomalies and sudden spikes in packet size are indicative of potential SYN flood attacks.",
+        "raw_response": {
+            "exec_id": "1d08e6ff-ffd5-4cbd-bd8d-29beaabe2735",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "Low-level packet anomalies and sudden spikes in packet size are indicative of potential SYN flood attacks."
+            }
+        }
+    },
+    {
+        "flow_id": 59,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "Highly suspicious initial forward window bytes (5.5) and average packet size (8.5), which are indicative of a SYN-based DoS attack.",
+        "raw_response": {
+            "exec_id": "807f7683-b041-4adf-a465-53e71d5c1d3a",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "Highly suspicious initial forward window bytes (5.5) and average packet size (8.5), which are indicative of a SYN-based DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 60,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "Flow duration and packet count are within normal ranges.",
+        "raw_response": {
+            "exec_id": "f14246fb-29ae-42d0-b35b-3c2e7e53b77c",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "Flow duration and packet count are within normal ranges."
+            }
+        }
+    },
+    {
+        "flow_id": 61,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "Initial Forward Window Bytes are typically used to detect and prevent SYN flooding attacks.",
+        "raw_response": {
+            "exec_id": "a922b6a6-cdcb-4091-ab63-cd85a2b2b018",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "Initial Forward Window Bytes are typically used to detect and prevent SYN flooding attacks."
+            }
+        }
+    },
+    {
+        "flow_id": 62,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "Initial Forward Window Bytes are indicative of a SYN-based attack due to the suspiciously high rate and average packet size increase.",
+        "raw_response": {
+            "exec_id": "e5334324-a6a4-4011-8061-df223df24521",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "Initial Forward Window Bytes are indicative of a SYN-based attack due to the suspiciously high rate and average packet size increase."
+            }
+        }
+    },
+    {
+        "flow_id": 63,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "Average packet size of 51.75 bytes is significantly above the initial forward window byte threshold of 5.",
+        "raw_response": {
+            "exec_id": "1e3c2abb-e1a7-4667-9b0c-aa2e503ea008",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "Average packet size of 51.75 bytes is significantly above the initial forward window byte threshold of 5."
+            }
+        }
+    },
+    {
+        "flow_id": 64,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "Packet size anomaly detected. Significant variation in average packet sizes between 5% and 95%, which could indicate a SYN-based DoS attack.",
+        "raw_response": {
+            "exec_id": "fdcba3c5-4671-4085-adf6-a50895ee9cdb",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "Packet size anomaly detected. Significant variation in average packet sizes between 5% and 95%, which could indicate a SYN-based DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 65,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "Initial Forward Window Bytes are a clear indication of a SYN flood, as they announce a large and unexpected increase in packet rate. The high average forward segment size also suggests that the attack is large-scale.",
+        "raw_response": {
+            "exec_id": "cfca52db-0047-4866-895e-d8b8b83f0696",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "Initial Forward Window Bytes are a clear indication of a SYN flood, as they announce a large and unexpected increase in packet rate. The high average forward segment size also suggests that the attack is large-scale."
+            }
+        }
+    },
+    {
+        "flow_id": 66,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "Flow Duration is relatively low, and there are no significant anomalies in packet size or window size.",
+        "raw_response": {
+            "exec_id": "2fe4b80e-58e7-45b7-be74-51f314aa424f",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "Flow Duration is relatively low, and there are no significant anomalies in packet size or window size."
+            }
+        }
+    },
+    {
+        "flow_id": 67,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "Initial Forward Window Bytes are a clear indication of a SYN flood, as they can quickly escalate the traffic to the point of overwhelming the network.",
+        "raw_response": {
+            "exec_id": "6e2744f1-9ea6-46e0-9972-787e7f8c982c",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "Initial Forward Window Bytes are a clear indication of a SYN flood, as they can quickly escalate the traffic to the point of overwhelming the network."
+            }
+        }
+    },
+    {
+        "flow_id": 68,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "Anomalously high flow duration (>5 seconds) and extremely high packets per second (5000x10^6), combined with a noticeable increase in initial TCP window size (>2500 bytes).",
+        "raw_response": {
+            "exec_id": "10eec3aa-0cfe-4554-b654-14f9783857a3",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "Anomalously high flow duration (>5 seconds) and extremely high packets per second (5000x10^6), combined with a noticeable increase in initial TCP window size (>2500 bytes)."
+            }
+        }
+    },
+    {
+        "flow_id": 69,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "Initial forward window bytes are a common indicator of potential SYN flooding attacks due to their high correlation with malicious traffic.",
+        "raw_response": {
+            "exec_id": "c04acd18-2d31-46fd-8102-4f911002f165",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "Initial forward window bytes are a common indicator of potential SYN flooding attacks due to their high correlation with malicious traffic."
+            }
+        }
+    },
+    {
+        "flow_id": 70,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "Based on the flow duration of 5 minutes and a total packets per second count of 50,000, I suspect a strong likelihood of SYN TCP Flooding DoS attacks due to excessive packet traffic.",
+        "raw_response": {
+            "exec_id": "4a5244b8-a908-4e8f-a391-0da894e89523",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "Based on the flow duration of 5 minutes and a total packets per second count of 50,000, I suspect a strong likelihood of SYN TCP Flooding DoS attacks due to excessive packet traffic."
+            }
+        }
+    },
+    {
+        "flow_id": 71,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "The flow duration is very high (20870 microseconds), suggesting a significant amount of network activity. The average forward segment size is also quite large (41 bytes). However, the initial forward window byte is -1, which may indicate that the attack is more focused on denial-of-service (DoS) attacks rather than SYN TCP flooding.",
+        "raw_response": {
+            "exec_id": "44f50b00-c8d4-4152-8700-7ffc8464634a",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "The flow duration is very high (20870 microseconds), suggesting a significant amount of network activity. The average forward segment size is also quite large (41 bytes). However, the initial forward window byte is -1, which may indicate that the attack is more focused on denial-of-service (DoS) attacks rather than SYN TCP flooding."
+            }
+        }
+    },
+    {
+        "flow_id": 72,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "Average packet size is slightly below the expected average segment size for a successful SYN Flooding attack.",
+        "raw_response": {
+            "exec_id": "352de0c9-81a2-4565-9fea-3de00cc94b5b",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "Average packet size is slightly below the expected average segment size for a successful SYN Flooding attack."
+            }
+        }
+    },
+    {
+        "flow_id": 73,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "Anomaly in initial forward window byte announcement suggests a malicious activity.",
+        "raw_response": {
+            "exec_id": "8a113a61-4156-443d-b1a0-24e662d38c87",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "Anomaly in initial forward window byte announcement suggests a malicious activity."
+            }
+        }
+    },
+    {
+        "flow_id": 74,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "The flow duration is extremely high (>5 seconds), suggesting prolonged network activity. The average forward segment size is also quite large (7.5 bytes), which could be a sign of malicious traffic.",
+        "raw_response": {
+            "exec_id": "2492d110-5ce2-4026-8926-945c6330a387",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "The flow duration is extremely high (>5 seconds), suggesting prolonged network activity. The average forward segment size is also quite large (7.5 bytes), which could be a sign of malicious traffic."
+            }
+        }
+    },
+    {
+        "flow_id": 75,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "Unusually high flow duration and packet packet packets per second exceed the expected range of 5-15 for a normal network activity.",
+        "raw_response": {
+            "exec_id": "52460502-4f54-4f3f-9d25-c47e66f51929",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "Unusually high flow duration and packet packet packets per second exceed the expected range of 5-15 for a normal network activity."
+            }
+        }
+    },
+    {
+        "flow_id": 76,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "Packet size variability is a strong indicator of potential SYN flooding.",
+        "raw_response": {
+            "exec_id": "521c1972-34ab-4202-a314-49e3f3ce2c97",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "Packet size variability is a strong indicator of potential SYN flooding."
+            }
+        }
+    },
+    {
+        "flow_id": 77,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "The flow duration is significantly higher than the average duration of a normal network session. This suggests an unusual pattern and increases the probability of a SYN-based DoS attack.",
+        "raw_response": {
+            "exec_id": "163036c9-34e5-47d0-9fa1-f8dcf7be7a08",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "The flow duration is significantly higher than the average duration of a normal network session. This suggests an unusual pattern and increases the probability of a SYN-based DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 78,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "An average forward segment size is slightly above 7 bytes, and the initial window announcement could be a sign of increased latency from unknown sources.",
+        "raw_response": {
+            "exec_id": "18216cad-4a7d-47dc-9510-0f402bfcfe9a",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "An average forward segment size is slightly above 7 bytes, and the initial window announcement could be a sign of increased latency from unknown sources."
+            }
+        }
+    },
+    {
+        "flow_id": 79,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "A prolonged flow with high packet rates and average segment sizes suggests increased traffic volume.",
+        "raw_response": {
+            "exec_id": "8aec052e-76c6-42e4-8038-8ba338d91a23",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "A prolonged flow with high packet rates and average segment sizes suggests increased traffic volume."
+            }
+        }
+    },
+    {
+        "flow_id": 80,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "Increased flow duration and packet packets per second suggest a high likelihood of SYN TCP Flooding DoS attack",
+        "raw_response": {
+            "exec_id": "a8a8b4b9-3e35-42b3-af83-c203fa863f6d",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "Increased flow duration and packet packets per second suggest a high likelihood of SYN TCP Flooding DoS attack"
+            }
+        }
+    },
+    {
+        "flow_id": 81,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "initial forward window bytes are often a sign of an impending SYN flood",
+        "raw_response": {
+            "exec_id": "6d493eae-df36-42a2-a539-f0cf18055923",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "initial forward window bytes are often a sign of an impending SYN flood"
+            }
+        }
+    },
+    {
+        "flow_id": 82,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "The average packet size is larger than the initial forward window bytes, which could be a sign of increased traffic from a single source.",
+        "raw_response": {
+            "exec_id": "280e9af2-486e-43bf-ae10-d91315b283ed",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "The average packet size is larger than the initial forward window bytes, which could be a sign of increased traffic from a single source."
+            }
+        }
+    },
+    {
+        "flow_id": 83,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "Initial TCP window size is unusually high and indicates a possible flood with malicious intent.",
+        "raw_response": {
+            "exec_id": "a9555dc3-6f5f-4ac8-856d-5137e322a15e",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "Initial TCP window size is unusually high and indicates a possible flood with malicious intent."
+            }
+        }
+    },
+    {
+        "flow_id": 84,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "The flow duration of 10 microseconds and the high initial forward window bytes (-1) suggest a potential SYN TCP Flooding DoS attack.",
+        "raw_response": {
+            "exec_id": "dea26df7-8668-4492-9a51-6db3a0b10aeb",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "The flow duration of 10 microseconds and the high initial forward window bytes (-1) suggest a potential SYN TCP Flooding DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 85,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "Initial Forward Window Bytes are a strong indicator of potential SYN TCP Flooding attacks due to their consistent range (500-1500 bytes) and lack of variation.",
+        "raw_response": {
+            "exec_id": "942e913d-a482-4f11-86c0-eedfabe57867",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "Initial Forward Window Bytes are a strong indicator of potential SYN TCP Flooding attacks due to their consistent range (500-1500 bytes) and lack of variation."
+            }
+        }
+    },
+    {
+        "flow_id": 86,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "95.5 bytes is within normal network traffic ranges",
+        "raw_response": {
+            "exec_id": "2cddab75-c3c4-4608-bcd3-d5bb017aec81",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "95.5 bytes is within normal network traffic ranges"
+            }
+        }
+    },
+    {
+        "flow_id": 87,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "Average flow packets per second is slightly above the expected average of 5 packets per second in a normal network flow.",
+        "raw_response": {
+            "exec_id": "18414667-dd3b-4a0f-8e67-13edd1a9c6f6",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "Average flow packets per second is slightly above the expected average of 5 packets per second in a normal network flow."
+            }
+        }
+    },
+    {
+        "flow_id": 88,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "Average forward packet size is higher than the average segment size.",
+        "raw_response": {
+            "exec_id": "871b4d1b-1cc5-43c7-8e4c-12a9600fc8c9",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "Average forward packet size is higher than the average segment size."
+            }
+        }
+    },
+    {
+        "flow_id": 89,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "Initial packet size is significantly larger than the average segment size, indicating a possible attack.",
+        "raw_response": {
+            "exec_id": "9bdd6909-f82a-45eb-99a5-7cbaa7e34d58",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "Initial packet size is significantly larger than the average segment size, indicating a possible attack."
+            }
+        }
+    },
+    {
+        "flow_id": 90,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "The flow duration is excessively high (>5ms), indicating prolonged network activity. The increased packet rate (2x) and average forward segment size increase the likelihood of a SYN TCP flood.",
+        "raw_response": {
+            "exec_id": "1e1d4eb3-9d50-4b18-80c8-2d7601fb7a37",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "The flow duration is excessively high (>5ms), indicating prolonged network activity. The increased packet rate (2x) and average forward segment size increase the likelihood of a SYN TCP flood."
+            }
+        }
+    },
+    {
+        "flow_id": 91,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "Anomaly in flow duration and packet traffic pattern suggests a SYN TCP Flooding attack.",
+        "raw_response": {
+            "exec_id": "984fc896-1283-4408-86f5-de81bda77020",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "Anomaly in flow duration and packet traffic pattern suggests a SYN TCP Flooding attack."
+            }
+        }
+    },
+    {
+        "flow_id": 92,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "Highly variable TCP window sizes suggest a potential SYN flood attempt.",
+        "raw_response": {
+            "exec_id": "6b3786c3-7ee4-4dbb-9699-4e134ebf4641",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "Highly variable TCP window sizes suggest a potential SYN flood attempt."
+            }
+        }
+    },
+    {
+        "flow_id": 93,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "The flow duration of 66484037 microseconds is suspiciously high, indicating potential malicious activity.",
+        "raw_response": {
+            "exec_id": "f9c3ee49-4480-44a2-bd97-448ac2b7941b",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "The flow duration of 66484037 microseconds is suspiciously high, indicating potential malicious activity."
+            }
+        }
+    },
+    {
+        "flow_id": 94,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "Initial forward window bytes were announced at a high value (-1), indicating potential malicious activity.",
+        "raw_response": {
+            "exec_id": "962dcb54-782b-4969-b8f7-23507f246166",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "Initial forward window bytes were announced at a high value (-1), indicating potential malicious activity."
+            }
+        }
+    },
+    {
+        "flow_id": 95,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "Increased flow duration and packet count suggest a sustained attack, while average segment size is relatively low. Additionally, the initial forward window bytes are not unusually high.",
+        "raw_response": {
+            "exec_id": "bb28b93c-e6a3-4ad3-a371-b893c6137082",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "Increased flow duration and packet count suggest a sustained attack, while average segment size is relatively low. Additionally, the initial forward window bytes are not unusually high."
+            }
+        }
+    },
+    {
+        "flow_id": 96,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "The high flow duration (1 microsecond) and extremely high number of packets per second (2 million) combined with the average packet size being significantly larger than initial forward window bytes (8.5) raise significant concerns about a SYN-based DoS attack.",
+        "raw_response": {
+            "exec_id": "f080738c-0aae-41e7-be51-b618fb497f0e",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "The high flow duration (1 microsecond) and extremely high number of packets per second (2 million) combined with the average packet size being significantly larger than initial forward window bytes (8.5) raise significant concerns about a SYN-based DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 97,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 5.0,
+        "justification": "Initial Flow Durations are consistently above 5 seconds, with many packets exceeding 5 seconds. This suggests a high probability of SYN TCP Flooding.",
+        "raw_response": {
+            "exec_id": "fda1bfb2-50f2-47a0-aa69-33d09e2f8d3b",
+            "result": {
+                "dos_attack_probability": 5,
+                "justification": "Initial Flow Durations are consistently above 5 seconds, with many packets exceeding 5 seconds. This suggests a high probability of SYN TCP Flooding."
+            }
+        }
+    },
+    {
+        "flow_id": 98,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "Anomalously high flow duration and packet rate suggest a potential SYN-based DoS attack.",
+        "raw_response": {
+            "exec_id": "3288a6d0-6352-4072-aa75-49e312e4a3aa",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "Anomalously high flow duration and packet rate suggest a potential SYN-based DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 99,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "dos_attack_probability": 95.0,
+        "justification": "Anomalously high average packet size is indicative of malicious traffic.",
+        "raw_response": {
+            "exec_id": "bcac4331-f7f8-4fa8-80da-792938cfe810",
+            "result": {
+                "dos_attack_probability": 95,
+                "justification": "Anomalously high average packet size is indicative of malicious traffic."
+            }
+        }
+    }
+]

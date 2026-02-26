@@ -1,3 +1,0 @@
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-pip install transformers datasets accelerate
-pip install sentencepiece  # necessário para alguns tokenizers do LLaMA

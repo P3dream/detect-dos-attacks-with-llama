@@ -1,7 +1,8 @@
 """
-generate_finetune_dataset.py
+generate_finetune_dataset_syn.py
 ============================
 Gera dataset de finetuning no formato ChatML (Llama 3.2) a partir do CSV balanceado.
+Saída: classificação textual — "BENIGN" ou "SYN" (sem scores numéricos).
 
 Saída:
   - finetune_dataset.jsonl  → 80% dos dados (treino + validação no Colab)
@@ -25,29 +26,19 @@ random.seed(RANDOM_SEED)
 # ───────────────────────────────────────────────
 SYSTEM_PROMPT = (
     "You are a network security analyst specialized in detecting SYN TCP flooding DDoS attacks. "
-    "Analyze network flow features and respond only with a valid JSON object containing "
-    "dos_attack_probability (0-100)."
+    "Analyze network flow features and respond only with a valid JSON object with the field "
+    "'classification', which must be exactly 'BENIGN' or 'SYN'."
 )
-
-# ───────────────────────────────────────────────
-# GERADOR DE SCORE
-# ───────────────────────────────────────────────
-def generate_score(true_label):
-    if true_label == "BENIGN":
-        return 5
-    else:
-        return 95
-
 
 # ───────────────────────────────────────────────
 # TEMPLATES DE PERGUNTA
 # ───────────────────────────────────────────────
 USER_TEMPLATES = [
-    "Analyze the following network flow and determine the probability of a SYN-based DoS attack.\n\nFlow features:\n- Flow Duration: {duration} µs\n- Flow Packets/s: {pps}\n- Avg Fwd Segment Size: {seg} bytes\n- Average Packet Size: {pkt} bytes\n- Init_Win_bytes_forward: {win} bytes\n\nRespond ONLY with JSON: {{\"dos_attack_probability\": <0-100>}}",
+    "Analyze the following network flow and classify it as BENIGN or SYN DoS attack.\n\nFlow features:\n- Flow Duration: {duration} µs\n- Flow Packets/s: {pps}\n- Avg Fwd Segment Size: {seg} bytes\n- Average Packet Size: {pkt} bytes\n- Init_Win_bytes_forward: {win} bytes\n\nRespond ONLY with JSON: {{\"classification\": \"BENIGN\" or \"SYN\"}}",
 
-    "Given this network flow data, estimate the likelihood (0-100) of a SYN TCP flooding attack.\n\n- Flow Duration: {duration} µs\n- Flow Packets per Second: {pps}\n- Average Forward Segment Size: {seg} bytes\n- Average Packet Size: {pkt} bytes\n- Initial Forward Window Bytes: {win}\n\nReturn only valid JSON with dos_attack_probability.",
+    "Given this network flow data, classify the traffic as benign or SYN TCP flooding attack.\n\n- Flow Duration: {duration} µs\n- Flow Packets per Second: {pps}\n- Average Forward Segment Size: {seg} bytes\n- Average Packet Size: {pkt} bytes\n- Initial Forward Window Bytes: {win}\n\nReturn only valid JSON with the classification field.",
 
-    "You are analyzing a captured network flow. Classify it as benign or SYN DoS attack.\n\nFeatures:\nFlow Duration={duration}, Flow Packets/s={pps}, Avg Fwd Segment Size={seg}, Average Packet Size={pkt}, Init_Win_bytes_forward={win}\n\nRespond with JSON only: {{\"dos_attack_probability\": int}}",
+    "You are analyzing a captured network flow. Classify it as BENIGN or SYN DoS attack.\n\nFeatures:\nFlow Duration={duration}, Flow Packets/s={pps}, Avg Fwd Segment Size={seg}, Average Packet Size={pkt}, Init_Win_bytes_forward={win}\n\nRespond with JSON only: {{\"classification\": string}}",
 ]
 
 def build_user_message(row):
@@ -93,9 +84,8 @@ def main():
     for idx, row in df.iterrows():
         try:
             true_label    = row["Label"]
-            prob          = generate_score(true_label)
             user_msg      = build_user_message(row)
-            assistant_msg = json.dumps({"dos_attack_probability": prob})
+            assistant_msg = json.dumps({"classification": true_label})
 
             records.append({
                 "messages": [
@@ -103,14 +93,14 @@ def main():
                     {"role": "user",      "content": user_msg},
                     {"role": "assistant", "content": assistant_msg}
                 ],
-                "_true_label": true_label  # campo auxiliar para split estratificado
+                "_true_label": true_label
             })
 
         except Exception as e:
             errors += 1
             print(f"⚠️  Erro na linha {idx}: {e}")
 
-    # ── Split 80/20 ESTRATIFICADO (garante balanço nos dois splits) ──
+    # ── Split 80/20 ESTRATIFICADO ──
     benign_records = [r for r in records if r["_true_label"] == "BENIGN"]
     syn_records    = [r for r in records if r["_true_label"] == "SYN"]
 
@@ -130,7 +120,6 @@ def main():
     random.shuffle(train_records)
     random.shuffle(test_records)
 
-    # Remover campo auxiliar antes de salvar
     for r in train_records + test_records:
         r.pop("_true_label", None)
 
@@ -148,23 +137,15 @@ def main():
     print(f"   test_dataset.jsonl     → {len(test_records)} exemplos (teste final)")
     print(f"   Erros ignorados:         {errors}")
 
-    # ── Exemplo ──
     print(f"\n📋 Exemplo de entrada gerada:")
     print(json.dumps(train_records[0], indent=2, ensure_ascii=False))
 
-    # ── Estatísticas por split ──
     for split_name, split_records in [("Treino", train_records), ("Teste", test_records)]:
-        probs_benign, probs_syn = [], []
-        for r in split_records:
-            try:
-                score = json.loads(r["messages"][2]["content"])["dos_attack_probability"]
-                (probs_syn if score > 50 else probs_benign).append(score)
-            except:
-                pass
-
+        n_benign = sum(1 for r in split_records if json.loads(r["messages"][2]["content"])["classification"] == "BENIGN")
+        n_syn    = sum(1 for r in split_records if json.loads(r["messages"][2]["content"])["classification"] == "SYN")
         print(f"\n📊 Distribuição [{split_name}]:")
-        print(f"   BENIGN → {len(probs_benign)} exemplos | média score: {statistics.mean(probs_benign):.1f}")
-        print(f"   SYN    → {len(probs_syn)} exemplos | média score: {statistics.mean(probs_syn):.1f}")
+        print(f"   BENIGN → {n_benign} exemplos")
+        print(f"   SYN    → {n_syn} exemplos")
 
 
 if __name__ == "__main__":

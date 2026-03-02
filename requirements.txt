@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+ollama
+psutil
+pynvml
+pydantic

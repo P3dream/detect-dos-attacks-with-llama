@@ -1,0 +1,1202 @@
+[
+    {
+        "flow_id": 0,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "raw_response": {
+            "exec_id": "8aee9f91-1840-437d-af0f-e4307e40d419",
+            "result": {
+                "classification": "SYN",
+                "justification": "It was classified like this because of Analyze the following network flow and classify it as BENIGN or SYN DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 1,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "a99d835b-4fcc-4515-882f-5777abee0354",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of Given this network flow data, classify the traffic as benign or SYN TCP flooding attack."
+            }
+        }
+    },
+    {
+        "flow_id": 2,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "85b61a07-c9a6-499a-bdff-7996dbcb637e",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of a high average packet size and forward segment size."
+            }
+        }
+    },
+    {
+        "flow_id": 3,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "e6a1ad61-c3b6-47a9-90fa-0e605c6beaab",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the high packet rate and a reasonable forward segment size."
+            }
+        }
+    },
+    {
+        "flow_id": 4,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "788cacaa-d6f7-4f44-86ae-bcabfad9ed25",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of An analysis that shows the average packet size is greater than 6.0 bytes."
+            }
+        }
+    },
+    {
+        "flow_id": 5,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "1bb187fe-1001-44c8-a4d7-f66819feb732",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the high number of packets/s, indicating normal usage."
+            }
+        }
+    },
+    {
+        "flow_id": 6,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "f68b70cb-3e13-443a-9de8-f0d0979792c3",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of features such as flow duration and average packet size which do not suggest any suspicious activity."
+            }
+        }
+    },
+    {
+        "flow_id": 7,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "d1751dad-ad4d-4d0c-ad9a-ae7dc1df3c5f",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of Given this network flow data, classification is strictly BENIGN"
+            }
+        }
+    },
+    {
+        "flow_id": 8,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "raw_response": {
+            "exec_id": "361429ee-b002-43f1-98aa-fe6e446a6edd",
+            "result": {
+                "classification": "SYN",
+                "justification": "It was classified like this because of the average packet size."
+            }
+        }
+    },
+    {
+        "flow_id": 9,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "raw_response": {
+            "exec_id": "ec051e48-5f41-4985-afd7-977432e0cf22",
+            "result": {
+                "classification": "SYN",
+                "justification": "It was classified like this because of the high number of packets being forwarded."
+            }
+        }
+    },
+    {
+        "flow_id": 10,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "raw_response": {
+            "exec_id": "929e095b-84e0-418a-8577-cf918c6e1043",
+            "result": {
+                "classification": "SYN",
+                "justification": "It was classified like this because of the high number of packets sent in a short period."
+            }
+        }
+    },
+    {
+        "flow_id": 11,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "146fcb21-6c7d-4ff2-b778-a2b257f29f8a",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of features which show that flow has been initiated but no packets have been received yet."
+            }
+        }
+    },
+    {
+        "flow_id": 12,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "raw_response": {
+            "exec_id": "7a286625-6e39-40b7-8784-eb0721045507",
+            "result": {
+                "classification": "SYN",
+                "justification": "It was classified like this because of the high number of forward segments and packets."
+            }
+        }
+    },
+    {
+        "flow_id": 13,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "28edc648-230d-4865-b30d-fd79ae37c996",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the large number of packets it contains."
+            }
+        }
+    },
+    {
+        "flow_id": 14,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "7d377a8d-d2b0-46ad-8f66-a54ddfb07298",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of given network flow data."
+            }
+        }
+    },
+    {
+        "flow_id": 15,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "fc3ddcbb-a064-40a6-b8df-82a006a7192a",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the high number of forward segments and packet sizes."
+            }
+        }
+    },
+    {
+        "flow_id": 16,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "cf5ccb1d-d56a-4bd9-9f55-f6f4d9db66b8",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the high number of packets being sent during the flow."
+            }
+        }
+    },
+    {
+        "flow_id": 17,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "41f22bb0-267e-464f-9c6e-2c85c8382321",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the flow duration and average packet size."
+            }
+        }
+    },
+    {
+        "flow_id": 18,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "raw_response": {
+            "exec_id": "b3932e62-0eb1-4795-97bb-3a8180197ca9",
+            "result": {
+                "classification": "SYN",
+                "justification": "It was classified like this because of the high number of forward win bytes it had."
+            }
+        }
+    },
+    {
+        "flow_id": 19,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "raw_response": {
+            "exec_id": "517c0f77-0001-4583-af06-f7be7d89e3a4",
+            "result": {
+                "classification": "SYN",
+                "justification": "It was classified like this because of the large number of packet packets generated in a short period."
+            }
+        }
+    },
+    {
+        "flow_id": 20,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "raw_response": {
+            "exec_id": "7244fa69-7402-4063-b507-d1beb9061cc4",
+            "result": {
+                "classification": "SYN",
+                "justification": "It was classified like this because of initial Forward Window Bytes."
+            }
+        }
+    },
+    {
+        "flow_id": 21,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "6cca804e-1f4b-44bb-9916-a662d4d2d06e",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of a large initial forward window which suggests benign traffic."
+            }
+        }
+    },
+    {
+        "flow_id": 22,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "de15b409-752d-451c-b3d0-8620773c3aa6",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the large number of packets being sent in a short amount of time."
+            }
+        }
+    },
+    {
+        "flow_id": 23,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "raw_response": {
+            "exec_id": "eafd4f3e-3297-47d3-8a1d-dc7d353a2a44",
+            "result": {
+                "classification": "SYN",
+                "justification": "It was classified like this because of the high number of packets and segments."
+            }
+        }
+    },
+    {
+        "flow_id": 24,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "raw_response": {
+            "exec_id": "5749a5d9-93e4-4ebe-9a30-779e0fe1149c",
+            "result": {
+                "classification": "SYN",
+                "justification": "It was classified like this because of the number of packets sent and received in a short period."
+            }
+        }
+    },
+    {
+        "flow_id": 25,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "46f37254-51e1-4650-b63e-307e25bafda3",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of Given this network flow data, classify the traffic as benign or SYN TCP flooding attack."
+            }
+        }
+    },
+    {
+        "flow_id": 26,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "raw_response": {
+            "exec_id": "dda7ec1f-a319-4493-8757-c9aed157fc31",
+            "result": {
+                "classification": "SYN",
+                "justification": "It was classified like this because of the high number of packets and bytes in each segment."
+            }
+        }
+    },
+    {
+        "flow_id": 27,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "61f5b157-e5ec-4d03-a09d-84d320c8712d",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of features: Flow Duration=308.0, Flow Packets/s=12987.01, Avg Fwd Segment Size=30.75, Average Packet Size=42.25, Init_Win_bytes_forward=288.0"
+            }
+        }
+    },
+    {
+        "flow_id": 28,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "788a83b8-84bf-4247-9365-bb3bd5f8b823",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of initial Forward Window Bytes which were negative."
+            }
+        }
+    },
+    {
+        "flow_id": 29,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "raw_response": {
+            "exec_id": "671db232-1ce1-4881-8848-db1b8fe4b6ec",
+            "result": {
+                "classification": "SYN",
+                "justification": "It was classified like this because of the high number of packets forwarded and the low packet size."
+            }
+        }
+    },
+    {
+        "flow_id": 30,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "873d7b16-519e-4717-978b-f9f4e40011d6",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of An initial packet from a client sent to the router, which was then forwarded and received by other routers before being dropped."
+            }
+        }
+    },
+    {
+        "flow_id": 31,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "d5afc5da-82bd-47ce-9616-9ffddd3e4c43",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the high packet rate and size."
+            }
+        }
+    },
+    {
+        "flow_id": 32,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "37e09bd1-cbf2-44a2-b120-62f142edfc9d",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the low packet size (60.5 bytes)"
+            }
+        }
+    },
+    {
+        "flow_id": 33,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "dec9c0e1-12de-4228-9250-d6fd319a8392",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the large packet size and high forward segment size."
+            }
+        }
+    },
+    {
+        "flow_id": 34,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "raw_response": {
+            "exec_id": "0552dcf2-3274-4c87-85f3-5ee42b87297e",
+            "result": {
+                "classification": "SYN",
+                "justification": "It was classified like this because of the high number of packets being forwarded."
+            }
+        }
+    },
+    {
+        "flow_id": 35,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "b3bffcf1-031f-4942-b127-8e2a7d8db9d0",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of a normal network flow."
+            }
+        }
+    },
+    {
+        "flow_id": 36,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "c009e98e-d761-4f07-b4d9-8461d5344677",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the large number of forward packets per second and a high packet size."
+            }
+        }
+    },
+    {
+        "flow_id": 37,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "raw_response": {
+            "exec_id": "370a9278-4a56-41b1-9db4-f0483cf850a4",
+            "result": {
+                "classification": "SYN",
+                "justification": "It was classified like this because of the large number of initial forward window bytes."
+            }
+        }
+    },
+    {
+        "flow_id": 38,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "fa1284c2-49e8-4af7-a62a-8831ee0066a0",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the high average packet size (191.91) and the large number of forwarded packets (161.89 per second)."
+            }
+        }
+    },
+    {
+        "flow_id": 39,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "26859ce0-5ba7-4ac8-b40b-e54cdb055e35",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the flow duration and packet size."
+            }
+        }
+    },
+    {
+        "flow_id": 40,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "3e901c6e-84c7-4dc7-98c7-9c89043205db",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the flow duration."
+            }
+        }
+    },
+    {
+        "flow_id": 41,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "raw_response": {
+            "exec_id": "95df4d80-4980-439c-8118-c32a4f84db64",
+            "result": {
+                "classification": "SYN",
+                "justification": "It was classified like this because of the high number of forward segment size packets."
+            }
+        }
+    },
+    {
+        "flow_id": 42,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "raw_response": {
+            "exec_id": "8aeb39e2-42e5-4002-aeb5-3fb1d4bd4f75",
+            "result": {
+                "classification": "SYN",
+                "justification": "It was classified like this because of the high number of packets forwarded."
+            }
+        }
+    },
+    {
+        "flow_id": 43,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "26728858-5ad2-4c4a-896a-374f75695fbf",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the high number of packets that were being sent to a single host, which could be an indication of malicious activity."
+            }
+        }
+    },
+    {
+        "flow_id": 44,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "3ae87693-844a-41b8-a33e-5edc682d3e83",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the flow duration and average packet size."
+            }
+        }
+    },
+    {
+        "flow_id": 45,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "raw_response": {
+            "exec_id": "96d7f26d-635d-4f2a-a090-5d42c526edbd",
+            "result": {
+                "classification": "SYN",
+                "justification": "It was classified like this because of Given this network flow data, classification as SYN TCP flooding attack."
+            }
+        }
+    },
+    {
+        "flow_id": 46,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "raw_response": {
+            "exec_id": "e1a89af2-171e-4a89-806b-22b485e7adea",
+            "result": {
+                "classification": "SYN",
+                "justification": "It was classified like this because of the large number of packets forwarded"
+            }
+        }
+    },
+    {
+        "flow_id": 47,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "2986e02a-2d29-4376-b267-ed0d5e066282",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the flow features which show a high rate of forward segment size increase, indicating a large number of packets being forwarded by the source host."
+            }
+        }
+    },
+    {
+        "flow_id": 48,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "3aafa856-2fc6-46f3-8bb0-c5d51e371ac2",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the high number of packets forwarded without a win, which indicates an attack."
+            }
+        }
+    },
+    {
+        "flow_id": 49,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "raw_response": {
+            "exec_id": "34887680-457f-46cf-ab15-ddce7a800192",
+            "result": {
+                "classification": "SYN",
+                "justification": "It was classified like this because of the high number of packets being forwarded in a very short period, which could be indicative of a SYN flood attack."
+            }
+        }
+    },
+    {
+        "flow_id": 50,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "raw_response": {
+            "exec_id": "7247247c-0331-47f5-9baa-377bb805746e",
+            "result": {
+                "classification": "SYN",
+                "justification": "It was classified like this because of the high number of packet packets/s being sent by the device."
+            }
+        }
+    },
+    {
+        "flow_id": 51,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "raw_response": {
+            "exec_id": "862fa265-e652-4661-a1f9-14ee71d57c8b",
+            "result": {
+                "classification": "SYN",
+                "justification": "It was classified like this because of the large number of packets being sent from an IP address to another, indicating potential malicious activity."
+            }
+        }
+    },
+    {
+        "flow_id": 52,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "raw_response": {
+            "exec_id": "6614e87f-da69-47b8-b30b-6bdc94eb6a5a",
+            "result": {
+                "classification": "SYN",
+                "justification": "It was classified like this because of Initial Forward Window Bytes."
+            }
+        }
+    },
+    {
+        "flow_id": 53,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "raw_response": {
+            "exec_id": "d32d08bb-3b52-45c8-a87e-d97df5c9f2e2",
+            "result": {
+                "classification": "SYN",
+                "justification": "It was classified like this because of the number of packet packets/s it has."
+            }
+        }
+    },
+    {
+        "flow_id": 54,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "raw_response": {
+            "exec_id": "fb1e35d4-c68e-476d-9835-497da1754e3f",
+            "result": {
+                "classification": "SYN",
+                "justification": "It was classified like this because of the high number of packets forwarded."
+            }
+        }
+    },
+    {
+        "flow_id": 55,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "4fac1c06-4423-4989-9626-795dbd4c96c8",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of features Flow Duration=24899.0, Flow Packets/s=281.14, Avg Fwd Segment Size=32.6, Average Packet Size=34.43, Init_Win_bytes_forward=61.0"
+            }
+        }
+    },
+    {
+        "flow_id": 56,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "4e409651-33e5-40a2-ab23-7cd2e0c81613",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of Initial Forward Window Bytes: 4.84"
+            }
+        }
+    },
+    {
+        "flow_id": 57,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "05aaee3f-309c-4b3d-a1fe-0f8de686b199",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the flow duration and packet size."
+            }
+        }
+    },
+    {
+        "flow_id": 58,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "raw_response": {
+            "exec_id": "55a2bf8c-e9b8-434e-b363-a91e036f9742",
+            "result": {
+                "classification": "SYN",
+                "justification": "It was classified like this because of initial Forward Window Bytes."
+            }
+        }
+    },
+    {
+        "flow_id": 59,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "4f022e4c-3889-4807-a153-c26d7f34043d",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the average packet size being very small."
+            }
+        }
+    },
+    {
+        "flow_id": 60,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "7e5bd67f-dfad-4150-b13c-bfd8fd3edea8",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of Given this network flow data, classification as benign."
+            }
+        }
+    },
+    {
+        "flow_id": 61,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "987fb8c5-ec96-4897-be2e-f3715b1a7017",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the large number of packets and successful forwarding."
+            }
+        }
+    },
+    {
+        "flow_id": 62,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "d28c9028-0edb-4136-a0de-c49408d7733a",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the average packet size."
+            }
+        }
+    },
+    {
+        "flow_id": 63,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "de481dc3-95f0-44e6-a114-c47037d0b9ad",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the number of forward segment sizes which is above 20%"
+            }
+        }
+    },
+    {
+        "flow_id": 64,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "raw_response": {
+            "exec_id": "4e8f0102-9046-468f-be50-cdc88dcb7d7d",
+            "result": {
+                "classification": "SYN",
+                "justification": "It was classified like this because of Analyze the following network flow and classify it as BENIGN or SYN DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 65,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "db6b3802-b38d-4918-ad1d-c0480d63d642",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the average packet size being 9.0."
+            }
+        }
+    },
+    {
+        "flow_id": 66,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "35958a78-4c14-4320-94ee-ffcc590af2e2",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the large packet size."
+            }
+        }
+    },
+    {
+        "flow_id": 67,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "raw_response": {
+            "exec_id": "e2435ec3-dfaf-46b5-abcc-c901c1cfaf67",
+            "result": {
+                "classification": "SYN",
+                "justification": "It was classified like this because of the high number of packets forwarded (5840.0) which indicates that it is a SYN flooding attack."
+            }
+        }
+    },
+    {
+        "flow_id": 68,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "raw_response": {
+            "exec_id": "ca0128fb-4325-4019-b119-078f9ab13203",
+            "result": {
+                "classification": "SYN",
+                "justification": "It was classified like this because of the large number of packets and connections being forwarded."
+            }
+        }
+    },
+    {
+        "flow_id": 69,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "14b6fbd1-f21a-4742-9ed8-0e44e48dd0bf",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the high flow duration and packet size."
+            }
+        }
+    },
+    {
+        "flow_id": 70,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "raw_response": {
+            "exec_id": "bc4e07dc-5424-4746-a2d7-bcaaa5a46373",
+            "result": {
+                "classification": "SYN",
+                "justification": "It was classified like this because of Analyze the following network flow and classify it as BENIGN or SYN DoS attack.\n\nFlow features:\n- Flow Duration: 1.0 µs\n- Flow Packets/s: 2000000.0\n- Avg Fwd Segment Size: 6.0 bytes\n- Average Packet Size: 9.0 bytes\n- Init_Win_bytes_forward: 5840.0 bytes\n"
+            }
+        }
+    },
+    {
+        "flow_id": 71,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "3671cdf8-6b3e-44f2-abfd-afbd98a2df74",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of a very short initial forward window size."
+            }
+        }
+    },
+    {
+        "flow_id": 72,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "46d88242-bf5b-406b-8aaa-1203160b69e7",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the flow duration."
+            }
+        }
+    },
+    {
+        "flow_id": 73,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "38896d80-700d-403f-a3fc-5729378994a3",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the large number of forward segments (avg_fwd_segment_size) which suggests it is a legitimate connection."
+            }
+        }
+    },
+    {
+        "flow_id": 74,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "9826aa6e-d295-4fdf-84a1-d32fae51039b",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the flow duration and initial forward window."
+            }
+        }
+    },
+    {
+        "flow_id": 75,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "raw_response": {
+            "exec_id": "5480fdef-bf32-42d1-b3d4-c6c20d0a8c87",
+            "result": {
+                "classification": "SYN",
+                "justification": "It was classified like this because of the high number of packets forwarded during the duration."
+            }
+        }
+    },
+    {
+        "flow_id": 76,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "raw_response": {
+            "exec_id": "ef37b814-7041-40a9-809b-1d3a56c354fb",
+            "result": {
+                "classification": "SYN",
+                "justification": "It was classified like this because of the large number of packets/s and avg packet size."
+            }
+        }
+    },
+    {
+        "flow_id": 77,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "dab43ac2-3abc-4432-8c3a-143296bc246b",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the average packet size and flow duration which are within acceptable limits for a normal traffic."
+            }
+        }
+    },
+    {
+        "flow_id": 78,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "raw_response": {
+            "exec_id": "a84d3c6b-567e-48aa-85af-76800b7dc378",
+            "result": {
+                "classification": "SYN",
+                "justification": "It was classified like this because of the number of packets it sent."
+            }
+        }
+    },
+    {
+        "flow_id": 79,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "raw_response": {
+            "exec_id": "d3895e2a-8fb3-44f7-8d8a-9d6adf9a5d42",
+            "result": {
+                "classification": "SYN",
+                "justification": "It was classified like this because of the high number of packets/s and avg packet size which is larger than 7"
+            }
+        }
+    },
+    {
+        "flow_id": 80,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "raw_response": {
+            "exec_id": "939f1c45-f985-4e0e-9995-251812f87b18",
+            "result": {
+                "classification": "SYN",
+                "justification": "It was classified like this because of the high number of packets forwarded."
+            }
+        }
+    },
+    {
+        "flow_id": 81,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "095b0250-4d1b-4dde-b58f-776b8c38764c",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the high number of packets sent by a single user."
+            }
+        }
+    },
+    {
+        "flow_id": 82,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "raw_response": {
+            "exec_id": "82f9ee03-e3c1-42f4-9767-c5b5bc571599",
+            "result": {
+                "classification": "SYN",
+                "justification": "It was classified like this because of the large number of packets sent in a short duration."
+            }
+        }
+    },
+    {
+        "flow_id": 83,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "e38dc869-9393-43f7-966a-41fa8024bd41",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the low number of packets sent."
+            }
+        }
+    },
+    {
+        "flow_id": 84,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "raw_response": {
+            "exec_id": "d79c33ed-db75-4f01-a8d4-ce9a8ccb6010",
+            "result": {
+                "classification": "SYN",
+                "justification": "It was classified like this because of the high number of packets sent in a short period."
+            }
+        }
+    },
+    {
+        "flow_id": 85,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "raw_response": {
+            "exec_id": "a03fcd79-bb4b-4b0c-ac6d-e85392c74b15",
+            "result": {
+                "classification": "SYN",
+                "justification": "It was classified like this because of the large initial forward window bytes."
+            }
+        }
+    },
+    {
+        "flow_id": 86,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "746e6d6d-8542-482d-91f6-57a2b0408d27",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of Analyze the following network flow and classify it as BENIGN or SYN DoS attack.\n\nFlow features:\n- Flow Duration: 4255586.0 µs\n- Flow Packets/s: 9.16\n- Avg Fwd Segment Size: 279.47 bytes\n- Average Packet Size: 469.18 bytes\n- Init_Win_bytes_forward: 29200.0 bytes\n"
+            }
+        }
+    },
+    {
+        "flow_id": 87,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "7f85e977-9f51-42d5-973f-cf030edb4ae0",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of Given this network flow data, classify the traffic as benign or SYN TCP flooding attack."
+            }
+        }
+    },
+    {
+        "flow_id": 88,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "raw_response": {
+            "exec_id": "55d6d1b8-825a-48c0-994c-87385703796a",
+            "result": {
+                "classification": "SYN",
+                "justification": "It was classified like this because of the initial forward window size and packets per second."
+            }
+        }
+    },
+    {
+        "flow_id": 89,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "raw_response": {
+            "exec_id": "6e5075b6-1e0b-4943-a5fd-c3a4ba505328",
+            "result": {
+                "classification": "SYN",
+                "justification": "It was classified like this because of Given this network flow data, classify the traffic as benign or SYN TCP flooding attack."
+            }
+        }
+    },
+    {
+        "flow_id": 90,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "051066f0-caeb-46f5-9ff2-d63ab4c989da",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of initial forward window size."
+            }
+        }
+    },
+    {
+        "flow_id": 91,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "3f17793c-2a44-4988-b4dc-6885e15f5c7b",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of given network flow data"
+            }
+        }
+    },
+    {
+        "flow_id": 92,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "raw_response": {
+            "exec_id": "4996d946-5f5b-4b66-959e-1d5e4beedd4d",
+            "result": {
+                "classification": "SYN",
+                "justification": "It was classified like this because of Given this network flow data, classify the traffic as benign or SYN TCP flooding attack."
+            }
+        }
+    },
+    {
+        "flow_id": 93,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "raw_response": {
+            "exec_id": "f8c3c1fa-3876-45b1-8395-cad2c1e7e892",
+            "result": {
+                "classification": "SYN",
+                "justification": "It was classified like this because of Given this network flow data, classify the traffic as benign or SYN TCP flooding attack."
+            }
+        }
+    },
+    {
+        "flow_id": 94,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "raw_response": {
+            "exec_id": "bc4e2473-7240-46c9-822b-24f3483fcbae",
+            "result": {
+                "classification": "SYN",
+                "justification": "It was classified like this because of Given this network flow data, classify the traffic as benign or SYN TCP flooding attack."
+            }
+        }
+    },
+    {
+        "flow_id": 95,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "37a54aa1-3533-4105-8fbb-076d3f21b1a5",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of Given this network flow data, classify the traffic as benign or SYN TCP flooding attack."
+            }
+        }
+    },
+    {
+        "flow_id": 96,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "74e4816d-7faf-4968-8328-ebf0ce801e24",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of a high average packet size, suggesting a legitimate flow."
+            }
+        }
+    },
+    {
+        "flow_id": 97,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "806125a1-404f-4815-9227-b9bb6e9d280a",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of initial forward window size"
+            }
+        }
+    },
+    {
+        "flow_id": 98,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "ce0a05b6-156f-4980-be15-9bc06bf09ef7",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the high number of packets forwarded in each forward segment."
+            }
+        }
+    },
+    {
+        "flow_id": 99,
+        "true_label": "SYN",
+        "predicted": "SYN",
+        "raw_response": {
+            "exec_id": "44a8af71-4602-41ce-b76f-5f84ddcdb428",
+            "result": {
+                "classification": "SYN",
+                "justification": "It was classified like this because of the number of packets forwarded by the device."
+            }
+        }
+    }
+]

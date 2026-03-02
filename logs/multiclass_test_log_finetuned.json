@@ -1,0 +1,1202 @@
+[
+    {
+        "flow_id": 0,
+        "true_label": "UDPLag",
+        "predicted": "UDPLag",
+        "raw_response": {
+            "exec_id": "ec60730f-ca9c-4d43-bc88-af98e606d6fd",
+            "result": {
+                "classification": "UDPLag",
+                "justification": "It was classified like this because of the high packet rate."
+            }
+        }
+    },
+    {
+        "flow_id": 1,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "83df1d53-9229-4f19-a20e-b6697d405cca",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the high packet throughput and low URG flag count."
+            }
+        }
+    },
+    {
+        "flow_id": 2,
+        "true_label": "UDPLag",
+        "predicted": "UDPLag",
+        "raw_response": {
+            "exec_id": "d30b13e0-b83e-406e-9a44-3d679ecae33e",
+            "result": {
+                "classification": "UDPLag",
+                "justification": "It was classified like this because of the high packet rate."
+            }
+        }
+    },
+    {
+        "flow_id": 3,
+        "true_label": "UDPLag",
+        "predicted": "UDPLag",
+        "raw_response": {
+            "exec_id": "ef54f703-9850-4879-b8cc-929f87ce4c28",
+            "result": {
+                "classification": "UDPLag",
+                "justification": "It was classified like this because of the large number of packets and the lack of any URG Flag."
+            }
+        }
+    },
+    {
+        "flow_id": 4,
+        "true_label": "UDPLag",
+        "predicted": "UDPLag",
+        "raw_response": {
+            "exec_id": "aa006a66-b7ec-4f9b-bc1d-0aaf8c3001d2",
+            "result": {
+                "classification": "UDPLag",
+                "justification": "It was classified like this because of the large number of packets and the lack of any URG Flag."
+            }
+        }
+    },
+    {
+        "flow_id": 5,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "ec9d48dd-deec-44ee-84ec-2f47e7e323b5",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the high packet length and low flow rate."
+            }
+        }
+    },
+    {
+        "flow_id": 6,
+        "true_label": "UDPLag",
+        "predicted": "UDPLag",
+        "raw_response": {
+            "exec_id": "4c3caa7a-44fb-4a56-ab06-6af14072cae1",
+            "result": {
+                "classification": "UDPLag",
+                "justification": "It was classified like this because of the high packet size and low flow rate."
+            }
+        }
+    },
+    {
+        "flow_id": 7,
+        "true_label": "UDP",
+        "predicted": "UDP",
+        "raw_response": {
+            "exec_id": "ed2dc577-f21f-4c3e-a3f7-21e0dece0575",
+            "result": {
+                "classification": "UDP",
+                "justification": "It was classified like this because of the high packet rate."
+            }
+        }
+    },
+    {
+        "flow_id": 8,
+        "true_label": "UDPLag",
+        "predicted": "UDPLag",
+        "raw_response": {
+            "exec_id": "506263db-2356-41f4-9d59-886385c96b63",
+            "result": {
+                "classification": "UDPLag",
+                "justification": "It was classified like this because of the high packet size and low flow rate."
+            }
+        }
+    },
+    {
+        "flow_id": 9,
+        "true_label": "Syn",
+        "predicted": "Syn",
+        "raw_response": {
+            "exec_id": "07c4ef31-82f5-42f2-8561-50044f7206e7",
+            "result": {
+                "classification": "Syn",
+                "justification": "It was classified like this because of the high number of packets sent in a short period."
+            }
+        }
+    },
+    {
+        "flow_id": 10,
+        "true_label": "UDP",
+        "predicted": "UDP",
+        "raw_response": {
+            "exec_id": "b8d3236c-e8d8-4a06-873b-75a0b6b19b8e",
+            "result": {
+                "classification": "UDP",
+                "justification": "It was classified like this because of the high packet rate."
+            }
+        }
+    },
+    {
+        "flow_id": 11,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "dbb3bf44-89a5-467e-8f78-130416fc8507",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the low packet length."
+            }
+        }
+    },
+    {
+        "flow_id": 12,
+        "true_label": "Syn",
+        "predicted": "Syn",
+        "raw_response": {
+            "exec_id": "6865f691-16b4-4106-a596-7aa6731ed94b",
+            "result": {
+                "classification": "Syn",
+                "justification": "It was classified like this because of the high number of Syn packets."
+            }
+        }
+    },
+    {
+        "flow_id": 13,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "203943e2-bc4d-4045-a225-c685020c4628",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the low packet length."
+            }
+        }
+    },
+    {
+        "flow_id": 14,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "b68c2a74-ad11-46a4-b4d7-4c5d9f83cfab",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the high packet throughput and low URG flag count."
+            }
+        }
+    },
+    {
+        "flow_id": 15,
+        "true_label": "Syn",
+        "predicted": "Syn",
+        "raw_response": {
+            "exec_id": "99076830-8bff-422e-83df-f570933088c3",
+            "result": {
+                "classification": "Syn",
+                "justification": "It was classified like this because of the large number of packets in a short time."
+            }
+        }
+    },
+    {
+        "flow_id": 16,
+        "true_label": "Syn",
+        "predicted": "Syn",
+        "raw_response": {
+            "exec_id": "ff14731f-2cc1-483b-a916-36ad1f37ce8a",
+            "result": {
+                "classification": "Syn",
+                "justification": "It was classified like this because of the large number of packets in a short time."
+            }
+        }
+    },
+    {
+        "flow_id": 17,
+        "true_label": "Syn",
+        "predicted": "Syn",
+        "raw_response": {
+            "exec_id": "1de39fe9-5195-4596-8ca0-9f5e9a0f32b4",
+            "result": {
+                "classification": "Syn",
+                "justification": "It was classified like this because of the high number of Syn packets."
+            }
+        }
+    },
+    {
+        "flow_id": 18,
+        "true_label": "Syn",
+        "predicted": "Syn",
+        "raw_response": {
+            "exec_id": "c338841a-f604-4b1a-bbb9-fd2513214691",
+            "result": {
+                "classification": "Syn",
+                "justification": "It was classified like this because of the high number of Syn packets."
+            }
+        }
+    },
+    {
+        "flow_id": 19,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "37be6cd3-1d31-47de-83d5-1fed0ed87bc1",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the high packet throughput and low URG flag count."
+            }
+        }
+    },
+    {
+        "flow_id": 20,
+        "true_label": "UDP",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "b71e3962-f1c2-41c5-9088-b11d9b9178cb",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the high packet throughput and low URG flag count."
+            }
+        }
+    },
+    {
+        "flow_id": 21,
+        "true_label": "UDPLag",
+        "predicted": "UDPLag",
+        "raw_response": {
+            "exec_id": "07eb1a89-cbb4-403a-86a6-31e0c1cb386c",
+            "result": {
+                "classification": "UDPLag",
+                "justification": "It was classified like this because of the high packet size and low flow rate."
+            }
+        }
+    },
+    {
+        "flow_id": 22,
+        "true_label": "UDPLag",
+        "predicted": "UDPLag",
+        "raw_response": {
+            "exec_id": "65f25f91-cfd0-41a3-9bee-dd534a637ef1",
+            "result": {
+                "classification": "UDPLag",
+                "justification": "It was classified like this because of the high packet rate."
+            }
+        }
+    },
+    {
+        "flow_id": 23,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "62a811bd-2bdb-44ca-9818-5ab3634c83ca",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the high packet throughput and low URG flag count."
+            }
+        }
+    },
+    {
+        "flow_id": 24,
+        "true_label": "UDPLag",
+        "predicted": "UDPLag",
+        "raw_response": {
+            "exec_id": "c73744a3-ff70-40cf-93a6-4ae9e7393c38",
+            "result": {
+                "classification": "UDPLag",
+                "justification": "It was classified like this because of the high number of URG Flag Count."
+            }
+        }
+    },
+    {
+        "flow_id": 25,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "5fdbbfa9-9af7-48e3-84ec-f7b29ae9d8a2",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the high packet throughput and low URG flag count."
+            }
+        }
+    },
+    {
+        "flow_id": 26,
+        "true_label": "UDP",
+        "predicted": "UDP",
+        "raw_response": {
+            "exec_id": "6ff7a459-1668-4264-84b7-a39e9bb1e9f1",
+            "result": {
+                "classification": "UDP",
+                "justification": "It was classified like this because of the high packet rate."
+            }
+        }
+    },
+    {
+        "flow_id": 27,
+        "true_label": "UDP",
+        "predicted": "UDP",
+        "raw_response": {
+            "exec_id": "37279127-7652-4a28-8eae-9453d407968b",
+            "result": {
+                "classification": "UDP",
+                "justification": "It was classified like this because of the high packet rate."
+            }
+        }
+    },
+    {
+        "flow_id": 28,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "16a44aa5-b84b-4237-bf76-9ce0827b86b5",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the low packet length."
+            }
+        }
+    },
+    {
+        "flow_id": 29,
+        "true_label": "Syn",
+        "predicted": "Syn",
+        "raw_response": {
+            "exec_id": "68b21a0a-10f5-42ce-ac4d-53369eb4e7d5",
+            "result": {
+                "classification": "Syn",
+                "justification": "It was classified like this because of the large number of packets in a short time."
+            }
+        }
+    },
+    {
+        "flow_id": 30,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "46d9144b-3921-45e4-973a-a7a8e7457306",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the Min Packet Length and Fwd Packets/s values."
+            }
+        }
+    },
+    {
+        "flow_id": 31,
+        "true_label": "UDPLag",
+        "predicted": "UDPLag",
+        "raw_response": {
+            "exec_id": "3527d75e-de62-46c4-a45f-a2a80004fd43",
+            "result": {
+                "classification": "UDPLag",
+                "justification": "It was classified like this because of the high packet size and low flow rate."
+            }
+        }
+    },
+    {
+        "flow_id": 32,
+        "true_label": "UDPLag",
+        "predicted": "UDPLag",
+        "raw_response": {
+            "exec_id": "1f434a47-5d1d-4316-a090-6c2641f2c5d2",
+            "result": {
+                "classification": "UDPLag",
+                "justification": "It was classified like this because of the high packet rate."
+            }
+        }
+    },
+    {
+        "flow_id": 33,
+        "true_label": "Syn",
+        "predicted": "Syn",
+        "raw_response": {
+            "exec_id": "4158060d-a193-49f2-b533-1ea47118e953",
+            "result": {
+                "classification": "Syn",
+                "justification": "It was classified like this because of the high number of Syn packets."
+            }
+        }
+    },
+    {
+        "flow_id": 34,
+        "true_label": "Syn",
+        "predicted": "Syn",
+        "raw_response": {
+            "exec_id": "ddb30a76-5155-42ca-b5d5-153e0beb8e23",
+            "result": {
+                "classification": "Syn",
+                "justification": "It was classified like this because of the high number of Syn packets."
+            }
+        }
+    },
+    {
+        "flow_id": 35,
+        "true_label": "Syn",
+        "predicted": "Syn",
+        "raw_response": {
+            "exec_id": "99c59b30-391d-4698-86e3-dc911f3f63f2",
+            "result": {
+                "classification": "Syn",
+                "justification": "It was classified like this because of the high number of packets sent in a short period."
+            }
+        }
+    },
+    {
+        "flow_id": 36,
+        "true_label": "Syn",
+        "predicted": "Syn",
+        "raw_response": {
+            "exec_id": "1a2dac9c-95d6-4b42-9489-5461412f8f47",
+            "result": {
+                "classification": "Syn",
+                "justification": "It was classified like this because of the high number of packets sent in a short period."
+            }
+        }
+    },
+    {
+        "flow_id": 37,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "950c252f-d865-41f7-88d3-d17bf09e0ddc",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the high packet throughput and low URG flag count."
+            }
+        }
+    },
+    {
+        "flow_id": 38,
+        "true_label": "UDPLag",
+        "predicted": "UDPLag",
+        "raw_response": {
+            "exec_id": "aed37ffb-1c81-4b1d-b753-a2f9d5b19f94",
+            "result": {
+                "classification": "UDPLag",
+                "justification": "It was classified like this because of the high packet rate."
+            }
+        }
+    },
+    {
+        "flow_id": 39,
+        "true_label": "UDP",
+        "predicted": "UDP",
+        "raw_response": {
+            "exec_id": "63067794-726d-4b24-9121-d14f1ec12c50",
+            "result": {
+                "classification": "UDP",
+                "justification": "It was classified like this because of the high packet rate."
+            }
+        }
+    },
+    {
+        "flow_id": 40,
+        "true_label": "UDPLag",
+        "predicted": "UDPLag",
+        "raw_response": {
+            "exec_id": "d733b616-19cc-4dc8-946d-f6cf1f30f3c0",
+            "result": {
+                "classification": "UDPLag",
+                "justification": "It was classified like this because of the high packet rate."
+            }
+        }
+    },
+    {
+        "flow_id": 41,
+        "true_label": "UDP",
+        "predicted": "UDPLag",
+        "raw_response": {
+            "exec_id": "944cf059-0da8-46aa-80cc-291c8b89a935",
+            "result": {
+                "classification": "UDPLag",
+                "justification": "It was classified like this because of the high number of URG Flag Count."
+            }
+        }
+    },
+    {
+        "flow_id": 42,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "9d0dc85c-ae5a-4c4a-acf4-5267474aed53",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the low packet length."
+            }
+        }
+    },
+    {
+        "flow_id": 43,
+        "true_label": "UDPLag",
+        "predicted": "UDPLag",
+        "raw_response": {
+            "exec_id": "a657f3f1-0f7c-4fcf-ab87-71a6ee2c5108",
+            "result": {
+                "classification": "UDPLag",
+                "justification": "It was classified like this because of the high number of URG Flag Count."
+            }
+        }
+    },
+    {
+        "flow_id": 44,
+        "true_label": "UDP",
+        "predicted": "UDP",
+        "raw_response": {
+            "exec_id": "0dfc8422-e5e2-47b2-aa2a-db34dd1ed37b",
+            "result": {
+                "classification": "UDP",
+                "justification": "It was classified like this because of the high packet rate."
+            }
+        }
+    },
+    {
+        "flow_id": 45,
+        "true_label": "Syn",
+        "predicted": "Syn",
+        "raw_response": {
+            "exec_id": "83e0fdff-4eaa-4362-a884-bad559f29c7b",
+            "result": {
+                "classification": "Syn",
+                "justification": "It was classified like this because of the high number of Syn packets."
+            }
+        }
+    },
+    {
+        "flow_id": 46,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "c35f2988-b250-4f24-bb2e-bfac8e3d1409",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the high packet throughput and low URG flag count."
+            }
+        }
+    },
+    {
+        "flow_id": 47,
+        "true_label": "UDPLag",
+        "predicted": "UDPLag",
+        "raw_response": {
+            "exec_id": "15e76f0b-6885-4df9-9b1c-e65aef6d7b2c",
+            "result": {
+                "classification": "UDPLag",
+                "justification": "It was classified like this because of the high packet size and low flow rate."
+            }
+        }
+    },
+    {
+        "flow_id": 48,
+        "true_label": "UDP",
+        "predicted": "UDP",
+        "raw_response": {
+            "exec_id": "e8616746-e832-4903-819b-3f6300052ca2",
+            "result": {
+                "classification": "UDP",
+                "justification": "It was classified like this because of the high packet rate."
+            }
+        }
+    },
+    {
+        "flow_id": 49,
+        "true_label": "UDPLag",
+        "predicted": "UDPLag",
+        "raw_response": {
+            "exec_id": "db33f052-76b5-40fd-8085-5f71b17f8bb2",
+            "result": {
+                "classification": "UDPLag",
+                "justification": "It was classified like this because of the high packet size and low flow rate."
+            }
+        }
+    },
+    {
+        "flow_id": 50,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "34bbcd3e-fa0a-4584-b817-fc07e7b134ef",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the low packet length."
+            }
+        }
+    },
+    {
+        "flow_id": 51,
+        "true_label": "UDPLag",
+        "predicted": "UDPLag",
+        "raw_response": {
+            "exec_id": "5be39e90-b125-4e5e-8aa8-b04a6f97145c",
+            "result": {
+                "classification": "UDPLag",
+                "justification": "It was classified like this because of the large number of packets and the lack of any URG Flag."
+            }
+        }
+    },
+    {
+        "flow_id": 52,
+        "true_label": "UDP",
+        "predicted": "UDP",
+        "raw_response": {
+            "exec_id": "bfae81fc-bd31-4447-b779-026d8a58db0c",
+            "result": {
+                "classification": "UDP",
+                "justification": "It was classified like this because of the high number of URG Flag Count."
+            }
+        }
+    },
+    {
+        "flow_id": 53,
+        "true_label": "UDPLag",
+        "predicted": "UDPLag",
+        "raw_response": {
+            "exec_id": "973fe7ec-b6da-4c29-87f7-2005b3933434",
+            "result": {
+                "classification": "UDPLag",
+                "justification": "It was classified like this because of the high packet rate."
+            }
+        }
+    },
+    {
+        "flow_id": 54,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "39b6ada9-631f-4936-932e-05cfe8d0fdff",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the low packet length."
+            }
+        }
+    },
+    {
+        "flow_id": 55,
+        "true_label": "UDPLag",
+        "predicted": "UDPLag",
+        "raw_response": {
+            "exec_id": "1aee13c7-b7cc-4975-a60c-acc6e9b45794",
+            "result": {
+                "classification": "UDPLag",
+                "justification": "It was classified like this because of the large number of packets and the lack of any URG Flag."
+            }
+        }
+    },
+    {
+        "flow_id": 56,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "5852d393-4e1a-452c-b706-82bba5f03726",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the high packet throughput and low URG flag count."
+            }
+        }
+    },
+    {
+        "flow_id": 57,
+        "true_label": "Syn",
+        "predicted": "Syn",
+        "raw_response": {
+            "exec_id": "6df5c9e1-038b-4692-af6b-eb37cd872d6e",
+            "result": {
+                "classification": "Syn",
+                "justification": "It was classified like this because of the high number of Syn packets."
+            }
+        }
+    },
+    {
+        "flow_id": 58,
+        "true_label": "UDPLag",
+        "predicted": "UDPLag",
+        "raw_response": {
+            "exec_id": "9e454d1d-9119-47ed-900b-e8e2c3786e6f",
+            "result": {
+                "classification": "UDPLag",
+                "justification": "It was classified like this because of the large number of packets and the lack of any URG Flag."
+            }
+        }
+    },
+    {
+        "flow_id": 59,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "340baf06-df8b-4d51-a1c0-187c5bb6fc3c",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the high packet throughput and low URG flag count."
+            }
+        }
+    },
+    {
+        "flow_id": 60,
+        "true_label": "UDP",
+        "predicted": "UDP",
+        "raw_response": {
+            "exec_id": "116be703-34d2-4517-9ab8-965b0bb6fb05",
+            "result": {
+                "classification": "UDP",
+                "justification": "It was classified like this because of the high number of URG Flag Count."
+            }
+        }
+    },
+    {
+        "flow_id": 61,
+        "true_label": "UDPLag",
+        "predicted": "UDPLag",
+        "raw_response": {
+            "exec_id": "555732c5-d52b-4190-9b5c-ad2878c0385d",
+            "result": {
+                "classification": "UDPLag",
+                "justification": "It was classified like this because of the high packet size and low flow rate."
+            }
+        }
+    },
+    {
+        "flow_id": 62,
+        "true_label": "UDP",
+        "predicted": "UDP",
+        "raw_response": {
+            "exec_id": "f4f80d71-8161-4196-b7fb-b4c0557319a0",
+            "result": {
+                "classification": "UDP",
+                "justification": "It was classified like this because of the high packet rate."
+            }
+        }
+    },
+    {
+        "flow_id": 63,
+        "true_label": "UDP",
+        "predicted": "UDP",
+        "raw_response": {
+            "exec_id": "ef4800a3-9278-4dcb-ad74-43bc1c7848b5",
+            "result": {
+                "classification": "UDP",
+                "justification": "It was classified like this because of the high number of URG Flag Count."
+            }
+        }
+    },
+    {
+        "flow_id": 64,
+        "true_label": "UDPLag",
+        "predicted": "UDPLag",
+        "raw_response": {
+            "exec_id": "fb860d9b-ca64-4bed-9660-123c050cd70c",
+            "result": {
+                "classification": "UDPLag",
+                "justification": "It was classified like this because of the high packet rate."
+            }
+        }
+    },
+    {
+        "flow_id": 65,
+        "true_label": "UDPLag",
+        "predicted": "UDPLag",
+        "raw_response": {
+            "exec_id": "3def88e8-cc38-42de-b05f-386c03e54c35",
+            "result": {
+                "classification": "UDPLag",
+                "justification": "It was classified like this because of the high packet size and low flow rate."
+            }
+        }
+    },
+    {
+        "flow_id": 66,
+        "true_label": "Syn",
+        "predicted": "Syn",
+        "raw_response": {
+            "exec_id": "ad8e373c-6136-4a17-a8c2-1f7306bbdaff",
+            "result": {
+                "classification": "Syn",
+                "justification": "It was classified like this because of the high number of Syn packets."
+            }
+        }
+    },
+    {
+        "flow_id": 67,
+        "true_label": "UDP",
+        "predicted": "UDP",
+        "raw_response": {
+            "exec_id": "04682a8e-3630-4ffe-90e7-5d7a2836bee4",
+            "result": {
+                "classification": "UDP",
+                "justification": "It was classified like this because of the high number of URG Flag Count."
+            }
+        }
+    },
+    {
+        "flow_id": 68,
+        "true_label": "UDP",
+        "predicted": "UDP",
+        "raw_response": {
+            "exec_id": "cab93e2a-96b2-455e-835a-ca3e4b73acb0",
+            "result": {
+                "classification": "UDP",
+                "justification": "It was classified like this because of the high packet rate."
+            }
+        }
+    },
+    {
+        "flow_id": 69,
+        "true_label": "Syn",
+        "predicted": "Syn",
+        "raw_response": {
+            "exec_id": "5c5cfb33-5aa8-4fa8-bf8d-66743b21205b",
+            "result": {
+                "classification": "Syn",
+                "justification": "It was classified like this because of the high number of packets sent in a short period."
+            }
+        }
+    },
+    {
+        "flow_id": 70,
+        "true_label": "UDP",
+        "predicted": "UDP",
+        "raw_response": {
+            "exec_id": "a0922b6b-7fcf-4e67-9e02-0fd765726205",
+            "result": {
+                "classification": "UDP",
+                "justification": "It was classified like this because of the high number of URG Flag Count."
+            }
+        }
+    },
+    {
+        "flow_id": 71,
+        "true_label": "UDPLag",
+        "predicted": "UDPLag",
+        "raw_response": {
+            "exec_id": "2e0846b6-cb2f-4722-844c-0615c98f90d2",
+            "result": {
+                "classification": "UDPLag",
+                "justification": "It was classified like this because of the large number of packets and the lack of any URG Flag."
+            }
+        }
+    },
+    {
+        "flow_id": 72,
+        "true_label": "UDP",
+        "predicted": "UDP",
+        "raw_response": {
+            "exec_id": "37c5bd37-161d-4043-b870-74a7f532d6b7",
+            "result": {
+                "classification": "UDP",
+                "justification": "It was classified like this because of the high packet rate."
+            }
+        }
+    },
+    {
+        "flow_id": 73,
+        "true_label": "UDP",
+        "predicted": "UDP",
+        "raw_response": {
+            "exec_id": "81509a92-fede-4e2e-aeef-6fbdccf16bfa",
+            "result": {
+                "classification": "UDP",
+                "justification": "It was classified like this because of the high packet rate."
+            }
+        }
+    },
+    {
+        "flow_id": 74,
+        "true_label": "UDPLag",
+        "predicted": "UDPLag",
+        "raw_response": {
+            "exec_id": "414136b8-e5fc-470c-8e00-6c5165b6f149",
+            "result": {
+                "classification": "UDPLag",
+                "justification": "It was classified like this because of the high packet size and low flow rate."
+            }
+        }
+    },
+    {
+        "flow_id": 75,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "84d903ba-0f16-4e9a-8030-942e485f76c1",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the high packet throughput and low URG flag count."
+            }
+        }
+    },
+    {
+        "flow_id": 76,
+        "true_label": "Syn",
+        "predicted": "Syn",
+        "raw_response": {
+            "exec_id": "2b7ed831-f7ba-44ec-accc-f4055c885997",
+            "result": {
+                "classification": "Syn",
+                "justification": "It was classified like this because of the high number of Syn packets."
+            }
+        }
+    },
+    {
+        "flow_id": 77,
+        "true_label": "UDPLag",
+        "predicted": "UDPLag",
+        "raw_response": {
+            "exec_id": "a29988fb-b43a-4db3-892f-aa8ee92fdf48",
+            "result": {
+                "classification": "UDPLag",
+                "justification": "It was classified like this because of the high number of URG Flag Count."
+            }
+        }
+    },
+    {
+        "flow_id": 78,
+        "true_label": "UDP",
+        "predicted": "UDP",
+        "raw_response": {
+            "exec_id": "87e857ba-e101-4b85-88d9-f366a9307f48",
+            "result": {
+                "classification": "UDP",
+                "justification": "It was classified like this because of the high packet rate."
+            }
+        }
+    },
+    {
+        "flow_id": 79,
+        "true_label": "UDPLag",
+        "predicted": "UDPLag",
+        "raw_response": {
+            "exec_id": "0518634e-270e-46f4-989a-cbb334a09615",
+            "result": {
+                "classification": "UDPLag",
+                "justification": "It was classified like this because of the high packet rate and large size."
+            }
+        }
+    },
+    {
+        "flow_id": 80,
+        "true_label": "UDP",
+        "predicted": "UDP",
+        "raw_response": {
+            "exec_id": "cf89948a-c3c8-4727-ab22-d6f9939cea47",
+            "result": {
+                "classification": "UDP",
+                "justification": "It was classified like this because of the high packet rate."
+            }
+        }
+    },
+    {
+        "flow_id": 81,
+        "true_label": "Syn",
+        "predicted": "Syn",
+        "raw_response": {
+            "exec_id": "03430bb5-e3b5-45aa-b179-e39b46d3f5c5",
+            "result": {
+                "classification": "Syn",
+                "justification": "It was classified like this because of the high number of Syn packets."
+            }
+        }
+    },
+    {
+        "flow_id": 82,
+        "true_label": "UDPLag",
+        "predicted": "UDPLag",
+        "raw_response": {
+            "exec_id": "d8a89b9c-1531-4ca1-ae5d-851ec1636fb1",
+            "result": {
+                "classification": "UDPLag",
+                "justification": "It was classified like this because of the high packet rate."
+            }
+        }
+    },
+    {
+        "flow_id": 83,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "8c3fe581-b0e8-4b18-b507-9dba379f301d",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the high packet throughput and low URG flag count."
+            }
+        }
+    },
+    {
+        "flow_id": 84,
+        "true_label": "UDP",
+        "predicted": "UDP",
+        "raw_response": {
+            "exec_id": "68fea33c-46e9-47f6-98b0-519f0b04f45c",
+            "result": {
+                "classification": "UDP",
+                "justification": "It was classified like this because of the high packet rate."
+            }
+        }
+    },
+    {
+        "flow_id": 85,
+        "true_label": "Syn",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "28251ae1-9f69-414a-a935-eee4b9d3c8fe",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the high packet throughput and low URG flag count."
+            }
+        }
+    },
+    {
+        "flow_id": 86,
+        "true_label": "UDPLag",
+        "predicted": "UDPLag",
+        "raw_response": {
+            "exec_id": "a5311176-cfc7-4d77-8dc4-7cab5fb5c152",
+            "result": {
+                "classification": "UDPLag",
+                "justification": "It was classified like this because of the high packet rate."
+            }
+        }
+    },
+    {
+        "flow_id": 87,
+        "true_label": "UDP",
+        "predicted": "UDPLag",
+        "raw_response": {
+            "exec_id": "8ffa5343-b878-4c95-9f73-a525c95c433a",
+            "result": {
+                "classification": "UDPLag",
+                "justification": "It was classified like this because of the high number of URG Flag Count."
+            }
+        }
+    },
+    {
+        "flow_id": 88,
+        "true_label": "UDPLag",
+        "predicted": "UDPLag",
+        "raw_response": {
+            "exec_id": "0786d8d7-03d2-438c-b343-b43de8f6accb",
+            "result": {
+                "classification": "UDPLag",
+                "justification": "It was classified like this because of the high packet rate."
+            }
+        }
+    },
+    {
+        "flow_id": 89,
+        "true_label": "UDP",
+        "predicted": "UDPLag",
+        "raw_response": {
+            "exec_id": "2098105d-f131-4584-a534-9881ecdd5960",
+            "result": {
+                "classification": "UDPLag",
+                "justification": "It was classified like this because of the high packet rate."
+            }
+        }
+    },
+    {
+        "flow_id": 90,
+        "true_label": "UDPLag",
+        "predicted": "UDPLag",
+        "raw_response": {
+            "exec_id": "b79a82fa-fd8e-4e87-b182-0da19e90dce2",
+            "result": {
+                "classification": "UDPLag",
+                "justification": "It was classified like this because of the high number of URG Flag Count."
+            }
+        }
+    },
+    {
+        "flow_id": 91,
+        "true_label": "UDPLag",
+        "predicted": "UDPLag",
+        "raw_response": {
+            "exec_id": "11aa3e01-9593-410d-88d5-ec396b703847",
+            "result": {
+                "classification": "UDPLag",
+                "justification": "It was classified like this because of the high packet rate."
+            }
+        }
+    },
+    {
+        "flow_id": 92,
+        "true_label": "Syn",
+        "predicted": "Syn",
+        "raw_response": {
+            "exec_id": "98eddcaa-57ce-4de7-adca-27a48d91bd94",
+            "result": {
+                "classification": "Syn",
+                "justification": "It was classified like this because of the high number of Syn packets."
+            }
+        }
+    },
+    {
+        "flow_id": 93,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "3a0127db-adab-4874-84c5-8c03d0b0673b",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the low packet length."
+            }
+        }
+    },
+    {
+        "flow_id": 94,
+        "true_label": "UDPLag",
+        "predicted": "UDPLag",
+        "raw_response": {
+            "exec_id": "1a597f74-8d3c-41c6-aca9-8dac54769aee",
+            "result": {
+                "classification": "UDPLag",
+                "justification": "It was classified like this because of the high packet rate."
+            }
+        }
+    },
+    {
+        "flow_id": 95,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "raw_response": {
+            "exec_id": "fd94c534-95b9-4734-9c6a-b21583da02c1",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the low packet length."
+            }
+        }
+    },
+    {
+        "flow_id": 96,
+        "true_label": "Syn",
+        "predicted": "Syn",
+        "raw_response": {
+            "exec_id": "dcbd0e5a-1251-47c0-8cd3-9e0ee3e44069",
+            "result": {
+                "classification": "Syn",
+                "justification": "It was classified like this because of the high number of packets sent in a short period."
+            }
+        }
+    },
+    {
+        "flow_id": 97,
+        "true_label": "UDPLag",
+        "predicted": "UDPLag",
+        "raw_response": {
+            "exec_id": "89cfa5e9-530e-40e2-8457-11b0b4da508d",
+            "result": {
+                "classification": "UDPLag",
+                "justification": "It was classified like this because of the high packet rate."
+            }
+        }
+    },
+    {
+        "flow_id": 98,
+        "true_label": "UDPLag",
+        "predicted": "UDPLag",
+        "raw_response": {
+            "exec_id": "5ec5ab52-3301-4755-b617-392ae28ecf66",
+            "result": {
+                "classification": "UDPLag",
+                "justification": "It was classified like this because of the high packet rate and low URG flag count."
+            }
+        }
+    },
+    {
+        "flow_id": 99,
+        "true_label": "UDP",
+        "predicted": "UDP",
+        "raw_response": {
+            "exec_id": "c349b498-32c6-46f9-b207-d94d2f4369f4",
+            "result": {
+                "classification": "UDP",
+                "justification": "It was classified like this because of the high number of packets per second."
+            }
+        }
+    }
+]

@@ -14,7 +14,7 @@ import threading
 import pynvml
 
 # ----------------- Config -----------------
-REQUESTS_LOG_PATH = "requests.log"
+REQUESTS_LOG_PATH = "udpLag.requests.log"
 results_by_id = {}
 _ollama_proc = None
 _gpu_handle = None

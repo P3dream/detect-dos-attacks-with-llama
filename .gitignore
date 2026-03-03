@@ -4,3 +4,4 @@ __pycache__/
 last_prompt_sent.txt
 notes/
 .env
+portmap/Portmap.csv

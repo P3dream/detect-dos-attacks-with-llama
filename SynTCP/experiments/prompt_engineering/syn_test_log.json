@@ -1,0 +1,1402 @@
+[
+    {
+        "flow_id": 0,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because of the high flow duration (118 microseconds), low average packet size (7.5 bytes) and initial forward window size (5840 bytes). These characteristics are generally indicative of a benign network flow.",
+        "raw_response": {
+            "exec_id": "d85c1798-1a35-48f9-8352-d73bdc20b34b",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the high flow duration (118 microseconds), low average packet size (7.5 bytes) and initial forward window size (5840 bytes). These characteristics are generally indicative of a benign network flow."
+            }
+        }
+    },
+    {
+        "flow_id": 1,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because of the Flow Duration (1 microsecond), which indicates that the flow is very short and does not contain enough information to support a SYN-based DoS attack.",
+        "raw_response": {
+            "exec_id": "9605bdf7-35dd-4610-b986-24262d5a8b97",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the Flow Duration (1 microsecond), which indicates that the flow is very short and does not contain enough information to support a SYN-based DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 2,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because of the Flow Duration, which is a high number (>15000 microseconds), indicating a long flow duration. Also, the Flow Packets per Second (2000000) indicates that the flow rate is very high, suggesting a potential SYN-based DoS attack.",
+        "raw_response": {
+            "exec_id": "23c22748-ad02-48ff-8906-ac45c9476890",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the Flow Duration, which is a high number (>15000 microseconds), indicating a long flow duration. Also, the Flow Packets per Second (2000000) indicates that the flow rate is very high, suggesting a potential SYN-based DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 3,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "This flow was classified as BENIGN because it does not appear to be related to TCP segmentation or packet size manipulation, and the average forward segment size and packet size are both zero. The initial forward window is also set to a small value, suggesting that there is little to no traffic being forwarded at this time.",
+        "raw_response": {
+            "exec_id": "15a33bdc-4c3e-41ed-b632-c8e95ea1165a",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "This flow was classified as BENIGN because it does not appear to be related to TCP segmentation or packet size manipulation, and the average forward segment size and packet size are both zero. The initial forward window is also set to a small value, suggesting that there is little to no traffic being forwarded at this time."
+            }
+        }
+    },
+    {
+        "flow_id": 4,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "Due to the absence of any packet data flow or TCP segments within this network flow, it is classified as BENIGN.",
+        "raw_response": {
+            "exec_id": "c2388ff4-3d92-4dca-af37-a1693d9d32b1",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "Due to the absence of any packet data flow or TCP segments within this network flow, it is classified as BENIGN."
+            }
+        }
+    },
+    {
+        "flow_id": 5,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because of the very low average packet size (60.5 bytes) and the lack of an initial forward window bytes, indicating a short network flow duration and packets per second, suggesting likely benign activity.",
+        "raw_response": {
+            "exec_id": "92025fad-7b92-48c0-8879-5ff6dea036f3",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the very low average packet size (60.5 bytes) and the lack of an initial forward window bytes, indicating a short network flow duration and packets per second, suggesting likely benign activity."
+            }
+        }
+    },
+    {
+        "flow_id": 6,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because of the high Flow Duration and Average Packet Size, indicating a significant amount of time and packet movement in the flow, which is typical for legitimate traffic.",
+        "raw_response": {
+            "exec_id": "36da5038-581f-46ea-ab9f-55f5c33a60b3",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the high Flow Duration and Average Packet Size, indicating a significant amount of time and packet movement in the flow, which is typical for legitimate traffic."
+            }
+        }
+    },
+    {
+        "flow_id": 7,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because of the flow duration and packets per second values, which are within normal ranges for a SYN-based DoS attack.",
+        "raw_response": {
+            "exec_id": "fa7860f1-c9d6-4c05-98af-dc2da63fa564",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the flow duration and packets per second values, which are within normal ranges for a SYN-based DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 8,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "This network flow was considered like this because of the Flow Duration and Average Packet Size, which are both zero. This suggests that there is no data being transferred over the network, indicating a lack of legitimate communication between hosts, thus making it highly likely to be a SYN-based DoS attack.",
+        "raw_response": {
+            "exec_id": "b7f554b1-072d-4c3c-bb0e-93ea0374fbf1",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "This network flow was considered like this because of the Flow Duration and Average Packet Size, which are both zero. This suggests that there is no data being transferred over the network, indicating a lack of legitimate communication between hosts, thus making it highly likely to be a SYN-based DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 9,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because of the long duration and high packets per second, suggesting a normal flow with no indication of malicious activity.",
+        "raw_response": {
+            "exec_id": "6bd5d92b-cb68-49d1-9ff9-616dfd3143d4",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the long duration and high packets per second, suggesting a normal flow with no indication of malicious activity."
+            }
+        }
+    },
+    {
+        "flow_id": 10,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "The flow duration of 2 microseconds and the high number of packets per second (1,000,000) are indicative of a SYN-based DoS attack.",
+        "raw_response": {
+            "exec_id": "586f9427-4b87-46e5-8f01-a33aaf32449c",
+            "result": {
+                "classification": "SYN",
+                "justification": "The flow duration of 2 microseconds and the high number of packets per second (1,000,000) are indicative of a SYN-based DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 11,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "This flow is described as being part of the normal network activity and does not contain any packets with a size less than 15 bytes or more than 64 bytes. The average packet size and forward segment size are also within the expected ranges.",
+        "raw_response": {
+            "exec_id": "ea86acf0-5679-4f5b-b098-17303fe20d90",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "This flow is described as being part of the normal network activity and does not contain any packets with a size less than 15 bytes or more than 64 bytes. The average packet size and forward segment size are also within the expected ranges."
+            }
+        }
+    },
+    {
+        "flow_id": 12,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "Due to the long flow duration (48 microseconds) and high number of packets per second (41666.66666666666), this flow is highly likely benign.",
+        "raw_response": {
+            "exec_id": "c8035c10-fcac-46c8-ba88-d8256cb3bf0c",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "Due to the long flow duration (48 microseconds) and high number of packets per second (41666.66666666666), this flow is highly likely benign."
+            }
+        }
+    },
+    {
+        "flow_id": 13,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because the flow duration (20861 microseconds) and packets per second (191.7453621590528) are within normal ranges for legitimate TCP traffic.",
+        "raw_response": {
+            "exec_id": "b8cb384c-8dbc-4179-ace1-2c75995d2588",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because the flow duration (20861 microseconds) and packets per second (191.7453621590528) are within normal ranges for legitimate TCP traffic."
+            }
+        }
+    },
+    {
+        "flow_id": 14,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "The flow duration is less than 1 second, which indicates a low rate of packets being transmitted. This suggests that the flow is likely to be benign.",
+        "raw_response": {
+            "exec_id": "a69a3493-fdef-450b-8264-9523b1cb8afd",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "The flow duration is less than 1 second, which indicates a low rate of packets being transmitted. This suggests that the flow is likely to be benign."
+            }
+        }
+    },
+    {
+        "flow_id": 15,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because of the Flow Duration being significantly above 1000 microseconds, indicating a relatively long flow duration that suggests a high probability of SYN-based DoS attacks due to its potential impact on resource utilization and network performance.",
+        "raw_response": {
+            "exec_id": "9e61cee9-c7bb-405a-87ef-f4f387294567",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the Flow Duration being significantly above 1000 microseconds, indicating a relatively long flow duration that suggests a high probability of SYN-based DoS attacks due to its potential impact on resource utilization and network performance."
+            }
+        }
+    },
+    {
+        "flow_id": 16,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because of the Flow Duration and Average Forward Segment Size.",
+        "raw_response": {
+            "exec_id": "68d6f1ca-95b3-4da9-9224-b6dd24c7da30",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the Flow Duration and Average Forward Segment Size."
+            }
+        }
+    },
+    {
+        "flow_id": 17,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because of the flow duration which is less than 1,000 microseconds and packet count which is at least 100 packets per second.",
+        "raw_response": {
+            "exec_id": "2769f83a-0ef1-4a0b-94e8-e2b074defed3",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the flow duration which is less than 1,000 microseconds and packet count which is at least 100 packets per second."
+            }
+        }
+    },
+    {
+        "flow_id": 18,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "Due to the low flow duration and packet rate, it is likely a SYN-based DoS attack",
+        "raw_response": {
+            "exec_id": "427ecac0-253e-4692-ad37-15dca92300fc",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "Due to the low flow duration and packet rate, it is likely a SYN-based DoS attack"
+            }
+        }
+    },
+    {
+        "flow_id": 19,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "This network flow is strictly classified as a SYN flooding attack due to the low initial forward window size and high average packet size, which are indicative of an attack attempting to exploit the vulnerability in the SYN flood mitigation mechanism.",
+        "raw_response": {
+            "exec_id": "3eefc319-a59b-4c47-924d-bbb00d178405",
+            "result": {
+                "classification": "SYN",
+                "justification": "This network flow is strictly classified as a SYN flooding attack due to the low initial forward window size and high average packet size, which are indicative of an attack attempting to exploit the vulnerability in the SYN flood mitigation mechanism."
+            }
+        }
+    },
+    {
+        "flow_id": 20,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "This flow was classified as BENIGN because it was a normal network flow with no suspicious characteristics or anomalies.",
+        "raw_response": {
+            "exec_id": "ccbf1277-e657-459b-bced-8d62942c7f24",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "This flow was classified as BENIGN because it was a normal network flow with no suspicious characteristics or anomalies."
+            }
+        }
+    },
+    {
+        "flow_id": 21,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because the flow duration is below 10 microseconds and has a high number of packets per second (>1000), indicating a normal network activity. This is in contrast to the features that suggest high packet loss or fragmentation, which are typical indicators of SYN flooding attacks.",
+        "raw_response": {
+            "exec_id": "ede25034-ad16-4732-a037-1f4165d12ac9",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because the flow duration is below 10 microseconds and has a high number of packets per second (>1000), indicating a normal network activity. This is in contrast to the features that suggest high packet loss or fragmentation, which are typical indicators of SYN flooding attacks."
+            }
+        }
+    },
+    {
+        "flow_id": 22,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because the flow duration is significantly longer than normal network flows, and the packets per second ratio suggests a heavy traffic pattern, which could be indicative of SYN-based DoS attacks.",
+        "raw_response": {
+            "exec_id": "52a842ad-c52c-438d-a1af-f6db6805169b",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because the flow duration is significantly longer than normal network flows, and the packets per second ratio suggests a heavy traffic pattern, which could be indicative of SYN-based DoS attacks."
+            }
+        }
+    },
+    {
+        "flow_id": 23,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because the flow duration and packet per second rates are within normal ranges, indicating a typical network activity.",
+        "raw_response": {
+            "exec_id": "1f9e48ea-62aa-4b1d-9b19-0c457769911c",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because the flow duration and packet per second rates are within normal ranges, indicating a typical network activity."
+            }
+        }
+    },
+    {
+        "flow_id": 24,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "This flow was analyzed and classified as BENIGN because it does not contain any suspicious patterns of behavior that would indicate a potential SYN TCP flood or DoS attack.",
+        "raw_response": {
+            "exec_id": "1cd456c8-ed91-427c-b622-ba10fc1e45a1",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "This flow was analyzed and classified as BENIGN because it does not contain any suspicious patterns of behavior that would indicate a potential SYN TCP flood or DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 25,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because of the flow duration and average packet size, indicating a normal network activity",
+        "raw_response": {
+            "exec_id": "314a6525-4df3-4932-90db-50c28f2f9bc0",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the flow duration and average packet size, indicating a normal network activity"
+            }
+        }
+    },
+    {
+        "flow_id": 26,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "The flow duration and average packet size are within normal ranges. The initial forward window bytes indicate no large TCP windows.",
+        "raw_response": {
+            "exec_id": "92548289-23c7-4dfd-980b-8cb345a5e60f",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "The flow duration and average packet size are within normal ranges. The initial forward window bytes indicate no large TCP windows."
+            }
+        }
+    },
+    {
+        "flow_id": 27,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "The flow duration of 1 microsecond and the average packet size of 9 bytes are within normal ranges for TCP flows, suggesting a low probability of SYN-based DoS attacks.",
+        "raw_response": {
+            "exec_id": "589064e7-bf42-4656-bec2-fd9b5868c770",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "The flow duration of 1 microsecond and the average packet size of 9 bytes are within normal ranges for TCP flows, suggesting a low probability of SYN-based DoS attacks."
+            }
+        }
+    },
+    {
+        "flow_id": 28,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because the total duration of the network flow in microseconds is high (2), indicating a significant amount of time spent by the packets within the flow. This suggests that the packets are not being discarded or wasted, which increases the likelihood of it being a legitimate and non-DDoS attack.",
+        "raw_response": {
+            "exec_id": "c1c8d2d0-eb77-4f55-bb89-64808fc6f502",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because the total duration of the network flow in microseconds is high (2), indicating a significant amount of time spent by the packets within the flow. This suggests that the packets are not being discarded or wasted, which increases the likelihood of it being a legitimate and non-DDoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 29,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "Based on the provided flow features, it is classified as BENIGN because the total duration of the network flow in microseconds (1) and number of packets transmitted per second (2000000.0) are both below average values indicating a low-to-moderate traffic load which suggests no significant SYN flooding attack.",
+        "raw_response": {
+            "exec_id": "bb75fde3-8e22-4e85-a986-b1c2fd2c9482",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "Based on the provided flow features, it is classified as BENIGN because the total duration of the network flow in microseconds (1) and number of packets transmitted per second (2000000.0) are both below average values indicating a low-to-moderate traffic load which suggests no significant SYN flooding attack."
+            }
+        }
+    },
+    {
+        "flow_id": 30,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "This flow was analyzed for SYN TCP flooding DDoS attacks, but due to the lack of packet data from other segments (i.e., packets before and after the SYN flood), it cannot be conclusively classified as a SYN-based attack. However, the presence of low average packet sizes could indicate an attempt by the attacker to launch multiple simultaneous SYN floods without actually sending enough data to trigger a DDoS response.",
+        "raw_response": {
+            "exec_id": "3b66647c-0545-4a10-b4fc-e99555067ac6",
+            "result": {
+                "classification": "SYN",
+                "justification": "This flow was analyzed for SYN TCP flooding DDoS attacks, but due to the lack of packet data from other segments (i.e., packets before and after the SYN flood), it cannot be conclusively classified as a SYN-based attack. However, the presence of low average packet sizes could indicate an attempt by the attacker to launch multiple simultaneous SYN floods without actually sending enough data to trigger a DDoS response."
+            }
+        }
+    },
+    {
+        "flow_id": 31,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "The flow duration is less than 1 microsecond, and the number of packets per second is significantly higher than usual. These are typically characteristics of SYN TCP flooding DDoS attacks, indicating that it was classified like this because of a high probability of such an attack.",
+        "raw_response": {
+            "exec_id": "ca543582-2702-4bd4-84a5-352c86575470",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "The flow duration is less than 1 microsecond, and the number of packets per second is significantly higher than usual. These are typically characteristics of SYN TCP flooding DDoS attacks, indicating that it was classified like this because of a high probability of such an attack."
+            }
+        }
+    },
+    {
+        "flow_id": 32,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because of the Flow Duration, which is a typical value for a SYN-based DoS attack due to its low average value (< 60000000), indicating a short duration. The lack of significant packets per second (less than 1 packet/second) further supports the classification as BENIGN.",
+        "raw_response": {
+            "exec_id": "e1d36d06-5b6e-4f0c-a78c-a202719c816d",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the Flow Duration, which is a typical value for a SYN-based DoS attack due to its low average value (< 60000000), indicating a short duration. The lack of significant packets per second (less than 1 packet/second) further supports the classification as BENIGN."
+            }
+        }
+    },
+    {
+        "flow_id": 33,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "The flow duration is short, indicating a low risk of SYN flooding. The high packet-to-second ratio suggests that the flow has high traffic intensity, which would not typically be indicative of SYN flooding.",
+        "raw_response": {
+            "exec_id": "7e97af8f-ca05-43b2-9d26-637c97f43acd",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "The flow duration is short, indicating a low risk of SYN flooding. The high packet-to-second ratio suggests that the flow has high traffic intensity, which would not typically be indicative of SYN flooding."
+            }
+        }
+    },
+    {
+        "flow_id": 34,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "The flow duration is short, indicating a low number of packets sent over time. The packet rate is high, suggesting multiple connections are being established. However, the average forward segment size and packet size indicate that these segments are relatively small, which may not be typical for SYN-based DoS attacks.",
+        "raw_response": {
+            "exec_id": "3c60263b-7263-4cef-bde5-03da2b13c914",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "The flow duration is short, indicating a low number of packets sent over time. The packet rate is high, suggesting multiple connections are being established. However, the average forward segment size and packet size indicate that these segments are relatively small, which may not be typical for SYN-based DoS attacks."
+            }
+        }
+    },
+    {
+        "flow_id": 35,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because it had a relatively low flow duration (1565 microseconds) and a high flow packets per second (2555.91 packets/second).",
+        "raw_response": {
+            "exec_id": "f8b329ef-05f3-4feb-87a1-416b45cfdf64",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because it had a relatively low flow duration (1565 microseconds) and a high flow packets per second (2555.91 packets/second)."
+            }
+        }
+    },
+    {
+        "flow_id": 36,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because the flow duration is very short (0 microseconds), and there are no packets per second, average forward segment size is high (6.0 bytes), and initial forward window size is low (5840 bytes).",
+        "raw_response": {
+            "exec_id": "b27b00de-2cd8-46f9-91c8-05f5705059f7",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because the flow duration is very short (0 microseconds), and there are no packets per second, average forward segment size is high (6.0 bytes), and initial forward window size is low (5840 bytes)."
+            }
+        }
+    },
+    {
+        "flow_id": 37,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because of the high flow duration (56161171 microseconds) and low average packet size (6.5 bytes), indicating a low rate of data transfer, which is indicative of an isolated SYN flood attack.",
+        "raw_response": {
+            "exec_id": "157a9c04-0e92-4b8d-b140-432df2fe79c7",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the high flow duration (56161171 microseconds) and low average packet size (6.5 bytes), indicating a low rate of data transfer, which is indicative of an isolated SYN flood attack."
+            }
+        }
+    },
+    {
+        "flow_id": 38,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because the flow duration is low (20882 microseconds), indicating a short and probably benign network activity.",
+        "raw_response": {
+            "exec_id": "4906bfd1-fdb7-4894-98db-85fa31b2486a",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because the flow duration is low (20882 microseconds), indicating a short and probably benign network activity."
+            }
+        }
+    },
+    {
+        "flow_id": 39,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "The flow duration and packets per second are both within normal ranges, suggesting no suspicious activity.",
+        "raw_response": {
+            "exec_id": "26ab7251-c20c-4b0a-84b4-698ef95d46a9",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "The flow duration and packets per second are both within normal ranges, suggesting no suspicious activity."
+            }
+        }
+    },
+    {
+        "flow_id": 40,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "Because the total flow duration is low (88 microseconds), and the average packet size is relatively small compared to other features.",
+        "raw_response": {
+            "exec_id": "655293c5-9238-4279-9458-0848e410de19",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "Because the total flow duration is low (88 microseconds), and the average packet size is relatively small compared to other features."
+            }
+        }
+    },
+    {
+        "flow_id": 41,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because of the low flow duration and average forward segment size indicating a high packet rate and window size, which does not suggest any SYN flood potential",
+        "raw_response": {
+            "exec_id": "b65e837a-6f4d-494b-b927-ea28479e9cf4",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the low flow duration and average forward segment size indicating a high packet rate and window size, which does not suggest any SYN flood potential"
+            }
+        }
+    },
+    {
+        "flow_id": 42,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "The flow duration is greater than 10% of the total duration, indicating it could be a legitimate connection.",
+        "raw_response": {
+            "exec_id": "20277c8f-02ea-42fb-9a9e-4c8263ac02f3",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "The flow duration is greater than 10% of the total duration, indicating it could be a legitimate connection."
+            }
+        }
+    },
+    {
+        "flow_id": 43,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because the average forward segment size is less than 8.0 bytes.",
+        "raw_response": {
+            "exec_id": "6d8e77a1-734e-4ba4-bae4-00b90cd8caf2",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because the average forward segment size is less than 8.0 bytes."
+            }
+        }
+    },
+    {
+        "flow_id": 44,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because of the extremely low flow duration, indicating it's a short-lived connection.",
+        "raw_response": {
+            "exec_id": "e3316fc2-83fe-4555-bdf6-287c9c0f5800",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the extremely low flow duration, indicating it's a short-lived connection."
+            }
+        }
+    },
+    {
+        "flow_id": 45,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "This flow was identified as a potential source of SYN-based Distributed Denial-of-Service (DDoS) attacks due to its short duration and low packet-to-segment size ratio.",
+        "raw_response": {
+            "exec_id": "cc897cc2-64c8-4661-918a-b4a8d474d76a",
+            "result": {
+                "classification": "SYN",
+                "justification": "This flow was identified as a potential source of SYN-based Distributed Denial-of-Service (DDoS) attacks due to its short duration and low packet-to-segment size ratio."
+            }
+        }
+    },
+    {
+        "flow_id": 46,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "The flow duration and packet rate are within acceptable limits, indicating that the network is not experiencing excessive activity.",
+        "raw_response": {
+            "exec_id": "34e5510f-7883-4cbd-9368-8c9bb6456e4d",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "The flow duration and packet rate are within acceptable limits, indicating that the network is not experiencing excessive activity."
+            }
+        }
+    },
+    {
+        "flow_id": 47,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because the total duration of the network flow (116248304 microseconds) is within a normal range, indicating low activity. The number of packets per second (0.6107615987240553) suggests some level of communication but is unlikely to indicate a SYN flood attack given the short duration and lack of other suspicious patterns.",
+        "raw_response": {
+            "exec_id": "d31cb04c-590b-4be7-8560-4de168aec501",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because the total duration of the network flow (116248304 microseconds) is within a normal range, indicating low activity. The number of packets per second (0.6107615987240553) suggests some level of communication but is unlikely to indicate a SYN flood attack given the short duration and lack of other suspicious patterns."
+            }
+        }
+    },
+    {
+        "flow_id": 48,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because of the Flow Duration and Average Packet Size, indicating that it does not represent a potential SYN-based DoS attack.",
+        "raw_response": {
+            "exec_id": "a2823b8f-ae52-4f95-b486-6b061b5d062a",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the Flow Duration and Average Packet Size, indicating that it does not represent a potential SYN-based DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 49,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "This network flow features are generally indicative of a strictly non-SYN, do not support any SYN flooding DDoS attacks.",
+        "raw_response": {
+            "exec_id": "63a5b472-fea2-44e1-bd7b-16de35383c0f",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "This network flow features are generally indicative of a strictly non-SYN, do not support any SYN flooding DDoS attacks."
+            }
+        }
+    },
+    {
+        "flow_id": 50,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "The flow duration (4292646 microseconds) and packet count per second (9.085305427002366) exceed typical thresholds, suggesting potential SYN flooding.",
+        "raw_response": {
+            "exec_id": "930673b1-8710-4933-a6f3-ae9aed331bc3",
+            "result": {
+                "classification": "SYN",
+                "justification": "The flow duration (4292646 microseconds) and packet count per second (9.085305427002366) exceed typical thresholds, suggesting potential SYN flooding."
+            }
+        }
+    },
+    {
+        "flow_id": 51,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "The flow duration is high, indicating a prolonged period of network activity which can be indicative of SYN-based attacks.",
+        "raw_response": {
+            "exec_id": "48185f7c-fb4c-4eb9-9e6d-342278e12e0f",
+            "result": {
+                "classification": "SYN",
+                "justification": "The flow duration is high, indicating a prolonged period of network activity which can be indicative of SYN-based attacks."
+            }
+        }
+    },
+    {
+        "flow_id": 52,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because the flow duration is less than 5 seconds, which suggests a relatively short and benign network flow.",
+        "raw_response": {
+            "exec_id": "3bcc6f9c-b375-4039-8902-58623abf32ca",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because the flow duration is less than 5 seconds, which suggests a relatively short and benign network flow."
+            }
+        }
+    },
+    {
+        "flow_id": 53,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "Due to the high average packet size and forward segment size, it is unlikely that a SYN-based DoS attack occurred.",
+        "raw_response": {
+            "exec_id": "3f680ebe-b04c-415c-b8ce-2119041a203f",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "Due to the high average packet size and forward segment size, it is unlikely that a SYN-based DoS attack occurred."
+            }
+        }
+    },
+    {
+        "flow_id": 54,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "The flow duration is short (1 microsecond) and the number of packets per second is high, which indicates a normal flow. The average forward segment size is also reasonable for typical network traffic.",
+        "raw_response": {
+            "exec_id": "0e73cc19-8934-4ada-8652-c82fe322d746",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "The flow duration is short (1 microsecond) and the number of packets per second is high, which indicates a normal flow. The average forward segment size is also reasonable for typical network traffic."
+            }
+        }
+    },
+    {
+        "flow_id": 55,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because the flow duration is short (1 microsecond) and there are no packets per second, making it unlikely to be a SYN-based DoS attack.",
+        "raw_response": {
+            "exec_id": "fb00deb7-7d52-4cde-ad38-f727ecafd55b",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because the flow duration is short (1 microsecond) and there are no packets per second, making it unlikely to be a SYN-based DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 56,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because of the high Flow Duration and Average Packet Size, indicating a low probability of a SYN-based DoS attack.",
+        "raw_response": {
+            "exec_id": "f3394963-a85e-424d-bfdb-1de44e0f62fc",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the high Flow Duration and Average Packet Size, indicating a low probability of a SYN-based DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 57,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because of the high flow duration and packets per second, as well as average forward segment size and packet size, which are all typical characteristics of SYN TCP flooding attacks.",
+        "raw_response": {
+            "exec_id": "3bfd8b41-a3b1-40c9-b544-a6b38f22476a",
+            "result": {
+                "classification": "SYN",
+                "justification": "It was classified like this because of the high flow duration and packets per second, as well as average forward segment size and packet size, which are all typical characteristics of SYN TCP flooding attacks."
+            }
+        }
+    },
+    {
+        "flow_id": 58,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because of the high flow duration and packets per second.",
+        "raw_response": {
+            "exec_id": "6bb6d947-4754-4212-88bc-66f650598f12",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the high flow duration and packets per second."
+            }
+        }
+    },
+    {
+        "flow_id": 59,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because the flow duration (63971463 microseconds) is clearly below a typical sustained attack period, and there's no indication of packet loss or reordering, which are signs of SYN TCP flooding DDoS attacks. The average forward segment size and packet size also do not suggest any abnormal behavior that would indicate malicious activity.",
+        "raw_response": {
+            "exec_id": "adbce911-d739-4086-96fe-15d90da4c542",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because the flow duration (63971463 microseconds) is clearly below a typical sustained attack period, and there's no indication of packet loss or reordering, which are signs of SYN TCP flooding DDoS attacks. The average forward segment size and packet size also do not suggest any abnormal behavior that would indicate malicious activity."
+            }
+        }
+    },
+    {
+        "flow_id": 60,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because of the low flow duration and packets per second, suggesting a short and light TCP connection.",
+        "raw_response": {
+            "exec_id": "1b2ad949-df2b-4fdb-b6f5-154797e35236",
+            "result": {
+                "classification": "SYN",
+                "justification": "It was classified like this because of the low flow duration and packets per second, suggesting a short and light TCP connection."
+            }
+        }
+    },
+    {
+        "flow_id": 61,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because of the flow duration, which is a reasonable value for the total duration of the network flow in microseconds.",
+        "raw_response": {
+            "exec_id": "13e40a2d-c34d-4e71-bcbb-a739d9ed2ffc",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the flow duration, which is a reasonable value for the total duration of the network flow in microseconds."
+            }
+        }
+    },
+    {
+        "flow_id": 62,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because the flow duration (103 microseconds) is relatively short, indicating that it is unlikely to be a SYN-based DoS attack. The number of packets per second (38834.95145631068) is also high, suggesting that it may be an attempt by multiple sources, potentially indicating some form of legitimate activity rather than an attack.",
+        "raw_response": {
+            "exec_id": "6586fdc7-fd05-4ef3-bee4-ddce15fa2ff6",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because the flow duration (103 microseconds) is relatively short, indicating that it is unlikely to be a SYN-based DoS attack. The number of packets per second (38834.95145631068) is also high, suggesting that it may be an attempt by multiple sources, potentially indicating some form of legitimate activity rather than an attack."
+            }
+        }
+    },
+    {
+        "flow_id": 63,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because the flow duration is greater than 10 seconds, and packets per second are below 100.",
+        "raw_response": {
+            "exec_id": "dd224cb9-9765-41cf-8333-cc4831ac775a",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because the flow duration is greater than 10 seconds, and packets per second are below 100."
+            }
+        }
+    },
+    {
+        "flow_id": 64,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "The flow duration and packets per second are low, indicating a short flow. The average forward segment size and packet size suggest that the traffic is relatively small and normal for this network interface.",
+        "raw_response": {
+            "exec_id": "1f6223fd-402c-4a53-9d5f-854b3fb6921b",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "The flow duration and packets per second are low, indicating a short flow. The average forward segment size and packet size suggest that the traffic is relatively small and normal for this network interface."
+            }
+        }
+    },
+    {
+        "flow_id": 65,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "The flow duration is within a reasonable range (1 microsecond) and the number of packets per second is relatively high (2,000,000), which indicates a likely benign network activity.",
+        "raw_response": {
+            "exec_id": "ac0ed00b-91df-42bf-9e2b-9ee946b85808",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "The flow duration is within a reasonable range (1 microsecond) and the number of packets per second is relatively high (2,000,000), which indicates a likely benign network activity."
+            }
+        }
+    },
+    {
+        "flow_id": 66,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because of the low flow duration and average packet size, which are characteristic of normal network traffic.",
+        "raw_response": {
+            "exec_id": "32a51e92-63fc-4a0a-8f2e-8fec6ce4ec83",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the low flow duration and average packet size, which are characteristic of normal network traffic."
+            }
+        }
+    },
+    {
+        "flow_id": 67,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "The flow duration is very short, with only one second of network flow. This indicates a minimal amount of data being transferred and therefore does not suggest a potential SYN-based DoS attack.",
+        "raw_response": {
+            "exec_id": "a9037dc2-d6b2-44e7-b95d-5969690ab4be",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "The flow duration is very short, with only one second of network flow. This indicates a minimal amount of data being transferred and therefore does not suggest a potential SYN-based DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 68,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because of the Flow Duration being less than a typical DoS attack duration and the flow Packets per Second being higher than what is typically seen in normal traffic.",
+        "raw_response": {
+            "exec_id": "e625efda-05a4-4a8c-a547-4677f1773c3b",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the Flow Duration being less than a typical DoS attack duration and the flow Packets per Second being higher than what is typically seen in normal traffic."
+            }
+        }
+    },
+    {
+        "flow_id": 69,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "The flow duration is within the expected range of 10-500 microseconds, and packet rate is sufficient to avoid significant congestion. The average segment size is reasonable for efficient TCP traffic. Initial window is appropriate.",
+        "raw_response": {
+            "exec_id": "17380614-faa0-4935-8c3c-111ad0143735",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "The flow duration is within the expected range of 10-500 microseconds, and packet rate is sufficient to avoid significant congestion. The average segment size is reasonable for efficient TCP traffic. Initial window is appropriate."
+            }
+        }
+    },
+    {
+        "flow_id": 70,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because of the high Flow Duration (100 microseconds) which indicates a long-running flow and a low number of packets per second, which is indicative of normal network activity.",
+        "raw_response": {
+            "exec_id": "c54ef83d-770e-43b0-bfe3-c0086db679f0",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the high Flow Duration (100 microseconds) which indicates a long-running flow and a low number of packets per second, which is indicative of normal network activity."
+            }
+        }
+    },
+    {
+        "flow_id": 71,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "The flow duration and packet per second are within normal ranges, the average forward segment size is slightly larger than expected for a standard connection, and the initial forward window bytes suggest that there was no indication of a potential security threat at this time.",
+        "raw_response": {
+            "exec_id": "b56a9325-4405-4de6-af63-37dc4811fd75",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "The flow duration and packet per second are within normal ranges, the average forward segment size is slightly larger than expected for a standard connection, and the initial forward window bytes suggest that there was no indication of a potential security threat at this time."
+            }
+        }
+    },
+    {
+        "flow_id": 72,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because of the low Flow Duration which is below the threshold for a SYN flood attack.",
+        "raw_response": {
+            "exec_id": "4ead1383-70d5-4f78-95c4-df869832a40c",
+            "result": {
+                "classification": "SYN",
+                "justification": "It was classified like this because of the low Flow Duration which is below the threshold for a SYN flood attack."
+            }
+        }
+    },
+    {
+        "flow_id": 73,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "The flow duration is longer than the average, indicating some packet dropping but still within a reasonable range. The number of packets per second is very low, suggesting no significant traffic load.",
+        "raw_response": {
+            "exec_id": "c4f04d9f-fd4b-4258-8b5e-1ed7725047cd",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "The flow duration is longer than the average, indicating some packet dropping but still within a reasonable range. The number of packets per second is very low, suggesting no significant traffic load."
+            }
+        }
+    },
+    {
+        "flow_id": 74,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "This flow does not show any indication of a SYN flood or SYN amplification attacks. It appears to be a legitimate flow with normal TCP behavior.",
+        "raw_response": {
+            "exec_id": "4887dea6-6168-4383-bbb9-086b48241d60",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "This flow does not show any indication of a SYN flood or SYN amplification attacks. It appears to be a legitimate flow with normal TCP behavior."
+            }
+        }
+    },
+    {
+        "flow_id": 75,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "The flow duration is 1 microsecond, which is a very short duration and indicates the lack of significant packet activity in this flow.",
+        "raw_response": {
+            "exec_id": "b1d8dfcc-3356-44f0-b41a-b163257a5355",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "The flow duration is 1 microsecond, which is a very short duration and indicates the lack of significant packet activity in this flow."
+            }
+        }
+    },
+    {
+        "flow_id": 76,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because of the high Flow Duration which is expected to be close to one minute and very few packets are being transmitted in a short duration which indicates no unusual activity.",
+        "raw_response": {
+            "exec_id": "ddf195cf-99c8-4792-94b6-adffb1bb2978",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the high Flow Duration which is expected to be close to one minute and very few packets are being transmitted in a short duration which indicates no unusual activity."
+            }
+        }
+    },
+    {
+        "flow_id": 77,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "The flow duration (26581 microseconds) and packets per second (75.24171400624506) are within normal ranges, indicating no significant increase in network activity that would suggest a SYN-based DoS attack.",
+        "raw_response": {
+            "exec_id": "ab7e84fa-9ac5-4b5b-a25e-9c9fccc5d5f1",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "The flow duration (26581 microseconds) and packets per second (75.24171400624506) are within normal ranges, indicating no significant increase in network activity that would suggest a SYN-based DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 78,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because the Flow Duration and Initial Forward Window Bytes do not exceed the threshold values for a legitimate network flow, with neither exceeding 50 microseconds or 3000 bytes respectively.",
+        "raw_response": {
+            "exec_id": "0999bc24-0737-4bdc-aa54-a198212a640d",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because the Flow Duration and Initial Forward Window Bytes do not exceed the threshold values for a legitimate network flow, with neither exceeding 50 microseconds or 3000 bytes respectively."
+            }
+        }
+    },
+    {
+        "flow_id": 79,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "This flow is a standard TCP handshake and does not exhibit any characteristics that would suggest it is being used for malicious purposes, such as SYN flooding.",
+        "raw_response": {
+            "exec_id": "c72de9d5-2f95-4169-a488-8ea3c3a07929",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "This flow is a standard TCP handshake and does not exhibit any characteristics that would suggest it is being used for malicious purposes, such as SYN flooding."
+            }
+        }
+    },
+    {
+        "flow_id": 80,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because of the flow duration, which is expected to be high due to the large number of packets being transmitted in a short period, making it more difficult for an attacker to initiate a SYN flood attack. The average packet size and forward segment size are also within normal ranges, suggesting that the flow is likely legitimate.",
+        "raw_response": {
+            "exec_id": "ed4c3f02-ae1a-4c5f-ac80-3190a9491ad5",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the flow duration, which is expected to be high due to the large number of packets being transmitted in a short period, making it more difficult for an attacker to initiate a SYN flood attack. The average packet size and forward segment size are also within normal ranges, suggesting that the flow is likely legitimate."
+            }
+        }
+    },
+    {
+        "flow_id": 81,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because of the large average packet size (9.0 bytes), which is higher than typical network flow values, suggesting potential TCP traffic.",
+        "raw_response": {
+            "exec_id": "4de536c8-ebdd-4572-a5e4-4f34d3c52509",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the large average packet size (9.0 bytes), which is higher than typical network flow values, suggesting potential TCP traffic."
+            }
+        }
+    },
+    {
+        "flow_id": 82,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "This flow features a high number of packets per second, indicating it is a SYN flood. The average packet size and forward segment size also suggest this is not a legitimate TCP connection but an attack.",
+        "raw_response": {
+            "exec_id": "c3249dd2-3568-4c92-b9e6-fdc67d5d9ec5",
+            "result": {
+                "classification": "SYN",
+                "justification": "This flow features a high number of packets per second, indicating it is a SYN flood. The average packet size and forward segment size also suggest this is not a legitimate TCP connection but an attack."
+            }
+        }
+    },
+    {
+        "flow_id": 83,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "Because it did not contain any packets with a sequence number, it was classified like this because of the lack of legitimate communication.",
+        "raw_response": {
+            "exec_id": "808f084b-397c-4b1b-9798-7d75630ebd55",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "Because it did not contain any packets with a sequence number, it was classified like this because of the lack of legitimate communication."
+            }
+        }
+    },
+    {
+        "flow_id": 84,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "The flow duration is within a normal range, and the packet count per second is within a reasonable range. The average forward segment size and packet size are also relatively small compared to other flows in the network.",
+        "raw_response": {
+            "exec_id": "972445cd-095c-4867-8a19-dd01dcad5efa",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "The flow duration is within a normal range, and the packet count per second is within a reasonable range. The average forward segment size and packet size are also relatively small compared to other flows in the network."
+            }
+        }
+    },
+    {
+        "flow_id": 85,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "The flow duration is extremely short, suggesting that this traffic may not be a typical SYN TCP flood, but further analysis would be needed to confirm the classification.",
+        "raw_response": {
+            "exec_id": "1a62b4fc-93d9-46ae-b4e5-f6bbcb06b5dc",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "The flow duration is extremely short, suggesting that this traffic may not be a typical SYN TCP flood, but further analysis would be needed to confirm the classification."
+            }
+        }
+    },
+    {
+        "flow_id": 86,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because of the flow duration being below the threshold and packets per second being near zero. This is indicative of a benign network activity.",
+        "raw_response": {
+            "exec_id": "2d02f00a-b5b6-4671-b43e-8cabf80979e7",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the flow duration being below the threshold and packets per second being near zero. This is indicative of a benign network activity."
+            }
+        }
+    },
+    {
+        "flow_id": 87,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "The flow duration and packet count are within normal ranges for a typical network connection. The average forward segment size is relatively small compared to the total packets per second, suggesting that there are no indications of excessive SYN requests.",
+        "raw_response": {
+            "exec_id": "47bc159e-1aeb-4cc0-ac41-72e1bef450ad",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "The flow duration and packet count are within normal ranges for a typical network connection. The average forward segment size is relatively small compared to the total packets per second, suggesting that there are no indications of excessive SYN requests."
+            }
+        }
+    },
+    {
+        "flow_id": 88,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because the flow duration and packets per second are within normal ranges. The average forward segment size is slightly larger than expected, which could be indicative of a SYN flood attack but it does not strongly point towards any specific type.",
+        "raw_response": {
+            "exec_id": "a3c76e60-c93a-4225-9980-17922864df78",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because the flow duration and packets per second are within normal ranges. The average forward segment size is slightly larger than expected, which could be indicative of a SYN flood attack but it does not strongly point towards any specific type."
+            }
+        }
+    },
+    {
+        "flow_id": 89,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "Based on the flow duration and packet rate, this network flow features are not indicative of a SYN-based DoS attack.",
+        "raw_response": {
+            "exec_id": "607f1ee3-24b1-40db-bb31-b91402de685f",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "Based on the flow duration and packet rate, this network flow features are not indicative of a SYN-based DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 90,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "This network flow is classified as BENIGN because the Flow Duration (1 microsecond) and Flow Packets per Second (2000000.0 packets/sec) are both low, indicating a short duration with no significant number of packets being transmitted, which suggests that this is not a SYN-based DoS attack.",
+        "raw_response": {
+            "exec_id": "d5699de5-ddd8-4a84-bc93-1ef10e53c63a",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "This network flow is classified as BENIGN because the Flow Duration (1 microsecond) and Flow Packets per Second (2000000.0 packets/sec) are both low, indicating a short duration with no significant number of packets being transmitted, which suggests that this is not a SYN-based DoS attack."
+            }
+        }
+    },
+    {
+        "flow_id": 91,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because of the low probability and duration of the flow.",
+        "raw_response": {
+            "exec_id": "99978024-cf8a-43db-b074-5a16c5308caa",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the low probability and duration of the flow."
+            }
+        }
+    },
+    {
+        "flow_id": 92,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because of the high flow duration and packets per second, indicating a strong potential for network congestion.",
+        "raw_response": {
+            "exec_id": "a0caa86c-dd39-402f-bc32-8f4042a15478",
+            "result": {
+                "classification": "SYN",
+                "justification": "It was classified like this because of the high flow duration and packets per second, indicating a strong potential for network congestion."
+            }
+        }
+    },
+    {
+        "flow_id": 93,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because the flow duration is very short, indicating a low probability of a large-scale flood, and the packet count per second is also relatively low, suggesting that it might not be an attack",
+        "raw_response": {
+            "exec_id": "1de779f9-1bab-4221-be86-776fa53f24c2",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because the flow duration is very short, indicating a low probability of a large-scale flood, and the packet count per second is also relatively low, suggesting that it might not be an attack"
+            }
+        }
+    },
+    {
+        "flow_id": 94,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because the flow duration is very short and there are no packets transmitted per second, which indicates a low volume of traffic.",
+        "raw_response": {
+            "exec_id": "e8af62e0-5487-4630-a602-e63d78a0566f",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because the flow duration is very short and there are no packets transmitted per second, which indicates a low volume of traffic."
+            }
+        }
+    },
+    {
+        "flow_id": 95,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "This flow is strictly classified as BENIGN because it does not exhibit any characteristics that would suggest a SYN-based DoS attack, such as an abnormal increase in packet rate or size, unusual window sizes, or suspicious payload data.",
+        "raw_response": {
+            "exec_id": "06997ab1-ec27-4a8e-9191-a716e154e53a",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "This flow is strictly classified as BENIGN because it does not exhibit any characteristics that would suggest a SYN-based DoS attack, such as an abnormal increase in packet rate or size, unusual window sizes, or suspicious payload data."
+            }
+        }
+    },
+    {
+        "flow_id": 96,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because the total duration of the network flow (1 microsecond) is below typical values, indicating low activity.",
+        "raw_response": {
+            "exec_id": "7e1e8a57-0b7e-4a18-84a4-4e916b7de17a",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because the total duration of the network flow (1 microsecond) is below typical values, indicating low activity."
+            }
+        }
+    },
+    {
+        "flow_id": 97,
+        "true_label": "BENIGN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because of the low average packet size (79.5 bytes), indicating a short flow duration, suggesting minimal data transfer, and no indication of TCP congestion.",
+        "raw_response": {
+            "exec_id": "5231e7ce-b3dc-43be-8845-0c0432d271a8",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of the low average packet size (79.5 bytes), indicating a short flow duration, suggesting minimal data transfer, and no indication of TCP congestion."
+            }
+        }
+    },
+    {
+        "flow_id": 98,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "The flow duration is short (1 microsecond), and the packets per second are high (2,000,000), which indicates that this flow likely represents a normal network activity. The average forward segment size and packet size are within acceptable ranges, and the initial forward window bytes are above the minimum threshold of 5,440 bytes.",
+        "raw_response": {
+            "exec_id": "8335072e-3d27-4f35-89c3-51aa48d83e1f",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "The flow duration is short (1 microsecond), and the packets per second are high (2,000,000), which indicates that this flow likely represents a normal network activity. The average forward segment size and packet size are within acceptable ranges, and the initial forward window bytes are above the minimum threshold of 5,440 bytes."
+            }
+        }
+    },
+    {
+        "flow_id": 99,
+        "true_label": "SYN",
+        "predicted": "BENIGN",
+        "dos_attack_probability": 0.0,
+        "justification": "It was classified like this because of its normal characteristics and without any indication of abnormal or malicious activity.",
+        "raw_response": {
+            "exec_id": "7cc4c2f3-bd75-47cf-a8a1-da510d6bc89c",
+            "result": {
+                "classification": "BENIGN",
+                "justification": "It was classified like this because of its normal characteristics and without any indication of abnormal or malicious activity."
+            }
+        }
+    }
+]

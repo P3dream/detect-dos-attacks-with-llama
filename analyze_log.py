@@ -9,7 +9,7 @@ import json
 import sys
 import os
 
-LOG_PATH = "requests.log"
+LOG_PATH = "syn.requests.log"
 
 def load_log(path):
     """Lê o arquivo .log que é uma sequência de JSONs separados por vírgula"""

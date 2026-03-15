@@ -1,4 +1,10 @@
+
 # GenGuardian
+
+![Python](https://img.shields.io/badge/Python-3.10+-blue)
+![LLaMA](https://img.shields.io/badge/Model-LLaMA%203.2-orange)
+![Research](https://img.shields.io/badge/Type-Academic%20Research-green)
+![License](https://img.shields.io/badge/License-LLaMA%20Community-red)
 
 **GenGuardian** is an AI-powered intrusion detection and prevention system that uses a fine-tuned Large Language Model (LLM) to detect Distributed Denial of Service (DDoS) attacks in real time.
 

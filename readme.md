@@ -90,9 +90,9 @@ The fine-tuned models are available on Hugging Face in **GGUF format** for local
 
 | Model | Description | Quantization | Link |
 |---|---|---|---|
-| genguardian-syn-1b | SYN Flood detection | Q4_K_M | [🤗 Hugging Face](https://huggingface.co/p3dream/genguardian-syn-1b-gguf) |
-| genguardian-udplag-1b | UDPLag detection | Q4_K_M | [🤗 Hugging Face](https://huggingface.co/p3dream/genguardian-udplag-1b-gguf) |
-| genguardian-multiclass-1b | Multiclass detection (BENIGN / SYN / UDPLag / UDP) | Q4_K_M | [🤗 Hugging Face](https://huggingface.co/p3dream/genguardian-multiclass-1b-gguf) |
+| genguardian-syn-1b | SYN Flood detection | Q4_K_M | [🤗 Hugging Face](https://huggingface.co/P3dream/genguardian-syn-flood-detector) |
+| genguardian-udplag-1b | UDPLag detection | Q4_K_M | [🤗 Hugging Face](https://huggingface.co/P3dream/genguardian-udp-lag-detector) |
+| genguardian-multiclass-1b | Multiclass detection (BENIGN / SYN / UDPLag / UDP) | Q4_K_M | [🤗 Hugging Face](https://huggingface.co/P3dream/genguardian-multiclass-detector) |
 
 ### Running with Ollama
 

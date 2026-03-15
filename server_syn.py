@@ -126,6 +126,17 @@ def measure_resources(start_time, peak_cpu=0.0, avg_cpu=0.0):
         }
     }
 
+def format_flow_for_prompt(data: dict) -> str:
+    return (
+        f"Flow Duration={data.get('Flow Duration', 0)}, "
+        f"Flow Packets/s={data.get('Flow Packets/s', 0)}, "
+        f"Avg Fwd Segment Size={data.get('Avg Fwd Segment Size', 0)}, "
+        f"Average Packet Size={data.get('Average Packet Size', 0)}, "
+        f"Init_Win_bytes_forward={data.get('Init_Win_bytes_forward', 0)}"
+    )
+
+
+
 # ----------------- Endpoint principal -----------------
 @app.post("/ia")
 async def analyze_packets(request: Request):
@@ -134,6 +145,11 @@ async def analyze_packets(request: Request):
     print("📥 Recebido:", data)
 
     exec_id = str(uuid4())
+
+    if data.get("raw"):
+        flow_data = {k: v for k, v in data.items() if k != "raw"}
+        flow_text = format_flow_for_prompt(flow_data)
+        data = flow_text
     try:
         prompt = f"""
             Analyze the following network flow and classify it strictly as either BENIGN or SYN.

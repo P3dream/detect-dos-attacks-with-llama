@@ -1,0 +1,3 @@
+sudo java \
+  -Djava.library.path=/home/pedro/detect-dos-attacks-with-llama/CICFlowMeter/jnetpcap/linux/jnetpcap-1.4.r1425 \
+  -jar target/CICFlowMeterV3-0.0.4-SNAPSHOT.jar online enp0s3 /home/pedro/flows_output

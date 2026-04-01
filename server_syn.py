@@ -43,7 +43,6 @@ async def lifespan(app: FastAPI):
     else:
         print("⚠️ Processo ollama.exe não encontrado")
 
-    # Inicializa NVML para métricas de GPU
     try:
         pynvml.nvmlInit()
         _gpu_handle = pynvml.nvmlDeviceGetHandleByIndex(0)
@@ -54,7 +53,6 @@ async def lifespan(app: FastAPI):
 
     yield
 
-    # Shutdown
     try:
         pynvml.nvmlShutdown()
     except Exception:
@@ -77,7 +75,6 @@ def append_requests_log(obj):
         print("❌ Falha ao gravar requests.log:", e)
 
 def sample_ollama_cpu(stop_event, samples):
-    """Roda em thread paralela e coleta CPU do Ollama durante a inferência"""
     while not stop_event.is_set():
         if _ollama_proc:
             try:
@@ -90,7 +87,6 @@ def measure_resources(start_time, peak_cpu=0.0, avg_cpu=0.0):
     mem_info = process.memory_info()
     elapsed = (datetime.now() - start_time).total_seconds()
 
-    # Memória do Ollama
     ollama_rss = 0.0
     if _ollama_proc:
         try:
@@ -98,7 +94,6 @@ def measure_resources(start_time, peak_cpu=0.0, avg_cpu=0.0):
         except (psutil.NoSuchProcess, psutil.AccessDenied):
             pass
 
-    # Métricas de GPU
     gpu_util     = 0
     gpu_mem_used = 0
     try:
@@ -135,8 +130,6 @@ def format_flow_for_prompt(data: dict) -> str:
         f"Init_Win_bytes_forward={data.get('Init_Win_bytes_forward', 0)}"
     )
 
-
-
 # ----------------- Endpoint principal -----------------
 @app.post("/ia")
 async def analyze_packets(request: Request):
@@ -146,10 +139,15 @@ async def analyze_packets(request: Request):
 
     exec_id = str(uuid4())
 
-    if data.get("raw"):
+    # aceita lista (prompt direto do script de teste) ou dict (flow estruturado)
+    if isinstance(data, list):
+        flow_text = data[0]
+    elif isinstance(data, dict) and data.get("raw"):
         flow_data = {k: v for k, v in data.items() if k != "raw"}
         flow_text = format_flow_for_prompt(flow_data)
-        data = flow_text
+    else:
+        flow_text = format_flow_for_prompt(data)
+
     try:
         prompt = f"""
             Analyze the following network flow and classify it strictly as either BENIGN or SYN.
@@ -162,20 +160,18 @@ async def analyze_packets(request: Request):
             }}
 
             <flow>
-            {data}
+            {flow_text}
             </flow>
             """
         token_count = len(prompt.split())
         print(f"📥 Prompt length: {len(prompt)} chars")
         print(f"🔢 Token count (approx): {token_count}")
 
-        # Inicia monitoramento de CPU em paralelo
         cpu_samples = []
         stop_event  = threading.Event()
         cpu_thread  = threading.Thread(target=sample_ollama_cpu, args=(stop_event, cpu_samples), daemon=True)
         cpu_thread.start()
 
-        # ---------- Envio ao modelo Ollama ----------
         response = chat(
             messages=[
                 {
@@ -189,7 +185,6 @@ async def analyze_packets(request: Request):
             stream=False
         )
 
-        # Para o monitoramento de CPU
         stop_event.set()
         cpu_thread.join(timeout=1)
 
@@ -199,7 +194,6 @@ async def analyze_packets(request: Request):
         content = (response.message.content or "").strip()
         print("🧠 Raw Ollama response:", content)
 
-        # Parsing seguro
         try:
             result = DosAnalysis.model_validate_json(content)
         except Exception:
@@ -211,7 +205,6 @@ async def analyze_packets(request: Request):
         results_by_id[exec_id] = result
         print("✅ Parsed result:", result)
 
-        # Métricas
         metrics = measure_resources(start_time, peak_cpu, avg_cpu)
 
         log_data = {

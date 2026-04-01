@@ -26,38 +26,37 @@ log_entries = []
 errors = 0
 
 total = len(records)
-progress_step = total // 10
+progress_step = max(1, total // 10)
 
 print(f"🚀 Enviando {total} fluxos para o modelo...\n")
 
 for idx, r in enumerate(records):
-    # Label real a partir do campo classification
-    true_label = json.loads(r["messages"][2]["content"])["classification"]
-
-    # Prompt original do registro
+    true_label   = json.loads(r["messages"][2]["content"])["classification"]
     user_content = r["messages"][1]["content"]
 
     try:
         response = requests.post(API_URL, json=[user_content], timeout=120)
-        result = response.json()
+        result   = response.json()
 
-        predicted = result.get("result", {}).get("classification", "BENIGN")
+        predicted = result["result"]["classification"]
+
         if predicted not in ("BENIGN", "SYN"):
-            predicted = "BENIGN"
+            raise ValueError(f"Predição inválida: {predicted}")
 
     except Exception as e:
         print(f"⚠️ Erro no fluxo {idx}: {e}")
+        print(f"   Raw response: {result if 'result' in dir() else 'sem resposta'}")
         predicted = "BENIGN"
-        result = {"error": str(e)}
-        errors += 1
+        result    = {"error": str(e)}
+        errors   += 1
 
     y_true.append(true_label)
     y_pred.append(predicted)
 
     log_entries.append({
-        "flow_id":    idx,
-        "true_label": true_label,
-        "predicted":  predicted,
+        "flow_id":      idx,
+        "true_label":   true_label,
+        "predicted":    predicted,
         "raw_response": result
     })
 
@@ -74,11 +73,11 @@ print(f"\n📁 Logs salvos em {LOG_PATH}")
 print(f"⚠️  Erros de requisição: {errors}")
 
 # --- Resultados ---
-print(f"\n📊 Resultado final:")
+print("\n📊 Resultado final:")
 print(classification_report(y_true, y_pred, labels=["BENIGN", "SYN"]))
 
 # --- Matriz de Confusão ---
-cm = confusion_matrix(y_true, y_pred, labels=["BENIGN", "SYN"])
+cm   = confusion_matrix(y_true, y_pred, labels=["BENIGN", "SYN"])
 disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=["BENIGN", "SYN"])
 
 plt.figure(figsize=(6, 6))

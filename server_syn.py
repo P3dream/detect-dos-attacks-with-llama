@@ -180,7 +180,7 @@ async def analyze_packets(request: Request):
                 },
                 {"role": "user", "content": prompt}
             ],
-            model="llama-syn-finetuned-classify:latest",
+            model="llama-hping-finetuned:latest",
             format=DosAnalysis.model_json_schema(),
             stream=False
         )

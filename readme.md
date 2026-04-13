@@ -5,7 +5,7 @@
 ![Research](https://img.shields.io/badge/Type-Academic%20Research-green)
 ![License](https://img.shields.io/badge/License-LLaMA%20Community-red)
 
-**GenGuardian** is an AI-powered intrusion detection and prevention system that uses a fine-tuned Large Language Model (LLM) to detect Distributed Denial of Service (DDoS) attacks in real time.
+**GenGuardian** is an LLM-based intrusion detection and prevention system that uses a fine-tuned Large Language Model (LLM) to detect Distributed Denial of Service (DDoS) attacks in real time.
 
 This repository contains the implementation developed as part of the research:
 
@@ -27,9 +27,18 @@ The system is designed to be **lightweight and deployable**, capable of running 
 - DDoS detection using a **fine-tuned LLaMA 3.2 (1B)** model
 - Lightweight inference via **4-bit quantization (QLoRA)**
 - Real-time network traffic analysis
-- Integration with standard packet capture tools (**TShark**)
+- Integration with standard packet capture tools (**CICFlowMeter**)
 - Automatic mitigation through firewall rules (**iptables**)
 - Designed for research in **AI-driven cybersecurity**
+
+---
+
+## Design Goals
+
+- Low computational cost (edge-friendly)
+- Local execution (privacy-preserving)
+- Modular architecture (model-agnostic)
+- Real-time detection capability
 
 ---
 
@@ -80,6 +89,8 @@ All machines communicate through an **isolated host-only virtual network**, ensu
 | Optimization | QLoRA (Quantized Low-Rank Adaptation) |
 | Quantization | 4-bit |
 
+**Trainable parameters:** ~0.9%
+
 This configuration enables **local execution with low hardware requirements** while maintaining strong detection performance.
 
 ---
@@ -116,12 +127,13 @@ ollama run p3dream/genguardian-multiclass-1b
 
 ---
 
-## Dataset
+Dataset
 
-Training and evaluation were performed using the **CICDDoS2019 dataset** published by the Canadian Institute for Cybersecurity.
+Training and evaluation were performed using the CICDDoS2019 dataset published by the Canadian Institute for Cybersecurity.
 
 https://www.unb.ca/cic/datasets/ddos-2019.html
 
+To ensure compatibility with the dataset schema, CICFlowMeter was used to extract bidirectional flow-based features from raw packet captures, producing structured network flow data suitable for model training and evaluation.
 ---
 
 ### Selected Features
@@ -199,20 +211,31 @@ The fine-tuned model significantly outperformed the base model, achieving **dete
 
 ---
 
+## Results Summary
+
+The fine-tuned models achieved:
+
+- 99.9% accuracy for SYN Flood detection
+- 98.53% accuracy for UDPLag detection
+- 98% accuracy in multiclass scenario
+- 97% accuracy in hybrid real-traffic scenario (hping3 + real flows)
+
+Overall, the results significantly outperform both zero-shot and prompt-engineered baselines, demonstrating that lightweight fine-tuned LLMs can serve as effective network traffic classifiers, even in resource-constrained environments.
+
 ## Tech Stack
 
 - **Python** — Core pipeline and data processing
 - **FastAPI** — Controller API
 - **PyTorch + Transformers** — Model training and inference
 - **QLoRA / PEFT** — Efficient fine-tuning
-- **TShark** — Network traffic capture
+- **CicFlowMeter** — Network traffic capture
 - **iptables** — Firewall-based mitigation
 
 ---
 
 ## Example Workflow
 
-1. Capture network traffic with TShark
+1. Capture network traffic with CICFlowMeter
 2. Extract flow features from captured packets
 3. Convert structured data into prompt format
 4. Query the fine-tuned LLaMA model

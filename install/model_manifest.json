@@ -1,0 +1,7 @@
+{
+  "repo": "P3dream/genguardian-multiclass-detector",
+  "gguf": "genguardian-multiclass-1.2b-q4_k_m.gguf",
+  "modelfile": "Modelfile",
+  "version": "1.2b-q4_k_m",
+  "sha256": "PUT_YOUR_HASH_HERE"
+}

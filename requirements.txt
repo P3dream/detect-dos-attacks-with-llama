@@ -2,5 +2,5 @@ fastapi
 uvicorn
 ollama
 psutil
-pynvml
 pydantic
+pynvml; sys_platform == "win32"

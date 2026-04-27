@@ -4,3 +4,4 @@ ollama
 psutil
 pydantic
 pynvml; sys_platform == "win32"
+huggingface_hub>=0.20.0

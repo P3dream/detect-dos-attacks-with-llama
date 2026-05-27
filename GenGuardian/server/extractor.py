@@ -1,180 +1,218 @@
 #!/usr/bin/env python3
 import subprocess
-import json
+import pandas as pd
 import requests
+import os
 import time
-from datetime import datetime
-from urllib.parse import urljoin
+import datetime
 
 # ---------------- CONFIGURAÇÃO ----------------
-DETECTOR_URL = "http://192.168.56.1:3000/ia"
-INTERFACE = "enp0s3"
-PACKET_COUNT = 50           # quantos pacotes capturar por vez
-SLEEP_BETWEEN = 1.0         # segundos entre capturas
-REQUEST_TIMEOUT = 30
-LOG_FILE = "resultados_deteccao.jsonl"
-TARGET_IP = "192.168.56.3"  # IP do servidor do site
-TARGET_PORT = 80            # HTTP
+INTERFACE      = "enp0s3"
+CAPTURE_SECS   = 10
+BASE_DIR       = "/home/pedro/detect-dos-attacks-with-llama"
+PCAP_DIR       = f"{BASE_DIR}/captures"
+CSV_OUTPUT_DIR = f"{BASE_DIR}/flows_output"
+CIC_JAR        = f"{BASE_DIR}/CICFlowMeter/target/CICFlowMeterV3-0.0.4-SNAPSHOT.jar"
+CIC_LIB        = f"{BASE_DIR}/CICFlowMeter/jnetpcap/linux/jnetpcap-1.4.r1425"
+DETECTOR_URL   = "http://192.168.56.1:3000/ia"
 
-# ---------------- CAPTURA DE PACOTES ----------------
-def capture_packets(interface="enp0s3", packet_count=50, target_ip=None, target_port=80):
+# IPs que NUNCA serão bloqueados (gateway, DNS, servidor da API, loopback)
+IP_WHITELIST = {
+    "127.0.0.1",
+    "192.168.56.1",   # servidor da API de detecção
+    "8.8.8.8",
+    "8.8.4.4",
+}
+
+FEATURE_MAP = {
+    "Min Packet Length":    "Packet Length Min",
+    "Avg Fwd Segment Size": "Fwd Segment Size Avg",
+    "Flow Bytes/s":         "Flow Bytes/s",
+    "URG Flag Count":       "URG Flag Count",
+    "Fwd Packets/s":        "Fwd Packets/s",
+    # Coluna com IP de origem — ajuste o nome se o seu CSV usar outro cabeçalho
+    "_src_ip":              "Src IP",
+}
+
+# Conjunto em memória de IPs já bloqueados (evita chamadas repetidas ao iptables)
+_ips_bloqueados: set = set()
+
+# ---------------- IPTABLES ----------------
+
+def _iptables(args: list[str]) -> tuple[int, str]:
+    """Executa um comando iptables com sudo e retorna (returncode, stderr)."""
+    result = subprocess.run(
+        ["sudo", "iptables"] + args,
+        capture_output=True,
+        text=True
+    )
+    return result.returncode, result.stderr.strip()
+
+
+def bloquear_ip(ip: str, classificacao: str) -> None:
     """
-    Captura pacotes HTTP (requests) e tenta extrair a rota/URL destino e, se houver, o body de POST.
-    Usa reassembly TCP/HTTP para reduzir campos null.
+    Adiciona regra DROP no iptables para o IP de origem, caso ainda não esteja
+    bloqueado e não esteja na whitelist.
     """
-    # Monta display filter: apenas http.request ao target (se target_ip fornecido)
-    if target_ip:
-        display_filter = f"http.request && ip.dst == {target_ip} && tcp.port == {target_port}"
-    else:
-        display_filter = f"http.request && tcp.port == {target_port}"
-
-    tshark_command = [
-        "tshark",
-        "-i", interface,
-        "-c", str(packet_count),
-        "-s", "0",  # captura o pacote inteiro (sem truncar)
-        "-T", "json",
-        "-Y", display_filter,
-        # Força reassembly para que o dissector HTTP consiga montar headers/body
-        "-o", "tcp.desegment_tcp_streams:TRUE",
-        "-o", "http.desegment_headers:TRUE",
-        "-o", "http.desegment_body:TRUE",
-        # Campos úteis
-        "-e", "frame.time",
-        "-e", "ip.src",
-        "-e", "ip.dst",
-        "-e", "tcp.srcport",
-        "-e", "tcp.dstport",
-        "-e", "http.request.method",
-        "-e", "http.request.line",
-        "-e", "http.request.uri",
-        "-e", "http.request.full_uri",
-        "-e", "http.host",
-        "-e", "http.user_agent",
-        "-e", "http.content_type",
-        "-e", "http.file_data",          # frequentemente contém body de POST
-        "-e", "http.request.version",
-    ]
-
-    try:
-        result = subprocess.run(tshark_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=False)
-    except Exception as e:
-        print(f"[{datetime.now().isoformat()}] Erro ao chamar tshark: {e}")
-        return []
-
-    if result.returncode != 0:
-        stderr_text = result.stderr.decode(errors='ignore')
-        print(f"[{datetime.now().isoformat()}] Erro na captura (retcode {result.returncode}): {stderr_text}")
-        return []
-
-    try:
-        packets = json.loads(result.stdout.decode(errors='ignore'))
-    except json.JSONDecodeError as e:
-        print(f"[{datetime.now().isoformat()}] Erro JSON do tshark: {e}")
-        return []
-
-    parsed = []
-    for p in packets:
-        layers = p.get("_source", {}).get("layers", {})
-
-        time_field = (layers.get("frame.time") or [None])[0]
-        ip_src = (layers.get("ip.src") or [None])[0]
-        ip_dst = (layers.get("ip.dst") or [None])[0]
-        tcp_srcport = (layers.get("tcp.srcport") or [None])[0]
-        tcp_dstport = (layers.get("tcp.dstport") or [None])[0]
-
-        http_method = (layers.get("http.request.method") or [None])[0]
-        http_req_line = (layers.get("http.request.line") or [None])[0]
-        http_uri = (layers.get("http.request.uri") or [None])[0]
-        http_full = (layers.get("http.request.full_uri") or [None])[0]
-        http_host = (layers.get("http.host") or [None])[0]
-        http_user_agent = (layers.get("http.user_agent") or [None])[0]
-        http_content_type = (layers.get("http.content_type") or [None])[0]
-        http_file_data = (layers.get("http.file_data") or [None])[0]  # pode conter body do POST
-        http_version = (layers.get("http.request.version") or [None])[0]
-
-        # Reconstrói URL: prefira full_uri, senão host + uri. Se host for IP, fica ok.
-        reconstructed_url = None
-        if http_full and http_full != "":
-            reconstructed_url = http_full
-        elif http_host and http_uri:
-            # pode ser host:port em http_host (por ex. myhost:8080)
-            # garante esquema http porque estamos na porta 80 (ou se porta != 80, ainda assim usa http)
-            scheme = "http"
-            # se o http_host já contém http:// ou https:// (raro), evita duplicar
-            if http_host.startswith("http://") or http_host.startswith("https://"):
-                reconstructed_url = urljoin(http_host, http_uri or "")
-            else:
-                reconstructed_url = f"{scheme}://{http_host}{http_uri or ''}"
-        elif http_uri:
-            reconstructed_url = http_uri  # sem host disponível
-
-        # Normaliza body: http.file_data vem geralmente hex/text; deixamos raw e também tentamos truncar para segurança de log
-        body_raw = None
-        if http_file_data:
-            body_raw = http_file_data  # pode ser grande, contem o corpo do POST (raw)
-        # Monta registro
-        entry = {
-            "time": time_field,
-            "ip.src": ip_src,
-            "ip.dst": ip_dst,
-            "tcp.srcport": tcp_srcport,
-            "tcp.dstport": tcp_dstport,
-            "http.method": http_method,
-            "http.request_line": http_req_line,
-            "http.uri": http_uri,
-            "http.full_uri": http_full,
-            "http.host": http_host,
-            "http.user_agent": http_user_agent,
-            "http.version": http_version,
-            "http.content_type": http_content_type,
-            "http.reconstructed_url": reconstructed_url,
-            # body (se houver). ATENÇÃO: pode conter dados sensíveis
-            "http.body_raw": body_raw,
-        }
-        parsed.append(entry)
-
-    return parsed
-
-# ---------------- ENVIO PARA DETECTOR ----------------
-def send_data_to_url(data, url=DETECTOR_URL):
-    if not data:
+    if not ip or ip == "N/A":
         return
-    try:
-        response = requests.post(url, json=data, timeout=REQUEST_TIMEOUT)
-        if response.status_code == 200:
-            try:
-                response_json = response.json()
-                print(f"[{datetime.now().isoformat()}] Dados enviados com sucesso. {len(data)} pacotes")
-                # salva no log .jsonl
-                with open(LOG_FILE, "a") as f:
-                    log_entry = {
-                        "timestamp": datetime.now().isoformat(),
-                        "packets_count": len(data),
-                        "response": response_json
-                    }
-                    f.write(json.dumps(log_entry, ensure_ascii=False) + "\n")
-            except Exception:
-                print(f"[{datetime.now().isoformat()}] Resposta não-JSON: {response.text[:200]}")
-        else:
-            print(f"[{datetime.now().isoformat()}] Falha ao enviar. Status: {response.status_code}")
-    except requests.exceptions.RequestException as e:
-        print(f"[{datetime.now().isoformat()}] Erro ao enviar dados: {e}")
 
-# ---------------- LOOP PRINCIPAL ----------------
-def main_loop():
-    print("=== Iniciando captura contínua. Pressione Ctrl-C para parar. ===")
-    try:
-        while True:
-            packets = capture_packets(interface=INTERFACE, packet_count=PACKET_COUNT,
-                                      target_ip=TARGET_IP, target_port=TARGET_PORT)
-            if packets:
-                send_data_to_url(packets)
-            else:
-                print(f"[{datetime.now().isoformat()}] Nenhum pacote capturado.")
-            time.sleep(SLEEP_BETWEEN)
-    except KeyboardInterrupt:
-        print("\n=== Execução interrompida pelo usuário (Ctrl-C). Encerrando. ===")
+    if ip in IP_WHITELIST:
+        print(f"  [whitelist] {ip} ignorado (whitelist)")
+        return
+
+    if ip in _ips_bloqueados:
+        print(f"  [iptables] {ip} já estava bloqueado")
+        return
+
+    # Verifica se a regra já existe no kernel (segurança extra entre reinicializações)
+    rc, _ = _iptables(["-C", "INPUT", "-s", ip, "-j", "DROP"])
+    if rc == 0:
+        # Regra já existe — apenas registra localmente
+        _ips_bloqueados.add(ip)
+        print(f"  [iptables] regra já existia para {ip}")
+        return
+
+    rc, err = _iptables(["-A", "INPUT", "-s", ip, "-j", "DROP"])
+    if rc == 0:
+        _ips_bloqueados.add(ip)
+        ts = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        print(f"  [iptables] BLOQUEADO {ip} | motivo: {classificacao} | {ts}")
+    else:
+        print(f"  [iptables] FALHA ao bloquear {ip}: {err}")
+        print("  [iptables] Verifique se sudo iptables está permitido sem senha")
+        print("  [iptables] Dica: adicione ao sudoers ->  pedro ALL=(ALL) NOPASSWD: /sbin/iptables")
+
+
+def listar_bloqueados() -> None:
+    """Exibe os IPs bloqueados na sessão atual."""
+    if _ips_bloqueados:
+        print(f"[*] IPs bloqueados nesta sessão ({len(_ips_bloqueados)}): {', '.join(sorted(_ips_bloqueados))}")
+    else:
+        print("[*] Nenhum IP bloqueado nesta sessão")
+
+# ---------------- CAPTURA & FLUXOS ----------------
+
+def capturar_pcap(duracao=CAPTURE_SECS):
+    os.makedirs(PCAP_DIR, exist_ok=True)
+    ts = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    pcap_path = os.path.join(PCAP_DIR, f"capture_{ts}.pcap")
+    print(f"[*] Capturando {duracao}s em {INTERFACE}...")
+    subprocess.run([
+        "sudo", "timeout", str(duracao),
+        "tcpdump", "-i", INTERFACE, "-w", pcap_path, "-q"
+    ])
+    print(f"[*] PCAP salvo: {pcap_path}")
+    return pcap_path
+
+
+def gerar_csv(pcap_path):
+    os.makedirs(CSV_OUTPUT_DIR, exist_ok=True)
+    subprocess.run([
+        "sudo", "java",
+        "-Djava.awt.headless=true",
+        f"-Djava.library.path={CIC_LIB}",
+        "-cp", CIC_JAR,
+        "cic.cs.unb.ca.ifm.Cmd",
+        pcap_path,
+        CSV_OUTPUT_DIR
+    ], check=True)
+    csvs = sorted(
+        [f for f in os.listdir(CSV_OUTPUT_DIR) if f.endswith(".csv")],
+        key=lambda f: os.path.getmtime(os.path.join(CSV_OUTPUT_DIR, f))
+    )
+    if not csvs:
+        raise FileNotFoundError("Nenhum CSV gerado")
+    return os.path.join(CSV_OUTPUT_DIR, csvs[-1])
+
+
+def ler_fluxos(csv_path):
+    df = pd.read_csv(csv_path)
+    df.columns = df.columns.str.strip()
+
+    # Colunas obrigatórias para o modelo (exclui coluna interna _src_ip)
+    colunas_modelo = {k: v for k, v in FEATURE_MAP.items() if not k.startswith("_")}
+    faltando = [v for v in colunas_modelo.values() if v not in df.columns]
+    if faltando:
+        print(f"[!] Colunas faltando: {faltando}")
+        print(f"[!] Colunas disponíveis: {list(df.columns)}")
+        return []
+
+    # Coluna de IP de origem (opcional — pode não existir em todos os CSVs)
+    src_ip_col = FEATURE_MAP.get("_src_ip", "Src IP")
+    tem_ip = src_ip_col in df.columns
+
+    fluxos = []
+    for _, row in df.iterrows():
+        fluxo = {
+            nome_modelo: row[nome_csv]
+            for nome_modelo, nome_csv in colunas_modelo.items()
+        }
+        # Anexa IP de origem como metadado (não enviado ao modelo)
+        fluxo["_src_ip"] = str(row[src_ip_col]).strip() if tem_ip else "N/A"
+        fluxos.append(fluxo)
+
+    return fluxos
+
+# ---------------- ENVIO & BLOQUEIO ----------------
+
+def enviar_fluxos(fluxos):
+    for i, fluxo in enumerate(fluxos):
+        src_ip = fluxo.pop("_src_ip", "N/A")  # remove metadado antes de enviar
+
+        try:
+            resp = requests.post(DETECTOR_URL, json=fluxo, timeout=5)
+            status = resp.status_code
+            body   = resp.text
+
+            # Tenta extrair classificação da resposta JSON
+            classificacao = "UNKNOWN"
+            try:
+                data = resp.json()
+                # Estrutura esperada: {"exec_id": "...", "result": {"classification": "BENIGN"|"UDPLag", ...}}
+                classificacao = (
+                    data.get("result", {}).get("classification", "UNKNOWN")
+                    or data.get("classification", "UNKNOWN")
+                )
+            except Exception:
+                pass  # body não é JSON válido
+
+            print(f"[{i+1}/{len(fluxos)}] IP={src_ip} | {status} | classificação={classificacao}")
+
+            # Bloqueia se não for BENIGN
+            if classificacao.upper() != "BENIGN":
+                bloquear_ip(src_ip, classificacao)
+
+        except requests.exceptions.RequestException as e:
+            print(f"[{i+1}/{len(fluxos)}] IP={src_ip} | Erro de conexão: {e}")
+
+# ---------------- LOOP CONTÍNUO ----------------
 
 if __name__ == "__main__":
-    main_loop()
+    print("[*] GenGuardian pipeline iniciado")
+    print(f"[*] Whitelist de IPs protegidos: {IP_WHITELIST}")
+
+    # Dica de sudoers na inicialização
+    print("[*] Certifique-se de que o usuário tem permissão para iptables sem senha:")
+    print("    sudo visudo  →  pedro ALL=(ALL) NOPASSWD: /sbin/iptables")
+
+    while True:
+        try:
+            pcap = capturar_pcap(CAPTURE_SECS)
+            print("[*] Processando com CICFlowMeter...")
+            csv = gerar_csv(pcap)
+            print(f"[*] CSV: {csv}")
+            fluxos = ler_fluxos(csv)
+            print(f"[*] {len(fluxos)} fluxos para análise")
+            if fluxos:
+                enviar_fluxos(fluxos)
+                listar_bloqueados()
+            else:
+                print("[*] Nenhum fluxo gerado nessa janela")
+        except KeyboardInterrupt:
+            print("\n[*] Interrompido pelo usuário")
+            listar_bloqueados()
+            break
+        except Exception as e:
+            print(f"[!] Erro: {e}")
+            time.sleep(5)
